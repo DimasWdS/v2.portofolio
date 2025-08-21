@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap");
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Google Sans Code", monospace !important; */
+}
+:root {
+  --background-color: #222831;
+  --second-background: #181c23;
+  --line: #fffcfb;
+  --main-font: #fffff0;
+  --accen-color: #c73659;
+  --footer: rgb(20, 20, 20);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+a {
+  text-decoration: none;
+}
+
+input {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* nav-footer start */
+.con-nav-footer section:nth-child(1) section:nth-child(2) .link-menu {
+  position: relative;
+}
+.con-nav-footer section:nth-child(1) section:nth-child(2) .link-menu::before {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-font);
+  transform: translateX(110%);
+  transition: transform 0.3s ease; /* Tambahkan transisi untuk animasi halus */
+}
+
+/* Terapkan pseudo-class :hover pada elemen <a> */
+.con-nav-footer
+  section:nth-child(1)
+  section:nth-child(2)
+  .link-menu:hover::before {
+  transform: translateX(0);
+}
+@media (max-width: 640px) {
+  .con-nav-footer section:nth-child(1) section:nth-child(1) {
+    /* background-color: #c73659; */
+    display: flex;
+    /* background-color: #c73659; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .con-nav-footer section:nth-child(1) section:nth-child(1) div {
+    padding: 0.5rem 0 0.5rem 0.2rem !important;
+    /* align-items: center; */
+    justify-content: center;
+    font-size: 3em !important;
+  }
+  .con-nav-footer section:nth-child(1) section:nth-child(1) button {
+    /* background-color: yellow; */
+    font-size: 1em !important;
+  }
+  .con-nav-footer section:nth-child(1) section:nth-child(2) {
+    display: none !important;
+  }
+}
+@media (max-width: 1024px) {
+  .con-nav-footer section:nth-child(1) section:nth-child(1) div {
+    padding: 0.5rem 0 0.5rem 0.2rem !important;
+    /* align-items: center; */
+    justify-content: center;
+    font-size: 2.5em !important;
+  }
+}
+/* nav footer end */
+
+/* nav header start */
+.alink-nav-header {
+  transition: all 0.2s ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.alink-nav-header::before {
+  content: " ";
+  transition: all 0.2s ease;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: var(--main-font);
+  bottom: 0;
+  transform: scale(0);
+}
+.alink-nav-header:hover::before {
+  transform: scale(1);
+}
+.alink-nav-header-active::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--main-font);
+}
+/* nav header end */

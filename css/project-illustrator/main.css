@@ -1,0 +1,29 @@
+@media (min-width: 1290px) {
+  .container-scroll-skils {
+    border-left: 3px solid var(--main-font);
+    border-right: 3px solid var(--main-font);
+  }
+}
+
+.skill-scrol {
+  animation: toolsScroll 10s linear infinite;
+}
+
+@keyframes toolsScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .container-card-project {
+    padding: 3rem 0 3rem 0 !important;
+  }
+  .card-project {
+    width: 85% !important;
+    margin: auto;
+  }
+}

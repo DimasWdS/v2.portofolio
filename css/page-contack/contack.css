@@ -1,0 +1,106 @@
+.form-email label,
+.form-nama label,
+.form-subject label {
+  color: var(--main-font);
+}
+.form-nama input,
+.form-email input {
+  height: 2.5rem;
+  margin-top: 0.5rem;
+  padding: 0 0 0 1rem;
+}
+
+.form-subject input {
+  height: 3.5rem;
+  padding: 0 0 0 1rem;
+  margin-top: 0.5rem;
+}
+.form-nama input,
+.form-email input,
+.form-subject input {
+  border-bottom: 1px solid red;
+  color: var(--main-font);
+}
+
+@media (max-width: 640px) {
+  .container-contack {
+    height: 30rem !important;
+  }
+  .container-nama-email {
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+  .container-nama-email div {
+    width: 100% !important;
+  }
+  .container-form {
+    /* background-color: yellow; */
+    padding: 1rem !important;
+  }
+}
+
+@keyframes floatIrregularDetailed {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  5% {
+    transform: translate(2px, -3px) rotate(0.5deg);
+  }
+  10% {
+    transform: translate(-3px, 5px) rotate(-0.2deg);
+  }
+  15% {
+    transform: translate(7px, -2px) rotate(1deg);
+  }
+  20% {
+    transform: translate(-5px, 8px) rotate(-0.8deg);
+  }
+  25% {
+    transform: translate(10px, -6px) rotate(1.5deg);
+  }
+  30% {
+    transform: translate(-8px, 12px) rotate(-1.2deg);
+  }
+  35% {
+    transform: translate(13px, -9px) rotate(2deg);
+  }
+  40% {
+    transform: translate(-10px, 15px) rotate(-1.5deg);
+  }
+  45% {
+    transform: translate(15px, -12px) rotate(2.5deg);
+  }
+  50% {
+    transform: translate(-12px, 18px) rotate(-1.8deg);
+  }
+  55% {
+    transform: translate(18px, -15px) rotate(3deg);
+  }
+  60% {
+    transform: translate(-15px, 20px) rotate(-2deg);
+  }
+  65% {
+    transform: translate(20px, -17px) rotate(3.5deg);
+  }
+  70% {
+    transform: translate(-18px, 22px) rotate(-2.2deg);
+  }
+  75% {
+    transform: translate(22px, -19px) rotate(4deg);
+  }
+  80% {
+    transform: translate(-20px, 25px) rotate(-2.5deg);
+  }
+  85% {
+    transform: translate(25px, -22px) rotate(4.5deg);
+  }
+  90% {
+    transform: translate(-22px, 28px) rotate(-2.8deg);
+  }
+  95% {
+    transform: translate(28px, -25px) rotate(5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
