@@ -5,9 +5,11 @@ function headerNav(containerTarget) {
   containerTarget.appendChild(container);
   container.appendChild(conMenu);
 
+  container.classList.add("displayMobileNone");
+
   Object.assign(container.style, {
     position: "absolute",
-    zIndex: "999",
+    zIndex: "997",
     top: "0",
     width: "100%",
     // height: "5rem",
@@ -82,6 +84,103 @@ function headerNav(containerTarget) {
       default:
         aLink.textContent = "tes";
     }
+  }
+
+  // container btn nav muncul ketika discroll
+  {
+    const containerHamBtn = document.createElement("section");
+    const btn = document.createElement("button");
+    for (let i = 0; i < 3; i++) {
+      const span = document.createElement("div");
+      btn.appendChild(span);
+      Object.assign(span.style, {
+        width: "100%",
+        height: "4px",
+        backgroundColor: "black",
+        borderRadius: "10px",
+        transition: "all 0.2s ease",
+      });
+    }
+
+    containerTarget.appendChild(containerHamBtn);
+    containerHamBtn.appendChild(btn);
+
+    btn.classList.add("ham-btn");
+    const hamBtn = document.querySelector(".ham-btn");
+
+    Object.assign(containerHamBtn.style, {
+      position: "fixed",
+      zIndex: "999",
+      height: "70px",
+      aspectRatio: "1/1",
+      right: "0",
+      top: "0",
+      margin: "2rem 2rem 0 0",
+      backgroundColor: "var(--main-font)",
+      transform: "scale(0)",
+      borderRadius: "50%",
+      transition: "all 0.2s ease",
+      display: "grid",
+      placeItems: "center",
+      border: "2px solid var(--background-color)",
+    });
+    Object.assign(btn.style, {
+      display: "inline-flex",
+      flexDirection: "column",
+      width: "50%",
+      height: "65%",
+      // backgroundColor: "yellow",
+      justifyContent: "space-evenly",
+      transition: "all 0.2s ease",
+      cursor: "pointer",
+    });
+    hamBtn.addEventListener("click", () => {
+      const hamBtn = document.querySelector(".ham-btn");
+      hamBtn.classList.toggle("hamburger-active");
+    });
+
+    // memunculkan hamburger btn ketika discroll
+    {
+      const scrollDistance = 10 * 16;
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY >= scrollDistance) {
+          containerHamBtn.classList.add("ham-active");
+        } else {
+          containerHamBtn.classList.remove("ham-active");
+          // menonaktifkan hamburger
+          const hamBtn = document.querySelector(".ham-btn");
+          hamBtn.classList.remove("hamburger-active");
+          //
+          const conNavHidden = document.querySelector(".conNavHidden");
+          conNavHidden.classList.remove("navDown-hidden");
+        }
+      });
+    }
+  }
+
+  // container nav dari atas
+  {
+    const conNavDown = document.createElement("section");
+
+    containerTarget.appendChild(conNavDown);
+
+    conNavDown.classList.add("conNavHidden", "conNavDown");
+    Object.assign(conNavDown.style, {
+      position: "fixed",
+      top: "0",
+      height: "100vh",
+      width: "100%",
+      zIndex: "998",
+      backgroundColor: "var(--footer)",
+      transform: "translateY(-120%)",
+      transition: "all 0.8s ease",
+    });
+
+    const hamBtn = document.querySelector(".ham-btn");
+    hamBtn.addEventListener("click", () => {
+      conNavDown.classList.toggle("navDown-hidden");
+    });
   }
 }
 
