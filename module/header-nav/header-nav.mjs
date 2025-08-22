@@ -22,7 +22,6 @@ function headerNav(containerTarget) {
     gap: "0.5rem",
     padding: "0.5rem 0 0.5rem 0",
   });
-
   for (let i = 0; i < 5; i++) {
     const aLink = document.createElement("a");
     conMenu.appendChild(aLink);
@@ -85,6 +84,8 @@ function headerNav(containerTarget) {
         aLink.textContent = "tes";
     }
   }
+  // clone menu untuk nav down
+  const menuClone = conMenu.cloneNode(true);
 
   // container btn nav muncul ketika discroll
   {
@@ -162,8 +163,12 @@ function headerNav(containerTarget) {
   // container nav dari atas
   {
     const conNavDown = document.createElement("section");
+    const container = document.createElement("section");
+    const conMenuClone = document.createElement("section");
 
     containerTarget.appendChild(conNavDown);
+    conNavDown.appendChild(container);
+    container.appendChild(conMenuClone);
 
     conNavDown.classList.add("conNavHidden", "conNavDown");
     Object.assign(conNavDown.style, {
@@ -176,7 +181,27 @@ function headerNav(containerTarget) {
       transform: "translateY(-120%)",
       transition: "all 0.8s ease",
     });
+    Object.assign(container.style, {
+      width: "100%",
+      maxWidth: "80rem",
+      height: "100%",
+      margin: "auto",
+      display: "flex",
+      justifyContent: "center",
+    });
+    Object.assign(conMenuClone.style, {
+      width: "20rem",
+      height: "100%",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      // backgroundColor: "green",
+    });
 
+    conMenuClone.appendChild(menuClone);
+    menuClone.classList.add("menuClone");
+
+    // menghilangkan container nav ketika halaman kembali ke atas
     const hamBtn = document.querySelector(".ham-btn");
     hamBtn.addEventListener("click", () => {
       conNavDown.classList.toggle("navDown-hidden");
