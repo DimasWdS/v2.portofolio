@@ -1,3 +1,5 @@
+import { createIconSosmed } from "./../icon-sosmed/icon-sosmed.mjs";
+
 function headerNav(containerTarget) {
   const container = document.createElement("section");
   const conMenu = document.createElement("div");
@@ -165,10 +167,12 @@ function headerNav(containerTarget) {
     const conNavDown = document.createElement("section");
     const container = document.createElement("section");
     const conMenuClone = document.createElement("section");
+    const conSosmed = document.createElement("section");
 
     containerTarget.appendChild(conNavDown);
     conNavDown.appendChild(container);
     container.appendChild(conMenuClone);
+    container.appendChild(conSosmed);
 
     conNavDown.classList.add("conNavHidden", "conNavDown");
     Object.assign(conNavDown.style, {
@@ -187,7 +191,9 @@ function headerNav(containerTarget) {
       height: "100%",
       margin: "auto",
       display: "flex",
+      flexDirection: "column",
       justifyContent: "center",
+      alignItems: "center",
     });
     Object.assign(conMenuClone.style, {
       width: "20rem",
@@ -200,6 +206,40 @@ function headerNav(containerTarget) {
 
     conMenuClone.appendChild(menuClone);
     menuClone.classList.add("menuClone");
+
+    Object.assign(conSosmed.style, {
+      width: "100%",
+      // height: "4rem",
+      display: "flex",
+      justifyContent: "center",
+      gap: "0.5rem",
+      // backgroundColor: "yellow",
+      padding: "1rem 0 2rem 0",
+    });
+    createIconSosmed(
+      conSosmed,
+      "40px",
+      "github.svg",
+      "https://github.com/DimasWdS"
+    );
+    createIconSosmed(
+      conSosmed,
+      "40px",
+      "inkedin.svg",
+      "https://youtu.be/xvFZjo5PgG0?si=NqyMXNXCUnGqJIAV"
+    );
+    createIconSosmed(
+      conSosmed,
+      "40px",
+      "instagram.svg",
+      "https://www.instagram.com/dimaswidysaputraa/"
+    );
+    createIconSosmed(
+      conSosmed,
+      "40px",
+      "tiktok.svg",
+      "https://www.tiktok.com/@segogotol"
+    );
 
     // menghilangkan container nav ketika halaman kembali ke atas
     const hamBtn = document.querySelector(".ham-btn");
