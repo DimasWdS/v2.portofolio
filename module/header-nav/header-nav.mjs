@@ -178,7 +178,7 @@ function headerNav(containerTarget) {
     Object.assign(conNavDown.style, {
       position: "fixed",
       top: "0",
-      height: "100vh",
+      height: "100dvh",
       width: "100%",
       zIndex: "998",
       backgroundColor: "var(--footer)",

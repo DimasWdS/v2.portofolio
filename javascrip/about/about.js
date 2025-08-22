@@ -22,7 +22,7 @@ document.body.appendChild(mainAbout);
   mainAbout.appendChild(container);
   Object.assign(container.style, {
     width: "100%",
-    height: "100vh",
+    height: "100dvh",
     backgroundColor: "gray",
   });
 }
