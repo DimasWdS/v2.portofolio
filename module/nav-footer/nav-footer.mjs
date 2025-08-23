@@ -13,7 +13,7 @@ function createNavFooter(targetContainer) {
   const containerTouchMe = document.createElement("section");
   const headerTouchMe = document.createElement("div");
   //
-  const btnContackMe = document.createElement("button");
+  const btnContackMe = document.createElement("a");
   const btnEmail = document.createElement("button");
   //
   const containerMenu = document.createElement("section");
@@ -29,6 +29,8 @@ function createNavFooter(targetContainer) {
   containerSatu.appendChild(containerMenu);
   container.appendChild(containerDua);
   containerMenu.appendChild(menuHeader);
+
+  btnContackMe.setAttribute("href", "contack.html");
 
   for (let i = 0; i < 5; i++) {
     const aLink = document.createElement("a");
