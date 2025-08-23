@@ -26,7 +26,7 @@ function createIconSosmed(conTarget, ukuran, logo, link) {
     display: "inline-flex",
     width: "100%",
     height: "100%",
-    backgroundImage: `url(asset/icon/${logo})`,
+    backgroundImage: `url(../asset/icon/${logo})`,
     backgroundPosition: "center",
     backgroundSize: "70%",
     backgroundRepeat: "no-repeat",

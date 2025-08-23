@@ -7,12 +7,14 @@ Object.assign(mainHome.style, {
 });
 //
 
-// konten
+// konten halaman awal
 {
   const container = document.createElement("section");
   mainHome.appendChild(container);
   Object.assign(container.style, {
     width: "100%",
+    maxWidth: "80rem",
+    margin: "auto",
     height: "100dvh",
     backgroundColor: "green",
   });

@@ -51,7 +51,7 @@ Object.assign(containerThumbnail.style, {
     position: "relative",
     width: "100%",
     height: "100dvh",
-    backgroundImage: "url(asset/page-portofolio/api-bg-01.svg)",
+    backgroundImage: "url(../asset/page-portofolio/api-bg-01.svg)",
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -73,8 +73,8 @@ Object.assign(containerThumbnail.style, {
       //   backgroundColor: "green",
       backgroundImage:
         dex == 0
-          ? "url(asset/page-portofolio/hellcatmobil.svg)"
-          : "url(asset/page-portofolio/moonknight.svg)",
+          ? "url(../asset/page-portofolio/hellcatmobil.svg)"
+          : "url(../asset/page-portofolio/moonknight.svg)",
       backgroundPosition: "center",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
@@ -290,7 +290,7 @@ Object.assign(container.style, {
       width: "100%",
       height: "100%",
       // backgroundColor: "green",
-      backgroundImage: `url(asset/page-portofolio/project/${img})`,
+      backgroundImage: `url(../asset/page-portofolio/project/${img})`,
       backgroundPosition: "center",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",

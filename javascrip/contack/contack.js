@@ -197,7 +197,7 @@ Object.assign(containerContack.style, {
     right: "-5rem",
     height: "100%",
     aspectRatio: "16/10",
-    backgroundImage: "url(./asset/page-contack/bendera.svg)",
+    backgroundImage: "url(../asset/page-contack/bendera.svg)",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "90%",
