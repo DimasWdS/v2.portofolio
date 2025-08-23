@@ -34,9 +34,9 @@ Object.assign(mainAbout.style, {
   {
     const containerKonten = document.createElement("section");
     const konten = document.createElement("section");
-    const teksSatu = document.createElement("span");
-    const teksDua = document.createElement("span");
-    const teksTiga = document.createElement("span");
+    const teksSatu = document.createElement("p");
+    const teksDua = document.createElement("p");
+    const teksTiga = document.createElement("p");
 
     container.appendChild(containerKonten);
     containerKonten.appendChild(konten);
@@ -70,25 +70,27 @@ Object.assign(mainAbout.style, {
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
+      gap: "0.4rem",
       color: "var(--main-font)",
     });
     Object.assign(teksSatu.style, {
       fontSize: "1em",
       fontWeight: "700",
+      padding: "2rem 0 0 0 !important",
     });
     Object.assign(teksDua.style, {
       fontWeight: "700",
       fontSize: "1.5em",
     });
     Object.assign(teksTiga.style, {
-      fontSize: "2em",
+      fontSize: "1.9em",
       fontWeight: "700",
     });
     [teksSatu, teksDua, teksTiga].forEach((el) => {
       Object.assign(el.style, {
-        // backgroundColor: "var(--footer)",
-        // width: "max-content",
-        padding: "0 1rem",
+        backgroundColor: "var(--footer)",
+        width: "max-content",
+        padding: "1rem 1rem",
       });
     });
   }
