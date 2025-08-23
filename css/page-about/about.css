@@ -1,0 +1,84 @@
+@media (max-width: 1024px) {
+  .container-background-garuda {
+    transform: translateX(-50%) !important;
+  }
+}
+@media (max-width: 640px) {
+  .container-background-garuda {
+    transform: translateX(-100%) !important;
+  }
+}
+
+.sayap-kiri {
+  animation: sayapKiriHempas 1s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes sayapKiriHempas {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(-20deg); /* Arah turun ke bawah */
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+.sayap-kanan {
+  animation: sayapKananHempas 1s ease-in-out infinite;
+  /* transform-origin: top left; Titik rotasi di dalam pangkal kanan */
+  transform-style: preserve-3d;
+}
+
+@keyframes sayapKananHempas {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(20deg); /* Lawan dari kiri: arah turun ke bawah */
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+.ekor {
+  animation: rotateDepan 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes rotateDepan {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(50deg);
+  }
+}
+
+.objek-random {
+  animation: gerakRandom 20s ease-in-out infinite;
+  display: inline-block; /* supaya transform berlaku */
+}
+
+@keyframes gerakRandom {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  20% {
+    transform: translateY(-10px) rotate(3deg) scale(1.1);
+  }
+  40% {
+    transform: translateY(8px) rotate(-3deg) scale(0.95);
+  }
+  60% {
+    transform: translateY(-6px) rotate(6deg) scale(1.05);
+  }
+  80% {
+    transform: translateY(5px) rotate(-6deg) scale(0.9);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
