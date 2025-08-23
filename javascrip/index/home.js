@@ -2,23 +2,25 @@ import { createNavFooter, sum, headerNav } from "./../../module/module.mjs";
 //
 const mainHome = document.createElement("main");
 document.body.appendChild(mainHome);
+mainHome.setAttribute("id", "scroller-container");
 Object.assign(mainHome.style, {
   backgroundColor: "var(--background-color)",
 });
 //
 
 // konten halaman awal
-{
-  const container = document.createElement("section");
-  mainHome.appendChild(container);
-  Object.assign(container.style, {
-    width: "100%",
-    maxWidth: "80rem",
-    margin: "auto",
-    height: "100dvh",
-    backgroundColor: "green",
-  });
-}
+
+const container = document.createElement("section");
+
+mainHome.appendChild(container);
+container.setAttribute("id", "content");
+Object.assign(container.style, {
+  width: "100%",
+  maxWidth: "80rem",
+  margin: "auto",
+  height: "100dvh",
+  backgroundColor: "green",
+});
 
 {
   const containerHeaderNavHome = document.createElement("section");
