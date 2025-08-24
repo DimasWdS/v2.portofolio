@@ -96,6 +96,7 @@ Object.assign(mainAbout.style, {
         fontSize: "4rem",
         fontWeight: "600",
         padding: "0 0 0 1rem",
+        // textShadow: "10px 2px var(--footer)",
       });
     }
   }
@@ -187,6 +188,44 @@ Object.assign(mainAbout.style, {
           });
           break;
       }
+    });
+  }
+}
+
+// halaman ke dua
+{
+  const container = document.createElement("section");
+  mainAbout.appendChild(container);
+  Object.assign(container.style, {
+    position: "relative",
+    width: "100%",
+    height: "100dvh",
+    backgroundColor: "var(--second-background)",
+  });
+  // container tolls scroll
+  {
+    const containerTech = document.createElement("section");
+    const firstContainer = document.createElement("section");
+    container.appendChild(containerTech);
+    containerTech.appendChild(firstContainer);
+
+    Object.assign(containerTech.style, {
+      position: "absolute",
+      width: "100%",
+      height: "5rem",
+      // backgroundColor: "yellow",
+      // opacity: "30%",
+      top: "0",
+      // transform: "translateY(-50%)",
+    });
+    Object.assign(firstContainer.style, {
+      width: "90%",
+      height: "100%",
+      backgroundColor: "var(--accen-color)",
+      margin: "auto",
+      borderRadius: "10px",
+      boeder: "2px solid var(--accen-color)",
+      boxShadow: "rgba(0, 0, 0, 0.69) 0px 3px 8px",
     });
   }
 }
