@@ -19,6 +19,7 @@ Object.assign(mainAbout.style, {
   headerNav(containerHeaderNavAbout);
 }
 
+// halaman awal
 {
   const container = document.createElement("section");
   mainAbout.appendChild(container);
@@ -33,16 +34,16 @@ Object.assign(mainAbout.style, {
   // konten
   {
     const containerKonten = document.createElement("section");
-    const konten = document.createElement("section");
+    const kontenTeks = document.createElement("section");
     const teksSatu = document.createElement("p");
     const teksDua = document.createElement("p");
     const teksTiga = document.createElement("p");
 
     container.appendChild(containerKonten);
-    containerKonten.appendChild(konten);
+    containerKonten.appendChild(kontenTeks);
 
-    containerKonten.classList.add("container-konten-garuda");
-    konten.classList.add("margin-right-teks-name");
+    containerKonten.classList.add("container-kontenTeks-garuda");
+    kontenTeks.classList.add("margin-right-teks-name");
 
     Object.assign(containerKonten.style, {
       width: "100%",
@@ -56,9 +57,10 @@ Object.assign(mainAbout.style, {
       alignItems: "center",
     });
 
-    Object.assign(konten.style, {
+    Object.assign(kontenTeks.style, {
       position: "relative",
       width: "20rem",
+      height: "100%",
       // backgroundColor: "green",
       display: "flex",
       flexDirection: "column",
@@ -78,7 +80,7 @@ Object.assign(mainAbout.style, {
     firstContainer.appendChild(secondContainer);
 
     garuda.classList.add("container-background-garuda");
-    secondContainer.classList.add("objek-random");
+    firstContainer.classList.add("objek-random");
 
     Object.assign(garuda.style, {
       width: "100%",
