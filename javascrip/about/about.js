@@ -30,6 +30,7 @@ Object.assign(mainAbout.style, {
     display: "flex",
     justifyContent: "center",
     overflow: "hidden",
+    backgroundColor: "var(--footer)",
   });
 
   // konten
@@ -86,15 +87,15 @@ Object.assign(mainAbout.style, {
       }
 
       Object.assign(conTeks.style, {
-        height: "4rem",
+        height: "3rem",
         width: "100%",
         // backgroundColor: "gray",
         display: "flex",
         alignItems: "center",
       });
       Object.assign(teks.style, {
-        fontSize: "4rem",
-        fontWeight: "600",
+        fontSize: "3rem",
+        fontWeight: "900",
         padding: "0 0 0 1rem",
         // textShadow: "10px 2px var(--footer)",
       });
@@ -221,24 +222,13 @@ Object.assign(mainAbout.style, {
     Object.assign(firstContainer.style, {
       width: "90%",
       height: "100%",
-      backgroundColor: "var(--accen-color)",
+      backgroundColor: "var(--main-font)",
       margin: "auto",
       borderRadius: "10px",
       boeder: "2px solid var(--accen-color)",
       boxShadow: "rgba(0, 0, 0, 0.69) 0px 3px 8px",
     });
   }
-}
-
-// konten
-{
-  const container = document.createElement("section");
-  mainAbout.appendChild(container);
-  Object.assign(container.style, {
-    width: "100%",
-    height: "100dvh",
-    backgroundColor: "gray",
-  });
 }
 
 {
