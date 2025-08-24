@@ -152,7 +152,7 @@ Object.assign(mainAbout.style, {
         height: "100%",
         width: "100%",
         // backgroundColor: "cyan",
-        filter: "drop-shadow(4px 6px 6px rgba(0, 0, 0, 0.61))",
+        // filter: "drop-shadow(4px 6px 6px rgba(0, 0, 0, 0.61))",
       });
     }
 
