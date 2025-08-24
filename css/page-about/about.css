@@ -1,8 +1,4 @@
 @media (min-width: 1025px) {
-  .margin-right-teks-name {
-    margin-right: 10%;
-    width: 35rem !important;
-  }
 }
 @media (max-width: 1024px) {
   .container-background-garuda {
@@ -94,3 +90,14 @@
 }
 
 /* keyframe garuda end */
+
+/* style font halaman awal */
+@media (max-width: 640px) {
+  .con-teks-page-home {
+    height: 2rem !important;
+  }
+  .teks-page-home {
+    font-size: 2rem !important;
+  }
+}
+/* style font halaman awal end */

@@ -111,6 +111,8 @@ function headerNav(containerTarget) {
     btn.classList.add("ham-btn");
     const hamBtn = document.querySelector(".ham-btn");
 
+    containerHamBtn.classList.add("ham-btn-mobile-active");
+
     Object.assign(containerHamBtn.style, {
       position: "fixed",
       zIndex: "999",

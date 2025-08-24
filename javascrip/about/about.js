@@ -31,13 +31,11 @@ Object.assign(mainAbout.style, {
     justifyContent: "center",
     overflow: "hidden",
   });
+
   // konten
   {
     const containerKonten = document.createElement("section");
     const kontenTeks = document.createElement("section");
-    const teksSatu = document.createElement("p");
-    const teksDua = document.createElement("p");
-    const teksTiga = document.createElement("p");
 
     container.appendChild(containerKonten);
     containerKonten.appendChild(kontenTeks);
@@ -52,21 +50,54 @@ Object.assign(mainAbout.style, {
       position: "absolute",
       // backgroundColor: "red",
       top: "0",
-      zIndex: "2",
       display: "flex",
       alignItems: "center",
+      zIndex: "2",
     });
 
     Object.assign(kontenTeks.style, {
-      position: "relative",
-      width: "20rem",
-      height: "100%",
-      // backgroundColor: "green",
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
       color: "var(--main-font)",
+      gap: "0.1rem",
+      // backgroundColor: "green",
     });
+    for (let i = 0; i < 3; i++) {
+      const conTeks = document.createElement("div");
+      const teks = document.createElement("p");
+
+      kontenTeks.appendChild(conTeks);
+      conTeks.appendChild(teks);
+
+      conTeks.classList.add("con-teks-page-home");
+      teks.classList.add("teks-page-home");
+
+      switch (i) {
+        case 0:
+          teks.textContent = "FIRST🤚. ";
+          break;
+        case 1:
+          teks.textContent = "MY FULL NAME IS,";
+          break;
+        case 2:
+          teks.textContent = "DIMAS WIDY SAPUTRA";
+          break;
+      }
+
+      Object.assign(conTeks.style, {
+        height: "4rem",
+        width: "100%",
+        // backgroundColor: "gray",
+        display: "flex",
+        alignItems: "center",
+      });
+      Object.assign(teks.style, {
+        fontSize: "4rem",
+        fontWeight: "600",
+        padding: "0 0 0 1rem",
+      });
+    }
   }
 
   // background

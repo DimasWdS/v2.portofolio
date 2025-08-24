@@ -99,7 +99,6 @@ input {
 
 /* nav header start */
 .menuClone {
-  /* background-color: #c73659; */
   flex-direction: column;
 }
 .menuClone a {
@@ -120,6 +119,11 @@ input {
 .ham-active {
   transform: scale(1) !important;
   transition: all 0.2s ease;
+}
+@media (max-width: 640px) {
+  .ham-btn-mobile-active {
+    transform: scale(1) !important;
+  }
 }
 .hamburger-active {
   transition: all 0.2s ease;
