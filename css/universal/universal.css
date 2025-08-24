@@ -34,6 +34,15 @@ input {
   text-decoration: none;
 }
 
+@keyframes toolsScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 /* mobile gone start */
 @media (max-width: 640px) {
   .displayMobileNone {

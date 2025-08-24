@@ -9,15 +9,6 @@
   animation: toolsScroll 10s linear infinite;
 }
 
-@keyframes toolsScroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
 @media (max-width: 1024px) {
   .container-card-project {
     padding: 3rem 0 3rem 0 !important;
