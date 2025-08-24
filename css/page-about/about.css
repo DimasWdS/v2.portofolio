@@ -6,7 +6,7 @@
 }
 @media (max-width: 1024px) {
   .container-background-garuda {
-    transform: translateX(-50%) !important;
+    transform: translateX(40rem) !important;
   }
   .container-konten-garuda {
     justify-content: start !important;
@@ -14,7 +14,7 @@
 }
 @media (max-width: 640px) {
   .container-background-garuda {
-    transform: translateX(-100%) !important;
+    transform: translateX(30rem) !important;
   }
 }
 

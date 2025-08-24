@@ -40,13 +40,6 @@ Object.assign(mainAbout.style, {
 
     container.appendChild(containerKonten);
     containerKonten.appendChild(konten);
-    konten.appendChild(teksSatu);
-    konten.appendChild(teksDua);
-    konten.appendChild(teksTiga);
-
-    teksSatu.textContent = "HELLO THERE 👋";
-    teksDua.textContent = "MY FULL NAME IS";
-    teksTiga.textContent = "DIMAS WIDY SAPUTRA";
 
     containerKonten.classList.add("container-konten-garuda");
     konten.classList.add("margin-right-teks-name");
@@ -60,38 +53,17 @@ Object.assign(mainAbout.style, {
       top: "0",
       zIndex: "2",
       display: "flex",
-      justifyContent: "end",
+      alignItems: "center",
     });
 
     Object.assign(konten.style, {
-      height: "100%",
+      position: "relative",
       width: "20rem",
       // backgroundColor: "green",
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
-      gap: "0.4rem",
       color: "var(--main-font)",
-    });
-    Object.assign(teksSatu.style, {
-      fontSize: "1em",
-      fontWeight: "700",
-      padding: "2rem 0 0 0 !important",
-    });
-    Object.assign(teksDua.style, {
-      fontWeight: "700",
-      fontSize: "1.5em",
-    });
-    Object.assign(teksTiga.style, {
-      fontSize: "1.9em",
-      fontWeight: "700",
-    });
-    [teksSatu, teksDua, teksTiga].forEach((el) => {
-      Object.assign(el.style, {
-        backgroundColor: "var(--footer)",
-        width: "max-content",
-        padding: "1rem 1rem",
-      });
     });
   }
 
@@ -112,8 +84,9 @@ Object.assign(mainAbout.style, {
       width: "100%",
       height: "100%",
       // backgroundColor: "yellow",
-      // display: "flex",
-      transform: "translateX(-20%)",
+      display: "flex",
+      justifyContent: "end",
+      transform: "translateX(20%)",
     });
 
     Object.assign(firstContainer.style, {
