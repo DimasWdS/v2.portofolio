@@ -200,7 +200,7 @@ Object.assign(mainAbout.style, {
   Object.assign(container.style, {
     position: "relative",
     width: "100%",
-    height: "100dvh",
+    height: "50rem",
     backgroundColor: "var(--second-background)",
   });
 
@@ -232,7 +232,7 @@ Object.assign(mainAbout.style, {
         alignItems: "center",
         gap: "0.5rem",
         flexShrink: "0",
-        boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+        // boxShadow: "rgba(255, 255, 255, 0.63) 0px 2px 8px 0px",
       });
 
       Object.assign(conImg.style, {
@@ -243,6 +243,7 @@ Object.assign(mainAbout.style, {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        // boxShadow: "rgba(26, 26, 26, 0.79) 0px 2px 8px 0px",
       });
       Object.assign(name.style, {
         fontWeight: "800",
@@ -252,12 +253,29 @@ Object.assign(mainAbout.style, {
     }
 
     const containerTech = document.createElement("section");
+    const header = document.createElement("div");
     const firstContainer = document.createElement("section");
     const secondContainer = document.createElement("section");
 
     container.appendChild(containerTech);
     containerTech.appendChild(firstContainer);
     firstContainer.appendChild(secondContainer);
+    containerTech.appendChild(header);
+
+    header.textContent = "Tech i use";
+
+    Object.assign(header.style, {
+      position: "absolute",
+      bottom: "100%",
+      fontWeight: "700",
+      fontSize: "2em",
+      color: "var(--line)",
+      borderTop: "2px solid var(--accen-color)",
+      borderLeft: "2px solid var(--accen-color)",
+      borderRight: "2px solid var(--accen-color)",
+      padding: "0.5rem 1rem",
+      borderRadius: "10px 10px 0 0",
+    });
 
     Object.assign(containerTech.style, {
       position: "absolute",
@@ -267,6 +285,8 @@ Object.assign(mainAbout.style, {
       // opacity: "30%",
       top: "0",
       display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
       // transform: "translateY(-50%)",
     });
     Object.assign(firstContainer.style, {
@@ -276,10 +296,10 @@ Object.assign(mainAbout.style, {
       height: "100%",
       backgroundColor: "var(--footer)",
       margin: "auto",
-      borderRadius: "0 0 10px 10px",
-      boeder: "2px solid var(--accen-color)",
+      borderRadius: "10px",
       // boxShadow: "rgba(0, 0, 0, 0.69) 0px 3px 8px",
       display: "flex",
+      border: "2px solid var(--accen-color)",
     });
     Object.assign(secondContainer.style, {
       // width: "100%",
@@ -295,10 +315,68 @@ Object.assign(mainAbout.style, {
     createCardTools("css.svg", "CSS");
     createCardTools("javascript.svg", "JavaScrip");
     createCardTools("tailwindcss.svg", "Tailwind css");
+    createCardTools("adobeillustratoricon.svg", "illustrator");
+    createCardTools("csp.svg", "Clip Studio Paint");
 
     for (let i = 0; i < 3; i++) {
       const conScrollClone = secondContainer.cloneNode(true);
       firstContainer.appendChild(conScrollClone);
+    }
+  }
+
+  //konten
+  {
+    const about = document.createElement("section");
+    const aboutKiri = document.createElement("section");
+    const aboutKanan = document.createElement("section");
+
+    container.appendChild(about);
+    about.appendChild(aboutKiri);
+    about.appendChild(aboutKanan);
+
+    about.classList.add("about");
+
+    Object.assign(about.style, {
+      display: "flex",
+      width: "100%",
+      maxWidth: "80rem",
+      height: "100%",
+      // backgroundColor: "green",
+      margin: "auto",
+    });
+
+    [aboutKiri, aboutKanan].forEach((el) => {
+      Object.assign(el.style, {
+        width: "50%",
+        // backgroundColor: "cyan",
+        padding: "10rem 0 0 0",
+      });
+    });
+    // kiri
+    {
+      const headerKiri = document.createElement("header");
+      const teks = document.createElement("p");
+      const teksDua = document.createElement("p");
+
+      aboutKiri.appendChild(headerKiri);
+      headerKiri.appendChild(teks);
+      headerKiri.appendChild(teksDua);
+
+      teks.textContent = "I enjoy drawing as a hobby.";
+      teksDua.textContent = "I have an interest in web development.";
+
+      Object.assign(headerKiri.style, {
+        width: "100%",
+        // backgroundColor: "yellow",
+      });
+
+      [teks, teksDua].forEach((el) => {
+        Object.assign(el.style, {
+          color: "var(--main-font)",
+          fontSize: "2em",
+          fontWeight: "600",
+        });
+      });
     }
   }
 }

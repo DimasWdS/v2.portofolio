@@ -18,7 +18,7 @@
 .form-nama input,
 .form-email input,
 .form-subject input {
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid var(--accen-color);
   color: var(--main-font);
 }
 

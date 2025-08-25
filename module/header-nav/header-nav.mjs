@@ -99,7 +99,7 @@ function headerNav(containerTarget) {
       Object.assign(span.style, {
         width: "100%",
         height: "4px",
-        backgroundColor: "black",
+        backgroundColor: "var(--accen-color)",
         borderRadius: "10px",
         transition: "all 0.2s ease",
       });
