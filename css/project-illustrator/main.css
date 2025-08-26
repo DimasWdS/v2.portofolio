@@ -1,18 +1,8 @@
-.background-card-illustrator div:nth-child(1)::before {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 10rem;
-  background-color: yellow;
-  top: 100%;
-  background: linear-gradient(to bottom, var(--footer), rgba(255, 255, 0, 0));
-}
-.background-card-illustrator div:nth-child(2)::before {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 10rem;
-  background-color: yellow;
-  bottom: 100%;
-  background: linear-gradient(to top, var(--footer), rgba(255, 255, 255, 0));
+@media (max-width: 640px) {
+  .header-thumbnail-illustrator {
+    align-items: start !important;
+  }
+  .header-thumbnail-illustrator p {
+    margin-left: 1rem;
+  }
 }

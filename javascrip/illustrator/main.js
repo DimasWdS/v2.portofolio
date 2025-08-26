@@ -33,8 +33,8 @@ Object.assign(main.style, {
     height: "100dvh",
     overflow: "hidden",
   });
-  //background
 
+  //background
   {
     const background = document.createElement("section");
     const conApi = document.createElement("section");
@@ -96,6 +96,68 @@ Object.assign(main.style, {
       });
     });
   }
+
+  // konten teks
+  {
+    const conTeks = document.createElement("section");
+    const header = document.createElement("section");
+
+    for (let i = 0; i < 3; i++) {
+      const teks = document.createElement("p");
+
+      header.appendChild(teks);
+
+      Object.assign(header.style, {
+        fontWeight: "900",
+        color: "var(--main-font)",
+        fontSize: "3em",
+      });
+
+      switch (i) {
+        case 0:
+          teks.textContent = "MY";
+          Object.assign(teks.style, {
+            position: "absolute",
+            bottom: "2.5rem",
+          });
+          break;
+        case 1:
+          teks.textContent = "ILLUSTRATOR";
+          break;
+        case 2:
+          Object.assign(teks.style, {
+            position: "absolute",
+            top: "2.5rem",
+          });
+          teks.textContent = "PROJECTS";
+          break;
+      }
+    }
+
+    containerThumbnail.appendChild(conTeks);
+    conTeks.appendChild(header);
+
+    header.classList.add("header-thumbnail-illustrator");
+
+    Object.assign(conTeks.style, {
+      position: "absolute",
+      top: "0",
+      width: "100%",
+      height: "100%",
+      // backgroundColor: "yellow",
+    });
+
+    Object.assign(header.style, {
+      width: "100%",
+      position: "relative",
+      // height: "5rem",
+      // backgroundColor: "yellow",
+      margin: "10rem 0 0 0",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+    });
+  }
 }
 
 //konten
@@ -119,11 +181,10 @@ Object.assign(main.style, {
   container.appendChild(background);
   container.appendChild(konten);
 
-  background.classList.add("background-card-illustrator");
-
   Object.assign(container.style, {
     position: "relative",
     width: "100%",
+    backgroundColor: "var(--second-background)",
   });
 
   Object.assign(background.style, {
