@@ -4,6 +4,7 @@ const mainAbout = document.createElement("main");
 document.body.appendChild(mainAbout);
 Object.assign(mainAbout.style, {
   backgroundColor: "var(--background-color)",
+  overflow: "hidden",
 });
 
 // nav
@@ -188,6 +189,140 @@ Object.assign(mainAbout.style, {
 }
 // halaman kedua
 {
+  const container = document.createElement("section");
+
+  mainAbout.appendChild(container);
+
+  Object.assign(container.style, {
+    position: "relative",
+    width: "100%",
+    maxWidth: "80rem",
+    // height: "50rem",
+    // backgroundColor: "green",
+    margin: "auto",
+  });
+
+  // con garuda
+  {
+    const garuda = document.createElement("section");
+    const firstCon = document.createElement("section");
+    const secondCon = document.createElement("section");
+
+    container.appendChild(garuda);
+    garuda.appendChild(firstCon);
+    firstCon.appendChild(secondCon);
+
+    Object.assign(garuda.style, {
+      width: "100%",
+      height: "50rem",
+      // backgroundColor: "yellow",
+      display: "flex",
+      justifyContent: "end",
+    });
+
+    Object.assign(firstCon.style, {
+      height: "80%",
+      aspectRatio: "16/9",
+      // backgroundColor: "gray",
+      transform: "translateX(10rem)",
+      scale: "1.2",
+      margin: "5rem 0 0 0",
+    });
+    Object.assign(secondCon.style, {
+      position: "relative",
+      width: "100%",
+      height: "100%",
+      opacity: "50%",
+      // backgroundColor: "gray",
+    });
+    for (let i = 0; i < 4; i++) {
+      const div = document.createElement("div");
+      secondCon.appendChild(div);
+
+      Object.assign(div.style, {
+        position: "absolute",
+        width: "100%",
+        height: "100%",
+        // backgroundColor: "blue",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeate",
+        backgroundSize: "cover",
+      });
+
+      switch (i) {
+        case 0:
+          div.classList.add("ekor");
+          Object.assign(div.style, {
+            backgroundImage: "url(asset/page-about/garuda/garudaekor.svg)",
+          });
+          break;
+        case 1:
+          div.classList.add("sayap-kiri");
+          Object.assign(div.style, {
+            backgroundImage: "url(asset/page-about/garuda/garudasayapkiri.svg)",
+          });
+          break;
+        case 2:
+          div.classList.add("sayap-kanan");
+          Object.assign(div.style, {
+            backgroundImage:
+              "url(asset/page-about/garuda/garudasayapkanan.svg)",
+          });
+          break;
+        case 3:
+          div.classList.add("objek-random");
+          Object.assign(div.style, {
+            backgroundImage: "url(asset/page-about/garuda/garudabadan.svg)",
+          });
+          break;
+      }
+    }
+  }
+  // konten teks illustrator
+  {
+    const conTeks = document.createElement("section");
+    const div = document.createElement("section");
+    const teksSatu = document.createElement("p");
+    const teksDua = document.createElement("p");
+
+    container.appendChild(conTeks);
+    conTeks.appendChild(div);
+    div.appendChild(teksSatu);
+    div.appendChild(teksDua);
+
+    teksSatu.textContent = "I ENJOY DRAWING";
+    teksDua.textContent = "AS A HOBBY.";
+
+    Object.assign(conTeks.style, {
+      position: "absolute",
+      width: "100%",
+      height: "50rem",
+      // backgroundColor: "green",
+      top: "0",
+      display: "flex",
+      alignItems: "center",
+    });
+
+    Object.assign(div.style, {
+      position: "relative",
+      // backgroundColor: "yellow",
+      width: "100%",
+      display: "flex",
+      flexDirection: "column",
+      padding: "0 0 0 1rem",
+    });
+    [teksSatu, teksDua].forEach((el, dex) => {
+      Object.assign(el.style, {
+        color: "var(--main-font)",
+        fontWeight: "800",
+        fontSize: "clamp(1rem, calc(3vw + 1rem), 3rem)",
+      });
+      if (dex === 1) {
+        el.style.position = "absolute";
+        el.style.top = "55%";
+      }
+    });
+  }
 }
 
 // footer
