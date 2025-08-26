@@ -6,7 +6,7 @@ Object.assign(mainAbout.style, {
   backgroundColor: "var(--background-color)",
 });
 
-//
+// nav
 {
   const containerHeaderNavAbout = document.createElement("section");
   mainAbout.appendChild(containerHeaderNavAbout);
@@ -18,370 +18,179 @@ Object.assign(mainAbout.style, {
   });
   headerNav(containerHeaderNavAbout);
 }
-
-// halaman awal
+//halaman awal
 {
   const container = document.createElement("section");
-  mainAbout.appendChild(container);
-  Object.assign(container.style, {
-    position: "relative",
-    width: "100%",
-    height: "100dvh",
-    display: "flex",
-    justifyContent: "center",
-    overflow: "hidden",
-    backgroundColor: "var(--second-background)",
-  });
+  const headerKiri = document.createElement("section");
 
-  // konten
-  {
-    const containerKonten = document.createElement("section");
-    const kontenTeks = document.createElement("section");
+  const teksSatu = document.createElement("span");
+  const teksDua = document.createElement("span");
+  const teksTiga = document.createElement("span");
 
-    container.appendChild(containerKonten);
-    containerKonten.appendChild(kontenTeks);
+  const conImgKanan = document.createElement("div");
 
-    containerKonten.classList.add("container-kontenTeks-garuda");
-    kontenTeks.classList.add("margin-right-teks-name");
+  teksSatu.textContent = "FIRST🤚.";
+  teksDua.textContent = "MY FULL NAME IS";
+  teksTiga.textContent = "DIMAS WIDY SAPUTRA";
 
-    Object.assign(containerKonten.style, {
-      width: "100%",
-      maxWidth: "80rem",
+  for (let i = 0; i < 2; i++) {
+    const div = document.createElement("div");
+    div.classList.add("box");
+    container.appendChild(div);
+    div.classList.add("box-home-about");
+    Object.assign(div.style, {
+      width: "50%",
       height: "100%",
-      position: "absolute",
-      // backgroundColor: "red",
-      top: "0",
-      display: "flex",
-      alignItems: "center",
-      zIndex: "2",
+      // backgroundColor: "blue",
     });
+    switch (i) {
+      case 0:
+        div.appendChild(headerKiri);
+        headerKiri.appendChild(teksSatu);
+        headerKiri.appendChild(teksDua);
+        headerKiri.appendChild(teksTiga);
 
-    Object.assign(kontenTeks.style, {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      color: "var(--main-font)",
-      gap: "0.1rem",
-      // backgroundColor: "green",
-    });
-    for (let i = 0; i < 3; i++) {
-      const conTeks = document.createElement("div");
-      const teks = document.createElement("p");
-
-      kontenTeks.appendChild(conTeks);
-      conTeks.appendChild(teks);
-
-      conTeks.classList.add("con-teks-page-home");
-      teks.classList.add("teks-page-home");
-
-      switch (i) {
-        case 0:
-          teks.textContent = "FIRST🤚. ";
-          break;
-        case 1:
-          teks.textContent = "MY FULL NAME IS,";
-          break;
-        case 2:
-          teks.textContent = "DIMAS WIDY SAPUTRA";
-          break;
-      }
-
-      Object.assign(conTeks.style, {
-        height: "3rem",
-        width: "100%",
-        // backgroundColor: "gray",
-        display: "flex",
-        alignItems: "center",
-      });
-      Object.assign(teks.style, {
-        fontSize: "3rem",
-        fontWeight: "900",
-        padding: "0 0 0 1rem",
-        // textShadow: "10px 2px var(--footer)",
-      });
-    }
-  }
-
-  // background
-  {
-    const garuda = document.createElement("section");
-    const firstContainer = document.createElement("section");
-    const secondContainer = document.createElement("section");
-
-    container.appendChild(garuda);
-    garuda.appendChild(firstContainer);
-    firstContainer.appendChild(secondContainer);
-
-    garuda.classList.add("container-background-garuda");
-    firstContainer.classList.add("objek-random");
-
-    Object.assign(garuda.style, {
-      width: "100%",
-      height: "100%",
-      // backgroundColor: "yellow",
-      display: "flex",
-      justifyContent: "end",
-      transform: "translateX(20%)",
-      opacity: "40%",
-    });
-
-    Object.assign(firstContainer.style, {
-      // width: "60rem",
-      height: "100%",
-      aspectRatio: "16/9",
-      // backgroundColor: "green",
-      scale: "1.2",
-    });
-
-    Object.assign(secondContainer.style, {
-      width: "100%",
-      height: "100%",
-      // backgroundColor: "red",
-      position: "relative",
-    });
-
-    for (let i = 0; i < 4; i++) {
-      const div = document.createElement("div");
-
-      secondContainer.appendChild(div);
-
-      div.classList.add("container-img-garuda");
-
-      Object.assign(div.style, {
-        position: "absolute",
-        height: "100%",
-        width: "100%",
-        // backgroundColor: "cyan",
-        // filter: "drop-shadow(4px 6px 6px rgba(0, 0, 0, 0.61))",
-      });
-    }
-
-    const containerImg = document.querySelectorAll(".container-img-garuda");
-    [...containerImg].forEach((el, dex) => {
-      Object.assign(el.style, {
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      });
-      switch (dex) {
-        case 0:
-          el.classList.add("ekor");
-          Object.assign(el.style, {
-            backgroundImage: "url(asset/page-about/garuda/garudaekor.svg)",
-          });
-          break;
-        case 1:
-          el.classList.add("sayap-kiri");
-          Object.assign(el.style, {
-            backgroundImage: "url(asset/page-about/garuda/garudasayapkiri.svg)",
-          });
-          break;
-        case 2:
-          el.classList.add("sayap-kanan");
-          Object.assign(el.style, {
-            backgroundImage:
-              "url(asset/page-about/garuda/garudasayapkanan.svg)",
-          });
-          break;
-        case 3:
-          Object.assign(el.style, {
-            backgroundImage: "url(asset/page-about/garuda/garudabadan.svg)",
-          });
-          break;
-      }
-    });
-  }
-}
-
-// halaman ke dua
-{
-  const container = document.createElement("section");
-  mainAbout.appendChild(container);
-  Object.assign(container.style, {
-    position: "relative",
-    width: "100%",
-    height: "50rem",
-    backgroundColor: "var(--second-background)",
-  });
-
-  // container tolls scroll
-  {
-    function createCardTools(imgIcon, teks) {
-      const container = document.createElement("section");
-      const conImg = document.createElement("div");
-      const img = document.createElement("img");
-      const name = document.createElement("p");
-
-      secondContainer.appendChild(container);
-      container.appendChild(conImg);
-      conImg.appendChild(img);
-      container.appendChild(name);
-
-      name.textContent = teks;
-
-      img.setAttribute("loading", "lazy");
-      img.setAttribute("src", `asset/icon/${imgIcon}`);
-      img.setAttribute("alt", "logo");
-
-      Object.assign(container.style, {
-        padding: "0.4rem",
-        backgroundColor: "var(--line)",
-        margin: "0 1rem 0 0",
-        borderRadius: "10px",
-        display: "flex",
-        alignItems: "center",
-        gap: "0.5rem",
-        flexShrink: "0",
-        // boxShadow: "rgba(255, 255, 255, 0.63) 0px 2px 8px 0px",
-      });
-
-      Object.assign(conImg.style, {
-        height: "50px",
-        aspectRatio: "1/1",
-        // backgroundColor: "yellow",
-        borderRadius: "5px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        // boxShadow: "rgba(26, 26, 26, 0.79) 0px 2px 8px 0px",
-      });
-      Object.assign(name.style, {
-        fontWeight: "800",
-        fontSize: "1.2em",
-        color: "var(--footer)",
-      });
-    }
-
-    const containerTech = document.createElement("section");
-    const header = document.createElement("div");
-    const firstContainer = document.createElement("section");
-    const secondContainer = document.createElement("section");
-
-    container.appendChild(containerTech);
-    containerTech.appendChild(firstContainer);
-    firstContainer.appendChild(secondContainer);
-    containerTech.appendChild(header);
-
-    header.textContent = "Tech i use";
-
-    Object.assign(header.style, {
-      position: "absolute",
-      bottom: "100%",
-      fontWeight: "700",
-      fontSize: "1em",
-      color: "var(--line)",
-      borderTop: "2px solid var(--accen-color)",
-      borderLeft: "2px solid var(--accen-color)",
-      borderRight: "2px solid var(--accen-color)",
-      padding: "0.5rem 1rem",
-      borderRadius: "10px 10px 0 0",
-      backgroundColor: "var(--footer)",
-    });
-
-    Object.assign(containerTech.style, {
-      position: "absolute",
-      width: "100%",
-      height: "5rem",
-      // backgroundColor: "yellow",
-      // opacity: "30%",
-      top: "0",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      // transform: "translateY(-50%)",
-    });
-    Object.assign(firstContainer.style, {
-      overflow: "hidden",
-      width: "90%",
-      maxWidth: "80rem",
-      height: "100%",
-      backgroundColor: "var(--footer)",
-      margin: "auto",
-      borderRadius: "10px",
-      // boxShadow: "rgba(0, 0, 0, 0.69) 0px 3px 8px",
-      display: "flex",
-      border: "2px solid var(--accen-color)",
-    });
-    Object.assign(secondContainer.style, {
-      // width: "100%",
-      height: "100%",
-      display: "flex",
-      alignItems: "center",
-      // backgroundColor: "yellow",
-      flexShrink: "0",
-      animation: "toolsScroll 20s linear infinite",
-    });
-
-    createCardTools("html.svg", "HTML");
-    createCardTools("css.svg", "CSS");
-    createCardTools("javascript.svg", "JavaScrip");
-    createCardTools("tailwindcss.svg", "Tailwind css");
-    createCardTools("adobeillustratoricon.svg", "illustrator");
-    createCardTools("csp.svg", "Clip Studio Paint");
-
-    for (let i = 0; i < 3; i++) {
-      const conScrollClone = secondContainer.cloneNode(true);
-      firstContainer.appendChild(conScrollClone);
-    }
-  }
-
-  //konten
-  {
-    const about = document.createElement("section");
-    const aboutKiri = document.createElement("section");
-    const aboutKanan = document.createElement("section");
-
-    container.appendChild(about);
-    about.appendChild(aboutKiri);
-    about.appendChild(aboutKanan);
-
-    about.classList.add("about");
-
-    Object.assign(about.style, {
-      display: "flex",
-      width: "100%",
-      maxWidth: "80rem",
-      height: "100%",
-      // backgroundColor: "green",
-      margin: "auto",
-    });
-
-    [aboutKiri, aboutKanan].forEach((el) => {
-      Object.assign(el.style, {
-        width: "50%",
-        // backgroundColor: "cyan",
-        padding: "10rem 0 0 0",
-      });
-    });
-    // kiri
-    {
-      const headerKiri = document.createElement("header");
-      const teks = document.createElement("p");
-      const teksDua = document.createElement("p");
-
-      aboutKiri.appendChild(headerKiri);
-      headerKiri.appendChild(teks);
-      headerKiri.appendChild(teksDua);
-
-      teks.textContent = "I enjoy drawing as a hobby.";
-      teksDua.textContent = "I have an interest in web development.";
-
-      Object.assign(headerKiri.style, {
-        width: "100%",
-        // backgroundColor: "yellow",
-      });
-
-      [teks, teksDua].forEach((el) => {
-        Object.assign(el.style, {
-          color: "var(--main-font)",
-          fontSize: "2em",
-          fontWeight: "600",
+        Object.assign(div.style, {
+          // backgroundColor: "green",
+          display: "grid",
+          placeItems: "center",
         });
-      });
+
+        Object.assign(headerKiri.style, {
+          position: "relative",
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+        });
+        [teksSatu, teksDua, teksTiga].forEach((el, dex) => {
+          Object.assign(el.style, {
+            fontSize: "clamp(1rem, calc(3vw + 1rem), 3rem)",
+            fontWeight: "900",
+            color: "var(--main-font)",
+            margin: "0 0 0 1rem",
+          });
+          if (dex == 0) {
+            el.style.position = "absolute";
+            el.style.bottom = "60%";
+          } else if (dex === 2) {
+            el.style.position = "absolute";
+            el.style.top = "60%";
+          }
+        });
+        break;
+      case 1:
+        div.appendChild(conImgKanan);
+
+        Object.assign(div.style, {
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        });
+
+        Object.assign(conImgKanan.style, {
+          position: "relative",
+          width: "50%",
+          aspectRatio: "6/7",
+          // backgroundColor: "yellow",
+          // borderRadius: "10px",
+          border: "2px solid var(--line)",
+          // boxShadow:
+          //   "rgba(50, 50, 93, 0.5) 0px 6px 12px -2px, rgba(0, 0, 0, 1) 0px 3px 20px -3px",
+
+          backgroundImage: "url(asset/my-foto/1.jpg)",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        });
+
+        break;
     }
   }
+  // garis hiasan container foto
+  {
+    const lineSatu = document.createElement("span");
+    const lineDua = document.createElement("span");
+    const lineTiga = document.createElement("span");
+    const lineEmpat = document.createElement("span");
+    const lineLima = document.createElement("span");
+    const lineEnam = document.createElement("span");
+
+    conImgKanan.appendChild(lineSatu);
+    conImgKanan.appendChild(lineDua);
+    conImgKanan.appendChild(lineTiga);
+    conImgKanan.appendChild(lineEmpat);
+    conImgKanan.appendChild(lineLima);
+    conImgKanan.appendChild(lineEnam);
+
+    [lineSatu, lineDua, lineTiga, lineEmpat, lineLima, lineEnam].forEach(
+      (el) => {
+        Object.assign(el.style, {
+          position: "absolute",
+          display: "inline-blok",
+          backgroundColor: "var(--line)",
+        });
+
+        Object.assign(lineSatu.style, {
+          width: "5rem",
+          right: "100%",
+          top: "0",
+          height: "2px",
+          transform: "translateY(-100%)",
+        });
+        Object.assign(lineDua.style, {
+          width: "10rem",
+          height: "2px",
+          bottom: "0",
+          left: "100%",
+          transform: "translateY(100%)",
+        });
+        Object.assign(lineTiga.style, {
+          height: "5rem",
+          width: "2px",
+          top: "100%",
+          transform: "translateX(-100%)",
+        });
+        Object.assign(lineEmpat.style, {
+          width: "15rem",
+          height: "2px",
+          top: "100%",
+          right: "100%",
+        });
+        Object.assign(lineLima.style, {
+          width: "2rem",
+          height: "2px",
+          left: "100%",
+          bottom: "100%",
+        });
+        Object.assign(lineEnam.style, {
+          height: "10rem",
+          width: "2px",
+          left: "100%",
+          bottom: "100%",
+        });
+      }
+    );
+  }
+
+  mainAbout.appendChild(container);
+
+  container.classList.add("home-about");
+
+  Object.assign(container.style, {
+    width: "100%",
+    maxWidth: "80rem",
+    height: "100dvh",
+    // backgroundColor: "yellow",
+    display: "flex",
+    margin: "auto",
+    overflow: "hidden",
+  });
+}
+// halaman kedua
+{
 }
 
+// footer
 {
   const containerNavFooterAbout = document.createElement("section");
   mainAbout.appendChild(containerNavFooterAbout);

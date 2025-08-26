@@ -9,6 +9,24 @@
   }
 }
 @media (max-width: 640px) {
+  .home-about {
+    flex-direction: column;
+  }
+  .home-about .box {
+    width: 100% !important;
+    /* background-color: aqua; */
+  }
+  .home-about .box:nth-child(1) {
+    height: 40% !important;
+  }
+  .home-about .box:nth-child(2) {
+    height: 60% !important;
+  }
+
+  .home-about .box:nth-child(2) div {
+    width: 80% !important;
+  }
+
   .container-background-garuda {
     transform: translateX(30rem) !important;
   }
