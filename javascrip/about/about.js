@@ -122,7 +122,7 @@ Object.assign(mainAbout.style, {
       display: "flex",
       justifyContent: "end",
       transform: "translateX(20%)",
-      opacity: "90%",
+      opacity: "40%",
     });
 
     Object.assign(firstContainer.style, {
