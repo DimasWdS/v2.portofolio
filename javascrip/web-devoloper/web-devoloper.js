@@ -23,7 +23,7 @@ document.body.appendChild(mainDevoloper);
   Object.assign(container.style, {
     width: "100%",
     height: "100dvh",
-    backgroundColor: "gray",
+    backgroundColor: "var(--background-color)",
   });
 }
 

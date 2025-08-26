@@ -101,7 +101,7 @@ Object.assign(containerThumbnail.style, {
 
   teksSatu.textContent = "PROJECTS";
   teksDua.textContent = "ILLUSTRATOR";
-  teksTiga.textContent = "DIMAS WIDY SAPUTRA";
+  teksTiga.textContent = "MY";
 
   Object.assign(container.style, {
     position: "absolute",

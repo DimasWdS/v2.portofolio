@@ -30,7 +30,7 @@ Object.assign(mainAbout.style, {
     display: "flex",
     justifyContent: "center",
     overflow: "hidden",
-    backgroundColor: "var(--footer)",
+    backgroundColor: "var(--second-background)",
   });
 
   // konten
@@ -122,7 +122,7 @@ Object.assign(mainAbout.style, {
       display: "flex",
       justifyContent: "end",
       transform: "translateX(20%)",
-      opacity: "40%",
+      opacity: "90%",
     });
 
     Object.assign(firstContainer.style, {
@@ -268,13 +268,14 @@ Object.assign(mainAbout.style, {
       position: "absolute",
       bottom: "100%",
       fontWeight: "700",
-      fontSize: "2em",
+      fontSize: "1em",
       color: "var(--line)",
       borderTop: "2px solid var(--accen-color)",
       borderLeft: "2px solid var(--accen-color)",
       borderRight: "2px solid var(--accen-color)",
       padding: "0.5rem 1rem",
       borderRadius: "10px 10px 0 0",
+      backgroundColor: "var(--footer)",
     });
 
     Object.assign(containerTech.style, {
