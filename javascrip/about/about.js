@@ -5,6 +5,9 @@ document.body.appendChild(mainAbout);
 Object.assign(mainAbout.style, {
   backgroundColor: "var(--background-color)",
   overflow: "hidden",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
 });
 
 // nav
@@ -224,7 +227,7 @@ Object.assign(mainAbout.style, {
       height: "80%",
       aspectRatio: "16/9",
       // backgroundColor: "gray",
-      transform: "translateX(10rem)",
+      transform: "translateX(20%)",
       scale: "1.2",
       margin: "5rem 0 0 0",
     });
@@ -322,6 +325,153 @@ Object.assign(mainAbout.style, {
         el.style.top = "55%";
       }
     });
+  }
+  //con vscode tiruan
+  {
+    const container = document.createElement("section");
+    const header = document.createElement("header");
+    const vscode = document.createElement("section");
+
+    mainAbout.appendChild(container);
+    container.appendChild(header);
+    container.appendChild(vscode);
+
+    header.textContent = "AND WEB DEVOLOPMENT IS MY GOAL.";
+
+    vscode.classList.add("clone-vscode");
+
+    Object.assign(container.style, {
+      width: "100%",
+      maxWidth: "80rem",
+      // backgroundColor: "green",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      margin: "0 0 5rem 0",
+    });
+    Object.assign(header.style, {
+      width: "100%",
+      color: "var(--main-font)",
+      padding: "0 1rem 4rem 1rem",
+      fontWeight: "800",
+      fontSize: "clamp(1rem, calc(3vw + 1rem), 3rem)",
+    });
+
+    Object.assign(vscode.style, {
+      position: "relative",
+      width: "80%",
+      height: "30rem",
+      backgroundColor: "var(--footer)",
+      borderRadius: "10px",
+      border: "2px solid var(--second-background)",
+      display: "flex",
+      overflow: "hidden",
+      boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+      display: "none",
+      // backgroundColor: "yellow",
+    });
+    // navigasi kiri
+    {
+      const container = document.createElement("section");
+      const conFakeBtn = document.createElement("section");
+
+      vscode.appendChild(container);
+      container.appendChild(conFakeBtn);
+
+      Object.assign(container.style, {
+        height: "100%",
+        width: "10rem",
+        backgroundColor: "#1e1e1eff",
+        display: "flex",
+        flexDirection: "column",
+        // backgroundColor: "green",
+      });
+      // fake btn
+      {
+        Object.assign(conFakeBtn.style, {
+          width: "100%",
+          height: "2rem",
+          // backgroundColor: "yellow",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "0.5rem",
+          margin: "0 0 1rem 0",
+        });
+        for (let i = 0; i < 3; i++) {
+          const div = document.createElement("div");
+          conFakeBtn.appendChild(div);
+
+          Object.assign(div.style, {
+            width: "10px",
+            aspectRatio: "1/1",
+            backgroundColor: "yellow",
+            borderRadius: "50%",
+          });
+          switch (i) {
+            case 0:
+              div.style.backgroundColor = "red";
+              break;
+            case 1:
+              div.style.backgroundColor = "yellow";
+              break;
+            case 2:
+              div.style.backgroundColor = "green";
+              break;
+          }
+        }
+      }
+      // folder about
+      {
+        const folderAbout = document.createElement("section");
+        container.appendChild(folderAbout);
+        Object.assign(folderAbout.style, {
+          width: "100%",
+          height: "5rem",
+          backgroundColor: "green",
+        });
+      }
+    }
+    //con navigasi atas dan code
+    {
+      const con = document.createElement("section");
+      vscode.appendChild(con);
+
+      Object.assign(con.style, {
+        width: "100%",
+        height: "100%",
+        // backgroundColor: "red",
+        display: "flex",
+        flexDirection: "column",
+      });
+      // con nav atas
+      {
+        const conNavAtas = document.createElement("section");
+
+        con.appendChild(conNavAtas);
+
+        conNavAtas.classList.add("container-nav-atas");
+
+        Object.assign(conNavAtas.style, {
+          width: "100%",
+          height: "2rem",
+          // backgroundColor: "black",
+          display: "flex",
+        });
+      }
+      // container konten
+      {
+        const conKonten = document.createElement("section");
+        con.appendChild(conKonten);
+
+        conKonten.classList.add("container-konten-vscode");
+
+        Object.assign(conKonten.style, {
+          width: "100%",
+          height: "100%",
+        });
+      }
+    }
   }
 }
 

@@ -11,6 +11,7 @@ Object.assign(main.style, {
   backgroundColor: "var(--background-color)",
 });
 
+// nav
 {
   const containerHeaderNavProject = document.createElement("section");
   main.appendChild(containerHeaderNavProject);
@@ -122,14 +123,14 @@ Object.assign(main.style, {
           });
           break;
         case 1:
-          teks.textContent = "ILLUSTRATOR";
+          teks.textContent = "PROJECTS";
           break;
         case 2:
+          teks.textContent = "ILLUSTRATOR";
           Object.assign(teks.style, {
             position: "absolute",
             top: "2.5rem",
           });
-          teks.textContent = "PROJECTS";
           break;
       }
     }
@@ -184,7 +185,7 @@ Object.assign(main.style, {
   Object.assign(container.style, {
     position: "relative",
     width: "100%",
-    backgroundColor: "var(--second-background)",
+    backgroundColor: "transparent",
   });
 
   Object.assign(background.style, {
@@ -201,6 +202,7 @@ Object.assign(main.style, {
     zIndex: "1",
     width: "100%",
     height: "100rem",
+    // background: "green",
   });
 }
 

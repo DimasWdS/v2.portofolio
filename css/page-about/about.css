@@ -1,3 +1,8 @@
+:root {
+  --con-vscode: rgb(40, 40, 40);
+  --konten: #262626;
+}
+
 @media (min-width: 1025px) {
 }
 @media (max-width: 1024px) {
