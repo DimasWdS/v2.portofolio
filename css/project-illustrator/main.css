@@ -5,4 +5,15 @@
   .header-thumbnail-illustrator p {
     margin-left: 1rem;
   }
+  .con-card-illustrator {
+    width: 90% !important;
+  }
+}
+
+.con-card-illustrator {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  /* background-color: gray !important; */
 }

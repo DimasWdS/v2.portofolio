@@ -1,4 +1,9 @@
-import { createNavFooter, sum, headerNav } from "./../../module/module.mjs";
+import {
+  createNavFooter,
+  sum,
+  headerNav,
+  cardIllustrator,
+} from "./../../module/module.mjs";
 
 const containerIllustrator = document.createElement("main");
 
@@ -185,7 +190,9 @@ Object.assign(main.style, {
   Object.assign(container.style, {
     position: "relative",
     width: "100%",
-    backgroundColor: "transparent",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
   });
 
   Object.assign(background.style, {
@@ -201,9 +208,17 @@ Object.assign(main.style, {
     position: "relative",
     zIndex: "1",
     width: "100%",
-    height: "100rem",
-    // background: "green",
+    maxWidth: "80rem",
+    padding: "5rem 0 5rem 0",
+    display: "flex",
+    gap: "3rem",
+    flexWrap: "wrap",
+    justifyContent: "center",
   });
+
+  for (let i = 0; i < 4; i++) {
+    cardIllustrator(konten, "garuda-01.png");
+  }
 }
 
 // container nav footer
