@@ -190,7 +190,7 @@ Object.assign(mainAbout.style, {
     overflow: "hidden",
   });
 }
-// halaman kedua
+// halaman illlustrator
 {
   const container = document.createElement("section");
 
@@ -240,7 +240,9 @@ Object.assign(mainAbout.style, {
     });
     for (let i = 0; i < 4; i++) {
       const div = document.createElement("div");
+      const img = document.createElement("img");
       secondCon.appendChild(div);
+      div.appendChild(img);
 
       Object.assign(div.style, {
         position: "absolute",
@@ -252,31 +254,34 @@ Object.assign(mainAbout.style, {
         backgroundSize: "cover",
       });
 
+      img.setAttribute("loading", "lazy");
+
       switch (i) {
         case 0:
           div.classList.add("ekor");
-          Object.assign(div.style, {
-            backgroundImage: "url(asset/page-about/garuda/garudaekor.svg)",
-          });
+          img.setAttribute("alt", "ekor");
+          img.setAttribute("src", "asset/page-about/garuda/garudaekor.svg");
           break;
         case 1:
           div.classList.add("sayap-kiri");
-          Object.assign(div.style, {
-            backgroundImage: "url(asset/page-about/garuda/garudasayapkiri.svg)",
-          });
+          img.setAttribute("alt", "sayapkiri");
+          img.setAttribute(
+            "src",
+            "asset/page-about/garuda/garudasayapkiri.svg"
+          );
           break;
         case 2:
           div.classList.add("sayap-kanan");
-          Object.assign(div.style, {
-            backgroundImage:
-              "url(asset/page-about/garuda/garudasayapkanan.svg)",
-          });
+          img.setAttribute("alt", "sayapkanan");
+          img.setAttribute(
+            "src",
+            "asset/page-about/garuda/garudasayapkanan.svg"
+          );
           break;
         case 3:
           div.classList.add("objek-random");
-          Object.assign(div.style, {
-            backgroundImage: "url(asset/page-about/garuda/garudabadan.svg)",
-          });
+          img.setAttribute("alt", "badan");
+          img.setAttribute("src", "asset/page-about/garuda/garudabadan.svg");
           break;
       }
     }
@@ -326,152 +331,137 @@ Object.assign(mainAbout.style, {
       }
     });
   }
-  //con vscode tiruan
-  {
-    const container = document.createElement("section");
-    const header = document.createElement("header");
-    const vscode = document.createElement("section");
+}
+// halaman web devoloper
+{
+  const container = document.createElement("section");
+  const header = document.createElement("header");
+  const firstCon = document.createElement("section");
+  const secondCon = document.createElement("section");
+  function createCard(iconLogo, teksKonten) {
+    const container = document.createElement("div");
+    const containerDua = document.createElement("section");
+    const conImg = document.createElement("div");
+    const img = document.createElement("img");
+    const span = document.createElement("span");
+    for (let i = 0; i < 2; i++) {
+      const div = document.createElement("div");
+      container.appendChild(div);
+      Object.assign(div.style, {
+        position: "absolute",
+        height: "80%",
+        aspectRatio: "1/1",
+        backgroundColor: "var(--accen-color)",
+        borderRadius: "5px",
+        transform: "translateY(-10%) translateX(-10%)",
+      });
+      if (i === 1) {
+        Object.assign(div.style, {
+          bottom: "0",
+          right: "0",
+          transform: "translateY(10%) translateX(10%)",
+        });
+      }
+    }
 
-    mainAbout.appendChild(container);
-    container.appendChild(header);
-    container.appendChild(vscode);
+    secondCon.appendChild(container);
+    container.appendChild(containerDua);
+    containerDua.appendChild(conImg);
+    conImg.appendChild(img);
+    containerDua.appendChild(span);
 
-    header.textContent = "AND WEB DEVOLOPMENT IS MY GOAL.";
+    span.textContent = teksKonten;
 
-    vscode.classList.add("clone-vscode");
+    img.setAttribute("src", `asset/icon/${iconLogo}`);
+    img.setAttribute("alt", "logo");
+    img.setAttribute("loading", "lazy");
 
     Object.assign(container.style, {
-      width: "100%",
-      maxWidth: "80rem",
-      // backgroundColor: "green",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      margin: "0 0 5rem 0",
-    });
-    Object.assign(header.style, {
-      width: "100%",
-      color: "var(--main-font)",
-      padding: "0 1rem 4rem 1rem",
-      fontWeight: "800",
-      fontSize: "clamp(1rem, calc(3vw + 1rem), 3rem)",
-    });
-
-    Object.assign(vscode.style, {
       position: "relative",
-      width: "80%",
-      height: "30rem",
-      backgroundColor: "var(--footer)",
-      borderRadius: "10px",
-      border: "2px solid var(--second-background)",
-      display: "flex",
-      overflow: "hidden",
-      boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-      display: "none",
       // backgroundColor: "yellow",
+      // margin: "0 3rem 0 0",
     });
-    // navigasi kiri
-    {
-      const container = document.createElement("section");
-      const conFakeBtn = document.createElement("section");
+    Object.assign(containerDua.style, {
+      backgroundColor: "var(--main-font)",
+      display: "flex",
+      padding: "0.2rem 1rem 0.2rem 0.2rem",
+      borderRadius: "7px",
+      gap: "1rem",
+      alignItems: "center",
+      position: "relative",
+      zIndex: "2",
+      boxShadow:
+        "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
+    });
 
-      vscode.appendChild(container);
-      container.appendChild(conFakeBtn);
+    Object.assign(conImg.style, {
+      height: "3rem",
+      aspectRatio: "1/1",
+      // backgroundColor: "cyan",
+      borderRadius: "5px",
+    });
+    Object.assign(span.style, {
+      color: "var(--background-color)",
+      fontWeight: "800",
+    });
+  }
+  //
+  mainAbout.appendChild(container);
+  container.appendChild(header);
+  container.appendChild(firstCon);
+  firstCon.appendChild(secondCon);
 
-      Object.assign(container.style, {
-        height: "100%",
-        width: "10rem",
-        backgroundColor: "#1e1e1eff",
-        display: "flex",
-        flexDirection: "column",
-        // backgroundColor: "green",
-      });
-      // fake btn
-      {
-        Object.assign(conFakeBtn.style, {
-          width: "100%",
-          height: "2rem",
-          // backgroundColor: "yellow",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "0.5rem",
-          margin: "0 0 1rem 0",
-        });
-        for (let i = 0; i < 3; i++) {
-          const div = document.createElement("div");
-          conFakeBtn.appendChild(div);
+  secondCon.classList.add("con-tech-scroll");
 
-          Object.assign(div.style, {
-            width: "10px",
-            aspectRatio: "1/1",
-            backgroundColor: "yellow",
-            borderRadius: "50%",
-          });
-          switch (i) {
-            case 0:
-              div.style.backgroundColor = "red";
-              break;
-            case 1:
-              div.style.backgroundColor = "yellow";
-              break;
-            case 2:
-              div.style.backgroundColor = "green";
-              break;
-          }
-        }
-      }
-      // folder about
-      {
-        const folderAbout = document.createElement("section");
-        container.appendChild(folderAbout);
-        Object.assign(folderAbout.style, {
-          width: "100%",
-          height: "5rem",
-          backgroundColor: "green",
-        });
-      }
-    }
-    //con navigasi atas dan code
-    {
-      const con = document.createElement("section");
-      vscode.appendChild(con);
+  header.textContent = "AND WEB DEVOLOPMENT IS MY GOAL.";
 
-      Object.assign(con.style, {
-        width: "100%",
-        height: "100%",
-        // backgroundColor: "red",
-        display: "flex",
-        flexDirection: "column",
-      });
-      // con nav atas
-      {
-        const conNavAtas = document.createElement("section");
+  Object.assign(container.style, {
+    width: "100%",
+    maxWidth: "80rem",
+    overflow: "hidden",
+  });
 
-        con.appendChild(conNavAtas);
+  Object.assign(header.style, {
+    width: "100%",
+    padding: "0 0 0 1rem",
+    color: "var(--main-font)",
+    fontWeight: "800",
+    fontSize: "clamp(1rem, calc(3vw + 1rem), 3rem)",
+    margin: "0 0 3rem 0",
+  });
 
-        conNavAtas.classList.add("container-nav-atas");
+  Object.assign(firstCon.style, {
+    width: "100%",
+    display: "flex",
+    margin: "1rem 0 1rem 0",
+    gap: "2.5rem",
+    // flexDirection: "column",
+    // backgroundColor: "green",
+  });
 
-        Object.assign(conNavAtas.style, {
-          width: "100%",
-          height: "2rem",
-          // backgroundColor: "black",
-          display: "flex",
-        });
-      }
-      // container konten
-      {
-        const conKonten = document.createElement("section");
-        con.appendChild(conKonten);
+  Object.assign(secondCon.style, {
+    display: "flex",
+    gap: "2.5rem",
+    flexShrink: "0",
+  });
 
-        conKonten.classList.add("container-konten-vscode");
+  createCard("html.svg", "HTML");
+  createCard("css.svg", "CSS");
+  createCard("tailwindcss.svg", "Tailwind CSS");
+  createCard("javascript.svg", "JavaScrip");
 
-        Object.assign(conKonten.style, {
-          width: "100%",
-          height: "100%",
-        });
-      }
-    }
+  for (let i = 0; i < 2; i++) {
+    const secondConClone = secondCon.cloneNode(true);
+
+    firstCon.appendChild(secondConClone);
+  }
+
+  {
+    const tes = firstCon.cloneNode(true);
+
+    container.appendChild(tes);
+
+    tes.classList.add("clone-tech-scroll");
   }
 }
 

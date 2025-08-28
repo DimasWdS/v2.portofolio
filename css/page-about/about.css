@@ -124,27 +124,6 @@
   }
 }
 
-/* @keyframes gerakRandom {
-  0% {
-    transform: translateY(0) rotate(0deg) scale(1);
-  }
-  20% {
-    transform: translateY(-10px) rotate(3deg) scale(1.1);
-  }
-  40% {
-    transform: translateY(8px) rotate(-3deg) scale(0.95);
-  }
-  60% {
-    transform: translateY(-6px) rotate(6deg) scale(1.05);
-  }
-  80% {
-    transform: translateY(5px) rotate(-6deg) scale(0.9);
-  }
-  100% {
-    transform: translateY(0) rotate(0deg) scale(1);
-  }
-} */
-
 /* keyframe garuda end */
 
 /* style font halaman awal */
@@ -157,3 +136,35 @@
   }
 }
 /* style font halaman awal end */
+
+@keyframes techScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes techScrollv2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.con-tech-scroll {
+  animation: techScroll 50s linear infinite;
+}
+
+.clone-tech-scroll {
+  /* background-color: green; */
+  flex-direction: row-reverse;
+}
+
+.clone-tech-scroll .con-tech-scroll {
+  /* background-color: red; */
+  animation: none;
+  animation: techScrollv2 50s linear infinite;
+}
