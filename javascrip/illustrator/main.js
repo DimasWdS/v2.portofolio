@@ -216,8 +216,8 @@ Object.assign(main.style, {
     justifyContent: "center",
   });
 
-  for (let i = 0; i < 4; i++) {
-    cardIllustrator(konten, "garuda-01.png");
+  for (let i = 0; i < 7; i++) {
+    cardIllustrator(konten, "garuda-01.png", "adobeillustratoricon.svg");
   }
 }
 
