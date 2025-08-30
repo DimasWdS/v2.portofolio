@@ -60,7 +60,7 @@ Object.assign(mainHome.style, {
       backgroundRepeat: "no-repeat",
       backgroundSize: "90%",
       backgroundAttachment: "fixed",
-      filter: "drop-shadow(10px -10px 5px rgba(0,0,0,0.5))",
+      filter: "drop-shadow(10px 10px 5px rgba(0,0,0,0.5))",
     });
   }
   // konten
