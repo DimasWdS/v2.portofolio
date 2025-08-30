@@ -76,6 +76,7 @@ Object.assign(mainHome.style, {
       position: "fixed",
       zIndex: "0",
       filter: "drop-shadow(10px -10px 5px rgba(0, 0, 0, 0.4))",
+      opacity: "70%",
     });
   }
   // konten
@@ -84,14 +85,17 @@ Object.assign(mainHome.style, {
     const header = document.createElement("header");
     const teks1 = document.createElement("p");
     const teks2 = document.createElement("p");
+    const teks3 = document.createElement("p");
 
     container.appendChild(conKonten);
     conKonten.appendChild(header);
     header.appendChild(teks1);
     header.appendChild(teks2);
+    header.appendChild(teks3);
 
     teks1.textContent = "HALLO THERE 🤚";
     teks2.textContent = "I'M WIDY";
+    teks3.textContent = "EXPERIENCED ILLUSTRATOR AND FRONTEND WEB DEVELOPER";
 
     Object.assign(conKonten.style, {
       position: "absolute",
@@ -105,13 +109,18 @@ Object.assign(mainHome.style, {
       // backgroundColor: "gray",
       top: "0",
       paddingLeft: "10%",
+      paddingRight: "10%",
     });
 
     Object.assign(header.style, {
       width: "100%",
-      color: "var(--main-font)",
+      color: "var(--line)",
       fontWeight: "800",
       fontSize: "clamp(1.5rem, calc(3vw + 1rem), 3rem)",
+    });
+    Object.assign(teks3.style, {
+      fontSize: "clamp(0.5rem, calc(3vw + 1rem), 1rem)",
+      fontWeight: "400",
     });
   }
 }
