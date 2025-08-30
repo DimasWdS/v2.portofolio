@@ -1,10 +1,10 @@
 @media (max-width: 1024px) {
-  .con-bg-person {
-    transform: translateX(-45%);
+  .wrapper-person {
+    transform: translateX(-50%);
   }
 }
 @media (max-width: 640px) {
-  .con-bg-person {
+  .wrapper-person {
     transform: translateX(-55%);
   }
 }

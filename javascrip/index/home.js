@@ -34,16 +34,20 @@ Object.assign(mainHome.style, {
     width: "100%",
     // backgroundColor: "green",
     overflow: "hidden",
+    // margin: "0 0 5rem 0",
   });
 
   // background
   {
     const conBg = document.createElement("section");
+    const wrapperPerson = document.createElement("section");
     const bgPerson = document.createElement("div");
-    container.appendChild(conBg);
-    conBg.appendChild(bgPerson);
 
-    bgPerson.classList.add("con-bg-person");
+    container.appendChild(conBg);
+    conBg.appendChild(wrapperPerson);
+    wrapperPerson.appendChild(bgPerson);
+
+    bgPerson.classList.add("wrapper-person");
 
     Object.assign(conBg.style, {
       position: "relative",
@@ -51,16 +55,24 @@ Object.assign(mainHome.style, {
       width: "100%",
       // backgroundColor: "green",
     });
+    Object.assign(wrapperPerson.style, {
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      // backgroundColor: "cyan",
+    });
 
     Object.assign(bgPerson.style, {
       height: "100%",
       aspectRatio: "16/9",
+      // backgroundColor: "red",
       backgroundImage: "url(asset/my-foto/personv2.svg)",
+      backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
-      backgroundSize: "90%",
-      backgroundAttachment: "fixed",
-      filter: "drop-shadow(10px 10px 5px rgba(0,0,0,0.5))",
+      position: "fixed",
+      zIndex: "0",
+      filter: "drop-shadow(10px -10px 5px rgba(0, 0, 0, 0.4))",
     });
   }
   // konten
@@ -82,6 +94,8 @@ Object.assign(mainHome.style, {
   const containerNavFooterHome = document.createElement("section");
   mainHome.appendChild(containerNavFooterHome);
   Object.assign(containerNavFooterHome.style, {
+    position: "relative",
+    zIndex: "5",
     width: "100%",
     display: "flex",
     justifyContent: "center",
