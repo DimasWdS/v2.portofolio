@@ -9,63 +9,8 @@ Object.assign(mainHome.style, {
   flexDirection: "column",
   alignItems: "center",
 });
-//
 
-// background home
-{
-  const container = document.createElement("section");
-  mainHome.appendChild(container);
-  Object.assign(container.style, {
-    height: "100dvh",
-    width: "100%",
-    // backgroundColor: "yellow",
-  });
-}
-// konten halaman awal
-
-{
-  const container = document.createElement("section");
-  const conNama = document.createElement("section");
-  const experinceSkill = document.createElement("section");
-
-  mainHome.appendChild(container);
-  container.appendChild(conNama);
-  container.appendChild(experinceSkill);
-
-  conNama.textContent = "HI IM WIDY";
-  experinceSkill.textContent =
-    "EXPERIENCED ILLUSTRATOR AND FRONTEND WEB DEVELOPER";
-
-  container.setAttribute("id", "content");
-  Object.assign(container.style, {
-    position: "absolute",
-    top: "0",
-    width: "100%",
-    maxWidth: "80rem",
-    height: "100dvh",
-    // backgroundColor: "green",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexDirection: "column",
-  });
-  Object.assign(conNama.style, {
-    width: "100%",
-    // height: "5rem",
-    // backgroundColor: "blue",
-    display: "flex",
-    justifyContent: "center",
-    fontWeight: "700",
-    fontSize: "3.5rem",
-    color: "var(--main-font)",
-  });
-  Object.assign(experinceSkill.style, {
-    color: "var(--main-font)",
-    fontSize: "0.7em",
-    fontWeight: "600",
-  });
-}
-
+// Nav
 {
   const containerHeaderNavHome = document.createElement("section");
   mainHome.appendChild(containerHeaderNavHome);
@@ -78,6 +23,61 @@ Object.assign(mainHome.style, {
   headerNav(containerHeaderNavHome);
 }
 
+// home
+{
+  const container = document.createElement("section");
+
+  mainHome.appendChild(container);
+
+  Object.assign(container.style, {
+    height: "100dvh",
+    width: "100%",
+    // backgroundColor: "green",
+    overflow: "hidden",
+  });
+
+  // background
+  {
+    const conBg = document.createElement("section");
+    const bgPerson = document.createElement("div");
+    container.appendChild(conBg);
+    conBg.appendChild(bgPerson);
+
+    bgPerson.classList.add("con-bg-person");
+
+    Object.assign(conBg.style, {
+      position: "relative",
+      height: "100%",
+      width: "100%",
+      // backgroundColor: "green",
+    });
+
+    Object.assign(bgPerson.style, {
+      height: "100%",
+      aspectRatio: "16/9",
+      backgroundImage: "url(asset/my-foto/personv2.svg)",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "90%",
+      backgroundAttachment: "fixed",
+      filter: "drop-shadow(10px -10px 5px rgba(0,0,0,0.5))",
+    });
+  }
+  // konten
+  {
+    const conKonten = document.createElement("section");
+    container.appendChild(conKonten);
+    Object.assign(conKonten.style, {
+      position: "absolute",
+      height: "100%",
+      width: "100%",
+      // backgroundColor: "gray",
+      top: "0",
+    });
+  }
+}
+
+// footer
 {
   const containerNavFooterHome = document.createElement("section");
   mainHome.appendChild(containerNavFooterHome);

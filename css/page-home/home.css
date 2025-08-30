@@ -1,0 +1,10 @@
+@media (max-width: 1024px) {
+  .con-bg-person {
+    transform: translateX(-40%);
+  }
+}
+@media (max-width: 640px) {
+  .con-bg-person {
+    transform: translateX(-50%);
+  }
+}
