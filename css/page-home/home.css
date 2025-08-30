@@ -5,6 +5,7 @@
 }
 @media (max-width: 640px) {
   .wrapper-person {
+    margin-top: 5rem;
     transform: translateX(-55%);
   }
 }

@@ -34,6 +34,9 @@ Object.assign(mainHome.style, {
     width: "100%",
     // backgroundColor: "green",
     overflow: "hidden",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
     // margin: "0 0 5rem 0",
   });
 
@@ -78,13 +81,37 @@ Object.assign(mainHome.style, {
   // konten
   {
     const conKonten = document.createElement("section");
+    const header = document.createElement("header");
+    const teks1 = document.createElement("p");
+    const teks2 = document.createElement("p");
+
     container.appendChild(conKonten);
+    conKonten.appendChild(header);
+    header.appendChild(teks1);
+    header.appendChild(teks2);
+
+    teks1.textContent = "HALLO THERE 🤚";
+    teks2.textContent = "I'M WIDY";
+
     Object.assign(conKonten.style, {
       position: "absolute",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
       height: "100%",
+      maxWidth: "80rem",
+      margin: "auto",
       width: "100%",
       // backgroundColor: "gray",
       top: "0",
+      paddingLeft: "10%",
+    });
+
+    Object.assign(header.style, {
+      width: "100%",
+      color: "var(--main-font)",
+      fontWeight: "800",
+      fontSize: "clamp(1.5rem, calc(3vw + 1rem), 3rem)",
     });
   }
 }
