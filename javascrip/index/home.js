@@ -100,6 +100,7 @@ Object.assign(mainHome.style, {
     teks2.textContent = "I'M WIDY";
     teks3.textContent = "EXPERIENCED ILLUSTRATOR AND FRONTEND WEB DEVELOPER";
     konten.textContent = "ILLUSTRATOR | WEB DEVOLOPER";
+    konten.innerHTML = `ILLUSTRATOR <span style="color: var(--accen-color)">|</span> WEB DEVOLOPER`;
 
     Object.assign(conKonten.style, {
       position: "absolute",
