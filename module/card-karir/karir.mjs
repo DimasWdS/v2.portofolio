@@ -3,6 +3,7 @@ function createCardKarir(conTarget, workDate, work) {
   const indikator = document.createElement("div");
   const workDuration = document.createElement("p");
   const header = document.createElement("header");
+  const konten = document.createElement("section");
 
   for (let i = 0; i < workDate.length; i++) {
     const span = document.createElement("span");
@@ -39,12 +40,12 @@ function createCardKarir(conTarget, workDate, work) {
   container.appendChild(indikator);
   indikator.appendChild(workDuration);
   container.appendChild(header);
+  container.appendChild(konten);
 
   //   workDuration.textContent = workDate;
 
   Object.assign(container.style, {
     width: "100%",
-    // height: "5rem",
     // backgroundColor: "red",
     position: "relative",
   });
@@ -71,6 +72,7 @@ function createCardKarir(conTarget, workDate, work) {
     alignItems: "center",
   });
   Object.assign(header.style, {
+    position: "relative",
     height: "2rem",
     width: "100%",
     // backgroundColor: "green",
@@ -80,6 +82,11 @@ function createCardKarir(conTarget, workDate, work) {
     padding: "0 0 0 3rem",
     fontWeight: "700",
     color: "var(--blue)",
+  });
+  Object.assign(konten.style, {
+    height: "10rem",
+    width: "100%",
+    // backgroundColor: "green",
   });
 }
 
