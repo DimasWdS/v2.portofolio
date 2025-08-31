@@ -168,3 +168,16 @@
   animation: none;
   animation: techScrollv2 50s linear infinite;
 }
+
+/* karir */
+
+@media (max-width: 1024px) {
+  .sidebar-karir {
+    width: 8rem !important;
+  }
+}
+@media (max-width: 640px) {
+  .sidebar-karir {
+    width: 1rem !important;
+  }
+}

@@ -1,4 +1,9 @@
-import { createNavFooter, sum, headerNav } from "../../module/module.mjs";
+import {
+  createNavFooter,
+  sum,
+  headerNav,
+  createCardKarir,
+} from "../../module/module.mjs";
 
 const mainAbout = document.createElement("main");
 document.body.appendChild(mainAbout);
@@ -462,6 +467,70 @@ Object.assign(mainAbout.style, {
     container.appendChild(tes);
 
     tes.classList.add("clone-tech-scroll");
+  }
+}
+// halaman education
+{
+  const container = document.createElement("section");
+  const header = document.createElement("header");
+  const conKarir = document.createElement("section");
+  const conKarirSidebar = document.createElement("section");
+  const conCard = document.createElement("section");
+
+  mainAbout.appendChild(container);
+  container.appendChild(header);
+  container.appendChild(conKarir);
+  conKarir.appendChild(conKarirSidebar);
+  conKarir.appendChild(conCard);
+
+  header.textContent = "MY EXPERINCE";
+
+  conKarirSidebar.classList.add("sidebar-karir");
+
+  Object.assign(container.style, {
+    width: "100%",
+    maxWidth: "80rem",
+    margin: "0 0 5rem 0",
+    // backgroundColor: "green",
+  });
+
+  Object.assign(header.style, {
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    // backgroundColor: "yellow",
+    margin: "7rem 0 5rem 0",
+    fontSize: "clamp(1rem, calc(3vw + 1rem), 3rem)",
+    fontWeight: "800",
+    color: "var(--main-font)",
+    // backgroundColor: "green",
+  });
+
+  Object.assign(conKarir.style, {
+    width: "100%",
+    // height: "100vh",
+    display: "flex",
+    // backgroundColor: "yellow",
+  });
+  Object.assign(conKarirSidebar.style, {
+    width: "15rem",
+    borderRight: "2px solid var(--line)",
+    // backgroundColor: "green",
+  });
+  Object.assign(conCard.style, {
+    flex: "1",
+    display: "flex",
+    flexDirection: "column",
+    gap: "2rem",
+    // backgroundColor: "yellow",
+    padding: "1rem 0 1rem 0",
+  });
+  for (let i = 0; i < 20; i++) {
+    createCardKarir(
+      conCard,
+      ["2023", "5 months"],
+      ["Network Installation Technician", "@MENAKSOPAL LINK LUSANTARA"]
+    );
   }
 }
 

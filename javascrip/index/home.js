@@ -87,12 +87,14 @@ Object.assign(mainHome.style, {
     const teks2 = document.createElement("p");
     const teks3 = document.createElement("p");
     const konten = document.createElement("span");
+    const btnCv = document.createElement("button");
 
     container.appendChild(conKonten);
     conKonten.appendChild(header);
     header.appendChild(teks1);
     header.appendChild(teks2);
     conKonten.appendChild(konten);
+    conKonten.appendChild(btnCv);
 
     conKonten.classList.add("con-konten-home");
 
@@ -101,6 +103,7 @@ Object.assign(mainHome.style, {
     teks3.textContent = "EXPERIENCED ILLUSTRATOR AND FRONTEND WEB DEVELOPER";
     konten.textContent = "ILLUSTRATOR | WEB DEVOLOPER";
     konten.innerHTML = `ILLUSTRATOR <span style="color: var(--accen-color)">|</span> WEB DEVOLOPER`;
+    btnCv.textContent = "CV";
 
     Object.assign(conKonten.style, {
       position: "absolute",
@@ -145,6 +148,16 @@ Object.assign(mainHome.style, {
       color: "var(--main-font)",
       fontWeight: "500",
       margin: "5% 0 0 0",
+    });
+    Object.assign(btnCv.style, {
+      width: "max-content",
+      margin: "1rem 0 0 0",
+      padding: "0.5rem 6rem",
+      borderRadius: "20px",
+      color: "var(--line)",
+      fontWeight: "700",
+      backgroundColor: "var(--second-background)",
+      border: "2px solid var(--accen-color)",
     });
   }
 }
