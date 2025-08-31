@@ -86,22 +86,26 @@ Object.assign(mainHome.style, {
     const teks1 = document.createElement("p");
     const teks2 = document.createElement("p");
     const teks3 = document.createElement("p");
+    const konten = document.createElement("span");
 
     container.appendChild(conKonten);
     conKonten.appendChild(header);
     header.appendChild(teks1);
     header.appendChild(teks2);
-    header.appendChild(teks3);
+    conKonten.appendChild(konten);
 
-    teks1.textContent = "HALLO THERE 🤚";
+    conKonten.classList.add("con-konten-home");
+
+    teks1.textContent = "HALLO THERE 🤚,";
     teks2.textContent = "I'M WIDY";
     teks3.textContent = "EXPERIENCED ILLUSTRATOR AND FRONTEND WEB DEVELOPER";
+    konten.textContent = "ILLUSTRATOR | WEB DEVOLOPER";
 
     Object.assign(conKonten.style, {
       position: "absolute",
       display: "flex",
       flexDirection: "column",
-      justifyContent: "center",
+      // justifyContent: "center",
       height: "100%",
       maxWidth: "80rem",
       margin: "auto",
@@ -117,10 +121,29 @@ Object.assign(mainHome.style, {
       color: "var(--line)",
       fontWeight: "800",
       fontSize: "clamp(1.5rem, calc(3vw + 1rem), 3rem)",
+      position: "relative",
+      // backgroundColor: "green",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      margin: "10rem 0 0 0",
+    });
+    Object.assign(teks2.style, {
+      position: "absolute",
+      top: "60%",
     });
     Object.assign(teks3.style, {
       fontSize: "clamp(0.5rem, calc(3vw + 1rem), 1rem)",
       fontWeight: "400",
+    });
+
+    Object.assign(konten.style, {
+      // height: "2rem",
+      width: "100%",
+      // backgroundColor: "green",
+      color: "var(--main-font)",
+      fontWeight: "500",
+      margin: "5% 0 0 0",
     });
   }
 }

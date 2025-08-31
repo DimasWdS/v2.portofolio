@@ -2,6 +2,9 @@
   .wrapper-person {
     transform: translateX(-50%);
   }
+  .con-konten-home header {
+    margin-top: 15rem !important;
+  }
 }
 @media (max-width: 640px) {
   .wrapper-person {
