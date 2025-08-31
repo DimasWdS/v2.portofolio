@@ -525,18 +525,26 @@ Object.assign(mainAbout.style, {
     // backgroundColor: "yellow",
     padding: "1rem 0 1rem 0",
   });
-  for (let i = 0; i < 3; i++) {
-    createCardKarir(
-      conCard,
-      ["2023", "5 months"],
-      ["Network Installation Technician", "@MENAKSOPAL LINK LUSANTARA"],
-      [
-        "Dapat melakukan instalasi FFTH, mampu menyambung kabel fiber optic menggunakan splicer ataupun menggunakan konektor fiber optic tipe SC.",
-        "Dapat melakukan instalasi wifi dengam metode paralel, mampu memasang konektor RJ45 ke kabel lan",
-        "Dapat melakukan konfigurasi ke Router.",
-      ]
-    );
-  }
+  createCardKarir(
+    conCard,
+    ["2025", "until now"],
+    ["Freelance Illustrator", "Happy to work with you."],
+    [
+      "Saya senang menggunakan Adobe Illustrator untuk membuat karya saya.",
+      "Saya juga sedang belajar menggunakan Software Clip Studio Paint.",
+    ]
+  );
+
+  createCardKarir(
+    conCard,
+    ["2023", "5 months"],
+    ["Network Installation Technician", "@MENAKSOPAL LINK LUSANTARA"],
+    [
+      "Dapat melakukan instalasi FFTH, mampu menyambung kabel fiber optic menggunakan splicer ataupun menggunakan konektor fiber optic tipe SC.",
+      "Dapat melakukan instalasi wifi dengam metode paralel, mampu memasang konektor RJ45 ke kabel lan",
+      "Dapat melakukan konfigurasi ke Router.",
+    ]
+  );
 }
 
 // footer

@@ -182,5 +182,6 @@
   }
   .card-pengalaman section ul {
     padding-top: 7rem !important;
+    padding-right: 1rem !important;
   }
 }
