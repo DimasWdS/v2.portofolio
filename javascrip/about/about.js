@@ -514,7 +514,7 @@ Object.assign(mainAbout.style, {
   });
   Object.assign(conKarirSidebar.style, {
     width: "15rem",
-    borderRight: "2px solid var(--line)",
+    borderRight: "1px solid var(--line)",
     // backgroundColor: "green",
   });
   Object.assign(conCard.style, {
@@ -525,11 +525,16 @@ Object.assign(mainAbout.style, {
     // backgroundColor: "yellow",
     padding: "1rem 0 1rem 0",
   });
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 3; i++) {
     createCardKarir(
       conCard,
       ["2023", "5 months"],
-      ["Network Installation Technician", "@MENAKSOPAL LINK LUSANTARA"]
+      ["Network Installation Technician", "@MENAKSOPAL LINK LUSANTARA"],
+      [
+        "Dapat melakukan instalasi FFTH, mampu menyambung kabel fiber optic menggunakan splicer ataupun menggunakan konektor fiber optic tipe SC.",
+        "Dapat melakukan instalasi wifi dengam metode paralel, mampu memasang konektor RJ45 ke kabel lan",
+        "Dapat melakukan konfigurasi ke Router.",
+      ]
     );
   }
 }

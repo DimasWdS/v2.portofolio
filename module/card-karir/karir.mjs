@@ -1,9 +1,10 @@
-function createCardKarir(conTarget, workDate, work) {
+function createCardKarir(conTarget, workDate, work, whatIcanDo) {
   const container = document.createElement("section");
   const indikator = document.createElement("div");
   const workDuration = document.createElement("p");
   const header = document.createElement("header");
   const konten = document.createElement("section");
+  const ul = document.createElement("ul");
 
   for (let i = 0; i < workDate.length; i++) {
     const span = document.createElement("span");
@@ -35,12 +36,26 @@ function createCardKarir(conTarget, workDate, work) {
       });
     }
   }
+  for (let i = 0; i < whatIcanDo.length; i++) {
+    const li = document.createElement("li");
+
+    ul.appendChild(li);
+
+    li.textContent = whatIcanDo[i];
+
+    Object.assign(li.style, {
+      fontWeight: "500",
+    });
+  }
 
   conTarget.appendChild(container);
   container.appendChild(indikator);
   indikator.appendChild(workDuration);
   container.appendChild(header);
   container.appendChild(konten);
+  konten.appendChild(ul);
+
+  container.classList.add("card-pengalaman");
 
   //   workDuration.textContent = workDate;
 
@@ -84,9 +99,14 @@ function createCardKarir(conTarget, workDate, work) {
     color: "var(--blue)",
   });
   Object.assign(konten.style, {
-    height: "10rem",
+    // height: "10rem",
     width: "100%",
     // backgroundColor: "green",
+  });
+  Object.assign(ul.style, {
+    // backgroundColor: "green",
+    padding: "2rem 0 2rem 7rem",
+    color: "var(--main-font)",
   });
 }
 
