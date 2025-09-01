@@ -1,4 +1,9 @@
-import { createNavFooter, sum, headerNav } from "../../module/module.mjs";
+import {
+  createNavFooter,
+  sum,
+  headerNav,
+  createCarProjectWeb,
+} from "../../module/module.mjs";
 
 const mainDevoloper = document.createElement("main");
 document.body.appendChild(mainDevoloper);
@@ -24,15 +29,15 @@ Object.assign(mainDevoloper.style, {
 }
 
 // HOME
-{
-  const container = document.createElement("section");
-  mainDevoloper.appendChild(container);
-  Object.assign(container.style, {
-    width: "100%",
-    height: "100dvh",
-    backgroundColor: "var(--background-color)",
-  });
-}
+// {
+//   const container = document.createElement("section");
+//   mainDevoloper.appendChild(container);
+//   Object.assign(container.style, {
+//     width: "100%",
+//     height: "100dvh",
+//     backgroundColor: "var(--background-color)",
+//   });
+// }
 
 //
 {
@@ -43,9 +48,17 @@ Object.assign(mainDevoloper.style, {
   Object.assign(container.style, {
     width: "100%",
     maxWidth: "80rem",
-    height: "100vh",
-    backgroundColor: "green",
+    // height: "100vh",
+    padding: "4rem 0 4rem 0",
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    gap: "3rem",
   });
+
+  for (let i = 0; i < 4; i++) {
+    createCarProjectWeb(container);
+  }
 }
 
 // FOTTER
