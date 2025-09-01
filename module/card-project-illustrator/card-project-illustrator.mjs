@@ -17,14 +17,14 @@ function cardIllustrator(conTarget, imgKonten, toolsImg) {
       backgroundColor: "var(--accen-color)",
       zIndex: "-1",
       inset: "1",
-      transform: "translateY(-0.5rem) translateX(-0.5rem)",
+      transform: "translateY(-5px) translateX(-5px)",
       borderRadius: "15px",
     });
     if (i === 1) {
       Object.assign(span.style, {
         bottom: "0",
         right: "0",
-        transform: "translateY(0.5rem) translateX(0.5rem)",
+        transform: "translateY(5px) translateX(5px)",
       });
     }
   }

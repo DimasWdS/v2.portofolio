@@ -11,14 +11,14 @@ function createCarProjectWeb(conTarget) {
       width: "80%",
       aspectRatio: "1/1",
       backgroundColor: "var(--line",
-      transform: "translate(-2%, -2%)",
-      borderRadius: "20px",
+      transform: "translate(-5px, -5px)",
+      borderRadius: "15px",
     });
     if (i === 1) {
       Object.assign(div.style, {
         bottom: "0",
         right: "0",
-        transform: "translate(2%, 2%)",
+        transform: "translate(5px, 5px)",
       });
     }
   }
