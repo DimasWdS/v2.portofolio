@@ -113,6 +113,10 @@ img {
 /* nav footer end */
 
 /* nav header start */
+
+.hiasan-active {
+  border-radius: 0 !important;
+}
 .menuClone {
   flex-direction: column;
 }
@@ -125,7 +129,7 @@ img {
   height: 6rem;
   width: 100%;
   top: 100%;
-  background: linear-gradient(to bottom, var(--footer), rgba(255, 255, 255, 0));
+  /* background: linear-gradient(to bottom, var(--footer), rgba(255, 255, 255, 0)); */
 }
 
 .navDown-hidden {

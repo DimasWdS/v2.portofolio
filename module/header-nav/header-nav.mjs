@@ -171,10 +171,27 @@ function headerNav(containerTarget) {
     const conMenuClone = document.createElement("section");
     const conSosmed = document.createElement("section");
 
+    const hiasan = document.createElement("div");
+
     containerTarget.appendChild(conNavDown);
     conNavDown.appendChild(container);
     container.appendChild(conMenuClone);
     container.appendChild(conSosmed);
+    conNavDown.appendChild(hiasan);
+
+    {
+      Object.assign(hiasan.style, {
+        position: "absolute",
+        top: "100%",
+        transform: "translateY(-5%)",
+        height: "20rem",
+        width: "100%",
+        backgroundColor: "var(--footer)",
+        borderBottomLeftRadius: "50%",
+        borderBottomRightRadius: "50%",
+        transition: "all 1s ease-in-out",
+      });
+    }
 
     conNavDown.classList.add("conNavHidden", "conNavDown");
     Object.assign(conNavDown.style, {
@@ -184,8 +201,8 @@ function headerNav(containerTarget) {
       width: "100%",
       zIndex: "998",
       backgroundColor: "var(--footer)",
-      transform: "translateY(-120%)",
-      transition: "all 0.8s ease",
+      transform: "translateY(-155%)",
+      transition: "all 1.5s ease",
     });
     Object.assign(container.style, {
       width: "100%",
@@ -247,6 +264,7 @@ function headerNav(containerTarget) {
     const hamBtn = document.querySelector(".ham-btn");
     hamBtn.addEventListener("click", () => {
       conNavDown.classList.toggle("navDown-hidden");
+      hiasan.classList.toggle("hiasan-active");
     });
   }
 }
