@@ -240,7 +240,7 @@ Object.assign(mainAbout.style, {
       position: "relative",
       width: "100%",
       height: "100%",
-      opacity: "50%",
+      opacity: "80%",
       // backgroundColor: "gray",
     });
     for (let i = 0; i < 4; i++) {
@@ -469,7 +469,7 @@ Object.assign(mainAbout.style, {
     tes.classList.add("clone-tech-scroll");
   }
 }
-// halaman education
+// halaman experince
 {
   const container = document.createElement("section");
   const header = document.createElement("header");
