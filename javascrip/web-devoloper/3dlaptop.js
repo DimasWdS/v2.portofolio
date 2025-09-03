@@ -18,7 +18,7 @@ Object.assign(firstCon.style, {
   height: "100%",
   width: "100%",
   display: "flex",
-  alignItems: "center",
+  alignItems: "end",
 });
 
 Object.assign(laptop.style, {

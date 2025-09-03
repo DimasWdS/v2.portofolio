@@ -32,10 +32,13 @@ Object.assign(mainDevoloper.style, {
 {
   const container = document.createElement("section");
   const conBgLaptop = document.createElement("section");
+  const conKonten = document.createElement("section");
   mainDevoloper.appendChild(container);
   container.appendChild(conBgLaptop);
+  container.appendChild(conKonten);
   container.classList.add("con-web-home");
   Object.assign(container.style, {
+    position: "relative",
     width: "100%",
     maxWidth: "80rem",
     height: "100dvh",
@@ -47,6 +50,70 @@ Object.assign(mainDevoloper.style, {
     height: "100%",
     width: "100%",
   });
+  Object.assign(conKonten.style, {
+    position: "absolute",
+    top: "0",
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    justifyContent: "end",
+    // backgroundColor: "green",
+  });
+  //konten
+  {
+    const firstCon = document.createElement("div");
+    const teks = document.createElement("div");
+
+    for (let i = 0; i < 3; i++) {
+      const p = document.createElement("p");
+
+      teks.appendChild(p);
+
+      Object.assign(p.style, {
+        color: "var(--main-font)",
+        fontSize: "3rem",
+        fontWeight: "800",
+      });
+
+      switch (i) {
+        case 0:
+          p.textContent = "MY";
+          Object.assign(p.style, {
+            position: "absolute",
+            bottom: "2.5rem",
+          });
+          break;
+        case 1:
+          p.textContent = "PROJECT";
+          break;
+        case 2:
+          p.textContent = "WEBSITE 🚀";
+          Object.assign(p.style, {
+            position: "absolute",
+            top: "2.5rem",
+          });
+          break;
+      }
+    }
+
+    conKonten.appendChild(firstCon);
+    firstCon.appendChild(teks);
+
+    Object.assign(firstCon.style, {
+      height: "100%",
+      width: "50%",
+      // backgroundColor: "green",
+      display: "flex",
+    });
+    Object.assign(teks.style, {
+      position: "relative",
+      // backgroundColor: "green",
+      width: "100%",
+      // margin: "10% 0 0 0",
+      height: "max-content",
+      marginTop: "30%",
+    });
+  }
 }
 
 //

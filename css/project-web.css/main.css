@@ -1,0 +1,10 @@
+@media (max-width: 1024px) {
+  .con-web-home section:nth-child(2) div {
+    /* background-color: green; */
+    width: 100% !important;
+    padding: 0 0 0 2rem;
+  }
+  .con-web-home section:nth-child(2) div div {
+    margin-top: 50% !important;
+  }
+}
