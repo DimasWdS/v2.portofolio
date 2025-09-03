@@ -145,7 +145,7 @@ Object.assign(mainHome.style, {
       // height: "2rem",
       width: "100%",
       // backgroundColor: "green",
-      color: "var(--main-font)",
+      color: "var(--line)",
       fontWeight: "500",
       margin: "5% 0 0 0",
     });
@@ -158,6 +158,7 @@ Object.assign(mainHome.style, {
       fontWeight: "700",
       backgroundColor: "var(--second-background)",
       border: "2px solid var(--accen-color)",
+      cursor: "pointer",
     });
   }
 }

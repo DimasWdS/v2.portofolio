@@ -13,6 +13,7 @@
 
 .container-btn-project a {
   overflow: hidden;
+  cursor: pointer;
 }
 
 /* .container-btn-project a img {

@@ -28,16 +28,26 @@ Object.assign(mainDevoloper.style, {
   headerNav(containerHeaderNavAbout);
 }
 
-// HOME
-// {
-//   const container = document.createElement("section");
-//   mainDevoloper.appendChild(container);
-//   Object.assign(container.style, {
-//     width: "100%",
-//     height: "100dvh",
-//     backgroundColor: "var(--background-color)",
-//   });
-// }
+//HOME (3D)
+{
+  const container = document.createElement("section");
+  const conBgLaptop = document.createElement("section");
+  mainDevoloper.appendChild(container);
+  container.appendChild(conBgLaptop);
+  container.classList.add("con-web-home");
+  Object.assign(container.style, {
+    width: "100%",
+    maxWidth: "80rem",
+    height: "100dvh",
+    backgroundColor: "var(--background-color)",
+    // backgroundColor: "yellow",
+    margin: "0 0 15rem 0",
+  });
+  Object.assign(conBgLaptop.style, {
+    height: "100%",
+    width: "100%",
+  });
+}
 
 //
 {

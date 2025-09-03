@@ -357,14 +357,14 @@ Object.assign(mainAbout.style, {
         height: "80%",
         aspectRatio: "1/1",
         backgroundColor: "var(--accen-color)",
-        borderRadius: "15px 2px",
-        transform: "translateY(-5px) translateX(-5px)",
+        borderRadius: "12px",
+        transform: "translateY(-3px) translateX(-3px)",
       });
       if (i === 1) {
         Object.assign(div.style, {
           bottom: "0",
           right: "0",
-          transform: "translateY(5px) translateX(5px)",
+          transform: "translateY(3px) translateX(3px)",
         });
       }
     }
@@ -424,6 +424,7 @@ Object.assign(mainAbout.style, {
     width: "100%",
     maxWidth: "80rem",
     overflow: "hidden",
+    backgroundColor: "var(--second-background)",
   });
 
   Object.assign(header.style, {
