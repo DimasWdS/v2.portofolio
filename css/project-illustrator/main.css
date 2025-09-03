@@ -8,6 +8,9 @@
   .con-card-illustrator {
     width: 90% !important;
   }
+  .btn-more-instagram {
+    transform: scale(0.8);
+  }
 }
 
 .con-card-illustrator {
@@ -16,4 +19,9 @@
   transition: all 0.5s ease;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   /* background-color: gray !important; */
+}
+
+.btn-more-instagram div a:hover {
+  transform: rotate(45deg);
+  background-color: var(--footer) !important;
 }

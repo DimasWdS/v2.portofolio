@@ -133,9 +133,9 @@ Object.assign(mainDevoloper.style, {
     gap: "3rem",
   });
 
-  for (let i = 0; i < 5; i++) {
-    createCarProjectWeb(container, "TODO LIST");
-  }
+  // for (let i = 0; i < 5; i++) {
+  //   createCarProjectWeb(container, "TODO LIST");
+  // }
 }
 
 // FOTTER

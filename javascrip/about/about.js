@@ -421,10 +421,12 @@ Object.assign(mainAbout.style, {
   header.textContent = "AND WEB DEVOLOPMENT IS MY GOAL.";
 
   Object.assign(container.style, {
-    width: "100%",
+    width: "90%",
     maxWidth: "80rem",
     overflow: "hidden",
     backgroundColor: "var(--second-background)",
+    borderRadius: "20px",
+    boxShadow: "inset 0 0 10px rgba(0, 0, 0, 0.5)",
   });
 
   Object.assign(header.style, {

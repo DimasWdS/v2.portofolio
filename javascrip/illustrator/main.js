@@ -178,7 +178,7 @@ Object.assign(main.style, {
       position: "relative",
       width: "100%",
       height: "5px",
-      backgroundColor: "var(--accen-color)",
+      backgroundColor: "var(--line)",
     });
   }
   const konten = document.createElement("section");
@@ -193,6 +193,8 @@ Object.assign(main.style, {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    background:
+      "linear-gradient(to top,var(--second-background),var(--background-color))",
   });
 
   Object.assign(background.style, {
@@ -218,6 +220,100 @@ Object.assign(main.style, {
 
   for (let i = 0; i < 7; i++) {
     cardIllustrator(konten, "garuda-01.png", "adobeillustratoricon.svg");
+  }
+
+  // btn more on
+  {
+    const section = document.createElement("section");
+    const conBtn = document.createElement("section");
+    const conImg = document.createElement("div");
+    const imgLogo = document.createElement("img");
+    const conTeks = document.createElement("div");
+    const p1 = document.createElement("p");
+    const p2 = document.createElement("p");
+    const btnLink = document.createElement("div");
+    const a = document.createElement("a");
+
+    imgLogo.setAttribute("src", "asset/my-own-logo/LOGOSAYA.svg");
+    a.setAttribute("href", "#");
+
+    container.appendChild(section);
+    section.appendChild(conBtn);
+    conBtn.appendChild(conImg);
+    conImg.appendChild(imgLogo);
+    conBtn.appendChild(conTeks);
+    conTeks.appendChild(p1);
+    conTeks.appendChild(p2);
+    conBtn.appendChild(btnLink);
+    btnLink.appendChild(a);
+
+    p1.textContent = "MORE ON 🚀";
+    p2.textContent = "INSTAGRAM";
+
+    section.classList.add("btn-more-instagram");
+
+    Object.assign(section.style, {
+      width: "100%",
+      display: "flex",
+      justifyContent: "center",
+      padding: "5rem 0 15rem 0",
+      position: "relative",
+      zIndex: "5",
+    });
+
+    Object.assign(conBtn.style, {
+      padding: "10px",
+      backgroundColor: "var(--background-color)",
+      display: "flex",
+      borderRadius: "5px",
+      border: "2px solid var(--line)",
+    });
+
+    Object.assign(conImg.style, {
+      width: "6rem",
+      aspectRatio: "1/1",
+      borderRadius: "10px",
+      overflow: "hidden",
+      // background: "var(--line)",
+      border: "3px solid var(--accen-color)",
+      boxShadow:
+        "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 1) 0px 8px 16px -8px",
+    });
+    Object.assign(conTeks.style, {
+      height: "6rem",
+      aspectRatio: "16/9",
+      // backgroundColor: "yellow",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      fontSize: "1.2em",
+      fontWeight: "800",
+      padding: "0 0 0 1rem",
+      color: "var(--line)",
+    });
+    Object.assign(btnLink.style, {
+      height: "6rem",
+      aspectRatio: "1/1",
+      // backgroundColor: "yellow",
+      borderRadius: "50%",
+      cursor: "pointer",
+      overflow: "hidden",
+      outline: "3px solid var(--accen-color)",
+      boxShadow:
+        "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 1) 0px 8px 16px -8px",
+    });
+    Object.assign(a.style, {
+      display: "inline-flex",
+      height: "100%",
+      width: "100%",
+      // backgroundColor: "green",
+      cursor: "pointer",
+      backgroundImage: "url(asset/icon/arrowoutward.svg)",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      backgroundSize: "50%",
+      transition: "all 0.2s ease",
+    });
   }
 }
 
