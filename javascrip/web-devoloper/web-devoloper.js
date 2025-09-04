@@ -117,7 +117,7 @@ Object.assign(mainDevoloper.style, {
   }
 }
 
-//
+//container card
 {
   const container = document.createElement("section");
 
@@ -131,12 +131,18 @@ Object.assign(mainDevoloper.style, {
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
-    gap: "3rem",
+    gap: "10rem",
   });
 
-  // for (let i = 0; i < 5; i++) {
-  //   createCarProjectWeb(container, "TODO LIST");
-  // }
+  for (let i = 0; i < 1; i++) {
+    createCarProjectWeb(
+      container,
+      "prj1/bg.png",
+      "/prj1/big-city.jpg",
+      "MY OWN WEBSITE PORTOFOLIO",
+      "AGUSTUS 2025"
+    );
+  }
 }
 
 // FOTTER

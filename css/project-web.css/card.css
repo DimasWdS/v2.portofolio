@@ -1,23 +1,9 @@
 @media (max-width: 640px) {
-  .card-project-web section {
-    width: 20rem !important;
-    aspect-ratio: 9/16 !important;
+  .con-konten {
+    width: 100% !important;
+    /* background-color: aqua; */
+  }
+  .con-bg-web-preview {
+    display: none;
   }
 }
-
-.container-btn-project {
-  /* background-color: cyan !important; */
-  backdrop-filter: blur(20px);
-  /* background: rgba(255, 255, 255, 0.199); */
-}
-
-.container-btn-project a {
-  overflow: hidden;
-  cursor: pointer;
-}
-
-/* .container-btn-project a img {
-  background-color: green;
-
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-} */
