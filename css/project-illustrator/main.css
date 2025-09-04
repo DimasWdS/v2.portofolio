@@ -21,7 +21,7 @@
   /* background-color: gray !important; */
 }
 
-.btn-more-instagram div a:hover {
+.konten-more-instagram div a:hover {
   transform: rotate(45deg);
   background-color: var(--footer) !important;
 }

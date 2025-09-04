@@ -77,6 +77,7 @@ Object.assign(mainAbout.style, {
             fontWeight: "900",
             color: "var(--main-font)",
             margin: "0 0 0 1rem",
+            textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
           });
           if (dex == 0) {
             el.style.position = "absolute";
@@ -329,6 +330,7 @@ Object.assign(mainAbout.style, {
         color: "var(--main-font)",
         fontWeight: "800",
         fontSize: "clamp(1rem, calc(3vw + 1rem), 3rem)",
+        textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
       });
       if (dex === 1) {
         el.style.position = "absolute";
@@ -343,6 +345,7 @@ Object.assign(mainAbout.style, {
   const header = document.createElement("header");
   const firstCon = document.createElement("section");
   const secondCon = document.createElement("section");
+  const layarAtas = document.createElement("section");
   function createCard(iconLogo, teksKonten) {
     const container = document.createElement("div");
     const containerDua = document.createElement("section");
@@ -412,6 +415,7 @@ Object.assign(mainAbout.style, {
   }
   //
   mainAbout.appendChild(container);
+  container.appendChild(layarAtas);
   container.appendChild(header);
   container.appendChild(firstCon);
   firstCon.appendChild(secondCon);
@@ -421,12 +425,21 @@ Object.assign(mainAbout.style, {
   header.textContent = "AND WEB DEVOLOPMENT IS MY GOAL.";
 
   Object.assign(container.style, {
+    position: "relative",
     width: "90%",
     maxWidth: "80rem",
     overflow: "hidden",
     backgroundColor: "var(--second-background)",
-    borderRadius: "20px",
-    boxShadow: "inset 0 0 10px rgba(0, 0, 0, 0.5)",
+    borderRadius: "5px",
+  });
+
+  Object.assign(layarAtas.style, {
+    position: "absolute",
+    height: "100%",
+    width: "100%",
+    // backgroundColor: "green",
+    zIndex: "5",
+    boxShadow: "inset 0 0 30px rgba(0, 0, 0, 0.76)",
   });
 
   Object.assign(header.style, {
@@ -507,6 +520,7 @@ Object.assign(mainAbout.style, {
     fontWeight: "800",
     color: "var(--main-font)",
     // backgroundColor: "green",
+    textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
   });
 
   Object.assign(conKarir.style, {

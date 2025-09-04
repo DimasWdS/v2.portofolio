@@ -117,6 +117,7 @@ Object.assign(main.style, {
         fontWeight: "900",
         color: "var(--main-font)",
         fontSize: "3em",
+        textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
       });
 
       switch (i) {
@@ -180,6 +181,11 @@ Object.assign(main.style, {
       height: "5px",
       backgroundColor: "var(--line)",
     });
+    if (i === 0) {
+      Object.assign(bgLine.style, {
+        backgroundColor: "var(--accen-color)",
+      });
+    }
   }
   const konten = document.createElement("section");
 
@@ -218,7 +224,7 @@ Object.assign(main.style, {
     justifyContent: "center",
   });
 
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < 2; i++) {
     cardIllustrator(konten, "garuda-01.png", "adobeillustratoricon.svg");
   }
 
@@ -226,93 +232,135 @@ Object.assign(main.style, {
   {
     const section = document.createElement("section");
     const conBtn = document.createElement("section");
-    const conImg = document.createElement("div");
-    const imgLogo = document.createElement("img");
+    const bg = document.createElement("div");
+    const konten = document.createElement("section");
     const conTeks = document.createElement("div");
-    const p1 = document.createElement("p");
-    const p2 = document.createElement("p");
-    const btnLink = document.createElement("div");
+    const btn = document.createElement("div");
     const a = document.createElement("a");
+    for (let i = 0; i < 2; i++) {
+      const div = document.createElement("div");
+      conBtn.appendChild(div);
+      Object.assign(div.style, {
+        height: "100%",
+        position: "absolute",
+        zIndex: "2",
+        height: "100%",
+        width: "80%",
+        background:
+          "linear-gradient(to right, var(--background-color) 20%, rgba(255, 255, 255, 0))",
+      });
+      if (i === 1) {
+        Object.assign(div.style, {
+          right: "0",
+          background:
+            "linear-gradient(to left, var(--background-color) 20%, rgba(255, 255, 255, 0))",
+        });
+      }
+    }
+    for (let i = 0; i < 2; i++) {
+      const p = document.createElement("p");
+      conTeks.appendChild(p);
+      p.textContent = "MORE ON";
 
-    imgLogo.setAttribute("src", "asset/my-own-logo/LOGOSAYA.svg");
-    a.setAttribute("href", "#");
+      Object.assign(p.style, {
+        fontSize: "2rem",
+        fontWeight: "700",
+        color: "var(--main-font)",
+        position: "absolute",
+        top: "50%",
+        transform: "translatey(-75%)",
+      });
+
+      if (i === 1) {
+        p.textContent = "INSTAGRAM";
+        Object.assign(p.style, {
+          top: "65%",
+        });
+      }
+    }
 
     container.appendChild(section);
     section.appendChild(conBtn);
-    conBtn.appendChild(conImg);
-    conImg.appendChild(imgLogo);
-    conBtn.appendChild(conTeks);
-    conTeks.appendChild(p1);
-    conTeks.appendChild(p2);
-    conBtn.appendChild(btnLink);
-    btnLink.appendChild(a);
+    conBtn.appendChild(bg);
+    conBtn.appendChild(konten);
+    konten.appendChild(conTeks);
+    konten.appendChild(btn);
+    btn.appendChild(a);
 
-    p1.textContent = "MORE ON 🚀";
-    p2.textContent = "INSTAGRAM";
+    conBtn.classList.add("btn-more-instagram");
+    konten.classList.add("konten-more-instagram");
 
-    section.classList.add("btn-more-instagram");
+    a.setAttribute("href", "#");
 
     Object.assign(section.style, {
       width: "100%",
-      display: "flex",
-      justifyContent: "center",
-      padding: "5rem 0 15rem 0",
       position: "relative",
       zIndex: "5",
+      // backgroundColor: "green",
+      padding: "5rem 0 10rem 0",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
     });
 
     Object.assign(conBtn.style, {
-      padding: "10px",
-      backgroundColor: "var(--background-color)",
-      display: "flex",
-      borderRadius: "5px",
-      border: "2px solid var(--line)",
-    });
-
-    Object.assign(conImg.style, {
-      width: "6rem",
-      aspectRatio: "1/1",
+      position: "relative",
+      height: "10rem",
+      aspectRatio: "16/6",
+      backgroundColor: "var(--footer)",
       borderRadius: "10px",
+      outline: "3px solid var(--footer)",
       overflow: "hidden",
-      // background: "var(--line)",
-      border: "3px solid var(--accen-color)",
       boxShadow:
-        "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 1) 0px 8px 16px -8px",
+        "rgba(0, 0, 0, 0.7) 0px 54px 55px, rgba(0, 0, 0, 0.65) 0px -12px 30px, rgba(0, 0, 0, 0.64) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
+    });
+    Object.assign(bg.style, {
+      position: "relative",
+      height: "100%",
+      width: "100%",
+      backgroundImage: "url(asset/my-own-logo/LOGOSAYA.svg)",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "90%",
+      opacity: "0.3",
+    });
+    Object.assign(konten.style, {
+      position: "absolute",
+      inset: "0",
+      height: "100%",
+      width: "100%",
+      // backgroundColor: "green",
+      zIndex: "3",
+      display: "flex",
+      justifyContent: "space-evenly",
+      alignItems: "center",
     });
     Object.assign(conTeks.style, {
-      height: "6rem",
-      aspectRatio: "16/9",
+      height: "100%",
+      width: "50%",
       // backgroundColor: "yellow",
       display: "flex",
       flexDirection: "column",
-      justifyContent: "center",
-      fontSize: "1.2em",
-      fontWeight: "800",
-      padding: "0 0 0 1rem",
-      color: "var(--line)",
+      // justifyContent: "center",
     });
-    Object.assign(btnLink.style, {
-      height: "6rem",
+    Object.assign(btn.style, {
+      height: "60%",
       aspectRatio: "1/1",
-      // backgroundColor: "yellow",
+      // backgroundColor: "green",
       borderRadius: "50%",
-      cursor: "pointer",
+      outline: "2px solid var(--line",
       overflow: "hidden",
-      outline: "3px solid var(--accen-color)",
-      boxShadow:
-        "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 1) 0px 8px 16px -8px",
     });
     Object.assign(a.style, {
       display: "inline-flex",
       height: "100%",
       width: "100%",
-      // backgroundColor: "green",
-      cursor: "pointer",
       backgroundImage: "url(asset/icon/arrowoutward.svg)",
-      backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
       backgroundSize: "50%",
-      transition: "all 0.2s ease",
+      transition: "all 0.3s ease",
+      cursor: "pointer",
     });
   }
 }
