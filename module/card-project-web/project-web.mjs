@@ -4,7 +4,8 @@ function createCarProjectWeb(
   bgPictures,
   owner,
   startCreate,
-  tekonogiUse
+  tekonogiUse,
+  des
 ) {
   const conCard = document.createElement("section");
   const bg = document.createElement("div");
@@ -15,6 +16,8 @@ function createCarProjectWeb(
   const conLinkOutward = document.createElement("div");
   const aOutward = document.createElement("a");
   const conTeknologi = document.createElement("section");
+  const conDeskripsi = document.createElement("section");
+  const deskripsi = document.createElement("p");
 
   conTarget.appendChild(conCard);
   conCard.appendChild(bg);
@@ -25,10 +28,14 @@ function createCarProjectWeb(
   header.appendChild(conLinkOutward);
   conLinkOutward.appendChild(aOutward);
   conCard.appendChild(conTeknologi);
+  konten.appendChild(conDeskripsi);
+  conDeskripsi.appendChild(deskripsi);
 
   imgPreview.setAttribute("src", `asset/page-web/${background}`);
   imgPreview.setAttribute("loading", "lazy");
   imgPreview.setAttribute("alt", "background");
+
+  deskripsi.textContent = des;
 
   conCard.classList.add("con-card-web");
   konten.classList.add("con-konten");
@@ -66,7 +73,7 @@ function createCarProjectWeb(
     right: "1rem",
     transform: "translateY(-50%)",
     // backgroundColor: "yellow",
-    border: "2px solid var(--line)",
+    // border: "2px solid var(--line)",
     borderRadius: "5px",
     overflow: "hidden",
   });
@@ -153,12 +160,24 @@ function createCarProjectWeb(
     conTeknologi.appendChild(span);
     span.textContent = tekonogiUse[i];
     Object.assign(span.style, {
-      color: "var(--line)",
+      color: "var(--footer)",
       fontWeight: "600",
-      backgroundColor: "var(--footer)",
+      // backgroundColor: "var(--footer)",
+      backgroundColor: "#FF9B00",
       padding: "0.2rem 1rem",
       borderRadius: "5px",
       flexShrink: "0",
+    });
+    Object.assign(conDeskripsi.style, {
+      // height: "2rem",
+      width: "100%",
+      // backgroundColor: "green",
+      margin: "5rem 0 0 0",
+      padding: "0 0 0 1rem",
+    });
+    Object.assign(deskripsi.style, {
+      color: "var(--main-font)",
+      fontWeight: "600",
     });
   }
 }

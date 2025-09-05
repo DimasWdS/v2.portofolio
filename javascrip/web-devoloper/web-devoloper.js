@@ -141,7 +141,8 @@ Object.assign(mainDevoloper.style, {
       "/prj1/big-city.jpg",
       "MY OWN WEBSITE PORTOFOLIO",
       "AGUSTUS 2025",
-      ["HTML", "CSS", "JavaScrip", "Github Page"]
+      ["HTML", "CSS", "JavaScrip", "Github Page"],
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     );
   }
 }
