@@ -140,7 +140,8 @@ Object.assign(mainDevoloper.style, {
       "prj1/bg.png",
       "/prj1/big-city.jpg",
       "MY OWN WEBSITE PORTOFOLIO",
-      "AGUSTUS 2025"
+      "AGUSTUS 2025",
+      ["HTML", "CSS", "JavaScrip", "Github Page"]
     );
   }
 }

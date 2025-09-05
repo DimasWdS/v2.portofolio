@@ -3,7 +3,8 @@ function createCarProjectWeb(
   background,
   bgPictures,
   owner,
-  startCreate
+  startCreate,
+  tekonogiUse
 ) {
   const conCard = document.createElement("section");
   const bg = document.createElement("div");
@@ -11,6 +12,9 @@ function createCarProjectWeb(
   const imgPreview = document.createElement("img");
   const konten = document.createElement("section");
   const header = document.createElement("header");
+  const conLinkOutward = document.createElement("div");
+  const aOutward = document.createElement("a");
+  const conTeknologi = document.createElement("section");
 
   conTarget.appendChild(conCard);
   conCard.appendChild(bg);
@@ -18,6 +22,9 @@ function createCarProjectWeb(
   conBgWebPreview.appendChild(imgPreview);
   conCard.appendChild(konten);
   konten.appendChild(header);
+  header.appendChild(conLinkOutward);
+  conLinkOutward.appendChild(aOutward);
+  conCard.appendChild(conTeknologi);
 
   imgPreview.setAttribute("src", `asset/page-web/${background}`);
   imgPreview.setAttribute("loading", "lazy");
@@ -75,6 +82,7 @@ function createCarProjectWeb(
     zIndex: "2",
   });
   Object.assign(header.style, {
+    position: "relative",
     width: "100%",
     // backgroundColor: "green",
     display: "flex",
@@ -98,6 +106,58 @@ function createCarProjectWeb(
       });
       span.textContent = startCreate;
     }
+  }
+  Object.assign(conLinkOutward.style, {
+    position: "absolute",
+    height: "4rem",
+    aspectRatio: "1/1",
+    // backgroundColor: "yellow",
+    right: "0",
+    cursor: "pointer",
+  });
+  Object.assign(aOutward.style, {
+    display: "inline-flex",
+    height: "100%",
+    width: "100%",
+    backgroundImage: "url(asset/icon/arrowoutward.svg)",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundSize: "70%",
+    transition: "all 0.3s ease",
+  });
+  conLinkOutward.addEventListener("mouseenter", () => {
+    aOutward.style.transform = "rotate(45deg)";
+  });
+  conLinkOutward.addEventListener("mouseleave", () => {
+    aOutward.style.transform = "rotate(0)";
+  });
+  Object.assign(conTeknologi.style, {
+    position: "absolute",
+    height: "3rem",
+    width: "100%",
+    // backgroundColor: "green",
+    bottom: "0",
+    margin: "0 0 2rem 0",
+    display: "flex",
+    alignItems: "center",
+    gap: "2rem",
+    padding: "0 1rem 0 1rem",
+    // flexWrap: "wrap",
+    // overflow: "scroll",
+    overflowX: "auto",
+    overflowY: "hidden",
+  });
+  for (let i = 0; i < tekonogiUse.length; i++) {
+    const span = document.createElement("span");
+    conTeknologi.appendChild(span);
+    span.textContent = tekonogiUse[i];
+    Object.assign(span.style, {
+      color: "var(--line)",
+      fontWeight: "600",
+      backgroundColor: "var(--footer)",
+      padding: "0.2rem 1rem",
+      borderRadius: "5px",
+    });
   }
 }
 
