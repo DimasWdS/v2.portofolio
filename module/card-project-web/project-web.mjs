@@ -146,6 +146,7 @@ function createCarProjectWeb(
     // overflow: "scroll",
     overflowX: "auto",
     overflowY: "hidden",
+    zIndex: "3",
   });
   for (let i = 0; i < tekonogiUse.length; i++) {
     const span = document.createElement("span");
@@ -157,6 +158,7 @@ function createCarProjectWeb(
       backgroundColor: "var(--footer)",
       padding: "0.2rem 1rem",
       borderRadius: "5px",
+      flexShrink: "0",
     });
   }
 }
