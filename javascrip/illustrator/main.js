@@ -225,7 +225,7 @@ Object.assign(main.style, {
   });
 
   for (let i = 0; i < 2; i++) {
-    cardIllustrator(konten, "garuda-01.png", "adobeillustratoricon.svg");
+    cardIllustrator(konten, "1.jpg", "adobeillustratoricon.svg");
   }
 
   // btn more on
