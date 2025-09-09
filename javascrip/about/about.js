@@ -266,28 +266,22 @@ Object.assign(mainAbout.style, {
         case 0:
           div.classList.add("ekor");
           img.setAttribute("alt", "ekor");
-          img.setAttribute("src", "asset/page-about/garuda/garudaekor.svg");
+          img.setAttribute("src", "asset/page-about/garuda/ekor.png");
           break;
         case 1:
           div.classList.add("sayap-kiri");
           img.setAttribute("alt", "sayapkiri");
-          img.setAttribute(
-            "src",
-            "asset/page-about/garuda/garudasayapkiri.svg"
-          );
+          img.setAttribute("src", "asset/page-about/garuda/sayapkiri.png");
           break;
         case 2:
           div.classList.add("sayap-kanan");
           img.setAttribute("alt", "sayapkanan");
-          img.setAttribute(
-            "src",
-            "asset/page-about/garuda/garudasayapkanan.svg"
-          );
+          img.setAttribute("src", "asset/page-about/garuda/sayapkanan.png");
           break;
         case 3:
           div.classList.add("objek-random");
           img.setAttribute("alt", "badan");
-          img.setAttribute("src", "asset/page-about/garuda/garudabadan.svg");
+          img.setAttribute("src", "asset/page-about/garuda/badan.png");
           break;
       }
     }

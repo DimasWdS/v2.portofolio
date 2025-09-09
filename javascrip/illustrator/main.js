@@ -63,7 +63,7 @@ Object.assign(main.style, {
     Object.assign(conApi.style, {
       width: "100%",
       height: "100%",
-      backgroundImage: "url(asset/page-illustrator/api-bg-01.svg",
+      backgroundImage: "url(asset/page-illustrator/bgapi.png",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
@@ -94,7 +94,7 @@ Object.assign(main.style, {
         backgroundImage:
           dex === 0
             ? "url(asset/page-illustrator/hellcatmobil.svg)"
-            : "url(asset/page-illustrator/moonknight.svg)",
+            : "url(asset/page-illustrator/moonknight.png)",
         transform:
           dex === 0
             ? "perspective(300px) rotateY(10deg)"

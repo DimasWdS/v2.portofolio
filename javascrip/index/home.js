@@ -69,7 +69,7 @@ Object.assign(mainHome.style, {
       height: "100%",
       aspectRatio: "16/9",
       // backgroundColor: "red",
-      backgroundImage: "url(asset/my-foto/personv2.svg)",
+      backgroundImage: "url(asset/my-foto/personhomelow.png)",
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
