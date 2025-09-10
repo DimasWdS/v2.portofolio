@@ -185,3 +185,69 @@
     padding-right: 1rem !important;
   }
 }
+
+/* page story start */
+@media (max-width: 640px) {
+  .con-konten-about div:nth-child(2) {
+    /* background-color: aqua; */
+    height: 8rem !important;
+  }
+}
+.zIndex2 {
+  z-index: 3;
+}
+
+.fotoKiri {
+  animation: fotoKiri 1s ease;
+}
+.fotoKiriBack {
+  animation: fotoKiriBack 1s ease;
+}
+.fotoKanan {
+  animation: fotoKanan 1s ease;
+}
+.fotoKananBack {
+  animation: fotoKananBack 1s ease;
+}
+
+@keyframes fotoKiri {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes fotoKiriBack {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes fotoKanan {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+}
+@keyframes fotoKananBack {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+}
+/* page story end */

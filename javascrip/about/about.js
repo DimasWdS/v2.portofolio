@@ -479,6 +479,190 @@ Object.assign(mainAbout.style, {
     tes.classList.add("clone-tech-scroll");
   }
 }
+// halaman my story
+{
+  const container = document.createElement("section");
+
+  mainAbout.appendChild(container);
+
+  Object.assign(container.style, {
+    // height: "100vh",
+    width: "100%",
+    // backgroundColor: "green",
+    position: "relative",
+    margin: "5rem 0 0 0",
+    display: "flex",
+    justifyContent: "center",
+  });
+
+  // konten
+  {
+    const conKonten = document.createElement("section");
+    const header = document.createElement("header");
+    const confoto = document.createElement("div");
+
+    container.appendChild(conKonten);
+    conKonten.appendChild(header);
+    conKonten.appendChild(confoto);
+
+    header.textContent = "MY STORY";
+
+    conKonten.classList.add("con-konten-about");
+
+    Object.assign(conKonten.style, {
+      // height: "100vh",
+      width: "100%",
+      maxWidth: "80rem",
+      position: "relative",
+      zIndex: "2",
+    });
+
+    Object.assign(confoto.style, {
+      height: "20rem",
+      width: "100%",
+      // backgroundColor: "green",
+      display: "flex",
+      justifyContent: "space-evenly",
+      position: "relative",
+    });
+
+    //box foto
+    {
+      for (let i = 0; i < 3; i++) {
+        const div = document.createElement("div");
+        const section = document.createElement("section");
+        const img = document.createElement("img");
+        confoto.appendChild(div);
+        div.appendChild(section);
+        section.appendChild(img);
+
+        img.setAttribute("loading", "lazy");
+        img.setAttribute("alt", "foto");
+
+        Object.assign(div.style, {
+          height: "100%",
+          aspectRatio: "1/1",
+          position: "relative",
+          // backgroundColor: "red",
+          // borderRadius: "5px",
+        });
+
+        Object.assign(section.style, {
+          height: "100%",
+          width: "100%",
+          overflow: "hidden",
+          border: "1px solid var(--line)",
+          boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+          // backgroundColor: "green",
+          position: "absolute",
+        });
+
+        Object.assign(img.style, {
+          objectFit: "cover",
+        });
+        switch (i) {
+          case 0:
+            img.setAttribute("src", "asset/my-foto/3.JPG");
+            div.classList.add("wrapperImg");
+            section.classList.add("conImg1");
+            break;
+          case 1:
+            Object.assign(div.style, {
+              position: "absolute",
+              zIndex: "2",
+              // backgroundColor: "cyan",
+              // opacity: "0.5",
+              scale: "1.2",
+            });
+            img.setAttribute("src", "asset/my-foto/2.JPG");
+            break;
+          case 2:
+            img.setAttribute("src", "asset/my-foto/4.JPG");
+            div.classList.add("wrapperImg");
+            section.classList.add("conImg2");
+            // section.style.zIndex = "0";
+            break;
+          case 1:
+        }
+      }
+      //con foto hover
+      {
+        const wrapper = document.querySelectorAll(".wrapperImg");
+        const con2 = document.querySelector(".conImg2");
+        const con1 = document.querySelector(".conImg1");
+
+        console.log(con1);
+
+        wrapper.forEach((el, dex) => {
+          console.log(el);
+          if (dex === 0) {
+            el.addEventListener("mouseenter", () => {
+              con1.classList.add("fotoKiri");
+              con1.classList.remove("fotoKiriBack");
+              setTimeout(() => {
+                // console.log("Muncul setelah 3 detik!");
+                con1.classList.add("zIndex2");
+              }, 500);
+            });
+            el.addEventListener("mouseleave", () => {
+              con1.classList.remove("fotoKiri");
+              con1.classList.add("fotoKiriBack");
+
+              setTimeout(() => {
+                // console.log("Muncul setelah 3 detik!");
+                con1.classList.remove("zIndex2");
+              }, 500);
+            });
+            // foto 2
+          } else {
+            el.addEventListener("mouseenter", () => {
+              con2.classList.add("fotoKanan");
+              con2.classList.remove("fotoKananBack");
+              setTimeout(() => {
+                // console.log("Muncul setelah 3 detik!");
+                con2.classList.add("zIndex2");
+              }, 500);
+            });
+            el.addEventListener("mouseleave", () => {
+              con2.classList.remove("fotoKanan");
+              con2.classList.add("fotoKananBack");
+
+              setTimeout(() => {
+                // console.log("Muncul setelah 3 detik!");
+                con2.classList.remove("zIndex2");
+              }, 500);
+            });
+          }
+        });
+      }
+    }
+
+    Object.assign(header.style, {
+      width: "100%",
+      display: "flex",
+      justifyContent: "center",
+      margin: "1rem 0 5rem 0",
+      fontWeight: "800",
+      fontSize: "clamp(1rem, calc(3vw + 1rem), 3rem)",
+      textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
+      color: "var(--line)",
+    });
+  }
+  // background
+  {
+    const conBackground = document.createElement("section");
+
+    container.appendChild(conBackground);
+
+    Object.assign(conBackground.style, {
+      height: "100%",
+      width: "100%",
+      // backgroundColor: "yellow",
+      position: "absolute",
+      top: "0",
+    });
+  }
+}
 // halaman experince
 {
   const container = document.createElement("section");
