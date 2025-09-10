@@ -574,10 +574,10 @@ Object.assign(mainAbout.style, {
               // opacity: "0.5",
               scale: "1.2",
             });
-            img.setAttribute("src", "asset/my-foto/2.JPG");
+            img.setAttribute("src", "./asset/my-foto/2.JPG");
             break;
           case 2:
-            img.setAttribute("src", "asset/my-foto/4.JPG");
+            img.setAttribute("src", "./asset/my-foto/4.JPG");
             div.classList.add("wrapperImg");
             section.classList.add("conImg2");
             // section.style.zIndex = "0";
@@ -587,7 +587,7 @@ Object.assign(mainAbout.style, {
       }
       const imgBox1 = document.querySelector(".img-box-1");
       console.log(imgBox1);
-      imgBox1.setAttribute("src", "asset/my-foto/3.JPG");
+      imgBox1.setAttribute("src", "./asset/my-foto/3.JPG");
       //con foto hover
       {
         const wrapper = document.querySelectorAll(".wrapperImg");
