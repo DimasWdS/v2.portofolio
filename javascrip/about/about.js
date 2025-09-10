@@ -562,7 +562,7 @@ Object.assign(mainAbout.style, {
         });
         switch (i) {
           case 0:
-            img.classList.add("img-box-1");
+            img.setAttribute("src", "asset/my-foto/3.jpg");
             div.classList.add("wrapperImg");
             section.classList.add("conImg1");
             break;
@@ -574,10 +574,10 @@ Object.assign(mainAbout.style, {
               // opacity: "0.5",
               scale: "1.2",
             });
-            img.setAttribute("src", "./asset/my-foto/2.JPG");
+            img.setAttribute("src", "asset/my-foto/2.jpg");
             break;
           case 2:
-            img.setAttribute("src", "./asset/my-foto/4.JPG");
+            img.setAttribute("src", "asset/my-foto/4.jpg");
             div.classList.add("wrapperImg");
             section.classList.add("conImg2");
             // section.style.zIndex = "0";
@@ -585,19 +585,16 @@ Object.assign(mainAbout.style, {
           case 1:
         }
       }
-      const imgBox1 = document.querySelector(".img-box-1");
-      console.log(imgBox1);
-      imgBox1.setAttribute("src", "./asset/my-foto/3.JPG");
       //con foto hover
       {
         const wrapper = document.querySelectorAll(".wrapperImg");
         const con2 = document.querySelector(".conImg2");
         const con1 = document.querySelector(".conImg1");
 
-        // console.log(con1);
+        console.log(con1);
 
         wrapper.forEach((el, dex) => {
-          // console.log(el);
+          console.log(el);
           if (dex === 0) {
             el.addEventListener("mouseenter", () => {
               con1.classList.add("fotoKiri");
