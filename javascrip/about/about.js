@@ -500,10 +500,12 @@ Object.assign(mainAbout.style, {
     const conKonten = document.createElement("section");
     const header = document.createElement("header");
     const confoto = document.createElement("div");
+    const conTeks = document.createElement("section");
 
     container.appendChild(conKonten);
     conKonten.appendChild(header);
     conKonten.appendChild(confoto);
+    conKonten.appendChild(conTeks);
 
     header.textContent = "MY STORY";
 
@@ -515,6 +517,17 @@ Object.assign(mainAbout.style, {
       maxWidth: "80rem",
       position: "relative",
       zIndex: "2",
+    });
+
+    Object.assign(header.style, {
+      width: "100%",
+      display: "flex",
+      justifyContent: "center",
+      margin: "1rem 0 5rem 0",
+      fontWeight: "800",
+      fontSize: "clamp(1rem, calc(3vw + 1rem), 3rem)",
+      textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
+      color: "var(--line)",
     });
 
     Object.assign(confoto.style, {
@@ -637,15 +650,12 @@ Object.assign(mainAbout.style, {
       }
     }
 
-    Object.assign(header.style, {
+    Object.assign(conTeks.style, {
+      height: "10rem",
       width: "100%",
-      display: "flex",
-      justifyContent: "center",
-      margin: "1rem 0 5rem 0",
-      fontWeight: "800",
-      fontSize: "clamp(1rem, calc(3vw + 1rem), 3rem)",
-      textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
-      color: "var(--line)",
+      // backgroundColor: "green",
+      margin: "5rem 0 0 0",
+      padding: "0 20%",
     });
   }
   // background

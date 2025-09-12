@@ -59,7 +59,7 @@ function headerNav(containerTarget) {
         break;
 
       case 2:
-        aLink.textContent = "Web Devoloper";
+        aLink.textContent = "Website";
         aLink.setAttribute("href", "web-devoloper.html");
         if (markPage === "WEB-DEVOLOPER") {
           aLink.classList.add("alink-nav-header-active");

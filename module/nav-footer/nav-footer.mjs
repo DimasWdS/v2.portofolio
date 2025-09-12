@@ -47,7 +47,7 @@ function createNavFooter(targetContainer) {
         aLink.setAttribute("href", "illustrator.html");
         break;
       case 2:
-        aLink.textContent = "Web Devoloper";
+        aLink.textContent = "Website";
         aLink.setAttribute("href", "web-devoloper.html");
         break;
       case 3:
