@@ -73,7 +73,7 @@ Object.assign(mainDevoloper.style, {
         color: "var(--main-font)",
         fontSize: "3rem",
         fontWeight: "800",
-        textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
+        // textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
       });
 
       switch (i) {

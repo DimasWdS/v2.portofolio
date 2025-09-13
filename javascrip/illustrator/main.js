@@ -117,7 +117,7 @@ Object.assign(main.style, {
         fontWeight: "900",
         color: "var(--main-font)",
         fontSize: "3em",
-        textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
+        // textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
       });
 
       switch (i) {

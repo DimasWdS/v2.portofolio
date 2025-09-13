@@ -77,7 +77,7 @@ Object.assign(mainAbout.style, {
             fontWeight: "900",
             color: "var(--main-font)",
             margin: "0 0 0 1rem",
-            textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
+            // textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
           });
           if (dex == 0) {
             el.style.position = "absolute";
@@ -107,7 +107,7 @@ Object.assign(mainAbout.style, {
           // boxShadow:
           //   "rgba(50, 50, 93, 0.5) 0px 6px 12px -2px, rgba(0, 0, 0, 1) 0px 3px 20px -3px",
 
-          backgroundImage: "url(asset/my-foto/1.jpg)",
+          backgroundImage: "url(asset/my-foto/1.png)",
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -324,7 +324,7 @@ Object.assign(mainAbout.style, {
         color: "var(--main-font)",
         fontWeight: "800",
         fontSize: "clamp(1rem, calc(3vw + 1rem), 3rem)",
-        textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
+        // textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
       });
       if (dex === 1) {
         el.style.position = "absolute";
@@ -526,7 +526,7 @@ Object.assign(mainAbout.style, {
       margin: "1rem 0 5rem 0",
       fontWeight: "800",
       fontSize: "clamp(1rem, calc(3vw + 1rem), 3rem)",
-      textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
+      // textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
       color: "var(--line)",
     });
 
@@ -708,7 +708,7 @@ Object.assign(mainAbout.style, {
     fontWeight: "800",
     color: "var(--main-font)",
     // backgroundColor: "green",
-    textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
+    // textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
   });
 
   Object.assign(conKarir.style, {

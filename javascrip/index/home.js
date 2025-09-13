@@ -163,7 +163,7 @@ Object.assign(mainHome.style, {
     [teks1, teks2, teks3, konten].forEach((el) => {
       Object.assign(el.style, {
         // backgroundColor: "green",
-        textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
+        // textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
       });
     });
   }
