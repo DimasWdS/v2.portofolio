@@ -33,10 +33,9 @@ Object.assign(main.style, {
 {
   const containerThumbnail = document.createElement("section");
   main.appendChild(containerThumbnail);
+  containerThumbnail.classList.add("width-full");
   Object.assign(containerThumbnail.style, {
     position: "relative",
-    width: "100%",
-    height: "100dvh",
     overflow: "hidden",
   });
 
