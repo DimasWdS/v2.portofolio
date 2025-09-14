@@ -1,184 +1,150 @@
-function createCarProjectWeb(
-  conTarget,
-  background,
-  bgPictures,
-  owner,
-  startCreate,
-  tekonogiUse,
-  des
-) {
-  const conCard = document.createElement("section");
-  const bg = document.createElement("div");
-  const conBgWebPreview = document.createElement("div");
-  const imgPreview = document.createElement("img");
-  const konten = document.createElement("section");
-  const header = document.createElement("header");
-  const conLinkOutward = document.createElement("div");
-  const aOutward = document.createElement("a");
-  const conTeknologi = document.createElement("section");
-  const conDeskripsi = document.createElement("section");
-  const deskripsi = document.createElement("p");
+function createCarProjectWeb(conTarget) {
+  const container = document.createElement("section");
+  const bg = document.createElement("section");
+  const conPrevWeb = document.createElement("section");
+  const conTeks = document.createElement("section");
 
-  conTarget.appendChild(conCard);
-  conCard.appendChild(bg);
-  conCard.appendChild(conBgWebPreview);
-  conBgWebPreview.appendChild(imgPreview);
-  conCard.appendChild(konten);
-  konten.appendChild(header);
-  header.appendChild(conLinkOutward);
-  conLinkOutward.appendChild(aOutward);
-  conCard.appendChild(conTeknologi);
-  konten.appendChild(conDeskripsi);
-  conDeskripsi.appendChild(deskripsi);
+  conTarget.appendChild(container);
+  container.appendChild(bg);
+  container.appendChild(conPrevWeb);
+  container.appendChild(conTeks);
 
-  imgPreview.setAttribute("src", `asset/page-web/${background}`);
-  imgPreview.setAttribute("loading", "lazy");
-  imgPreview.setAttribute("alt", "background");
+  container.classList.add("con-card-web");
 
-  deskripsi.textContent = des;
-
-  conCard.classList.add("con-card-web");
-  konten.classList.add("con-konten");
-  conBgWebPreview.classList.add("con-bg-web-preview");
-
-  Object.assign(conCard.style, {
-    position: "relative",
+  Object.assign(container.style, {
     width: "90%",
-    height: "40rem",
-    // backgroundColor: "green",
-    borderRadius: "5px",
+    aspectRatio: "16/10",
+    backgroundColor: "var(--footer)",
+    position: "relative",
     overflow: "hidden",
-    boxShadow:
-      "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
   });
 
-  Object.assign(bg.style, {
-    height: "100%",
-    width: "100%",
-    position: "absolute",
-    // inset: "0",
-    // backgroundColor: "green",
-    backgroundImage: `url(asset/page-web/${bgPictures})`,
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    opacity: "0.2",
-  });
-  Object.assign(conBgWebPreview.style, {
-    position: "absolute",
-    width: "60%",
-    aspectRatio: "16/9",
-    right: "0",
-    top: "50%",
-    right: "1rem",
-    transform: "translateY(-50%)",
-    // backgroundColor: "yellow",
-    // border: "2px solid var(--line)",
-    borderRadius: "5px",
-    overflow: "hidden",
-  });
-  Object.assign(imgPreview.style, {
-    objectFit: "cover",
-  });
-  Object.assign(konten.style, {
-    height: "100%",
-    width: "50%",
-    position: "absolute",
-    // inset: "0",
-    // backgroundColor: "yellow",
-    zIndex: "2",
-  });
-  Object.assign(header.style, {
-    position: "relative",
-    width: "100%",
-    // backgroundColor: "green",
-    display: "flex",
-    justifyContent: "center",
-    flexDirection: "column",
-    padding: "2rem 0 2rem 2rem",
-  });
-  for (let i = 0; i < 2; i++) {
-    const span = document.createElement("p");
-    header.appendChild(span);
-    Object.assign(span.style, {
-      color: "var(--line)",
-      fontWeight: "700",
-      fontSize: "1.5rem",
+  // background
+  {
+    const img = document.createElement("img");
+
+    bg.appendChild(img);
+
+    img.setAttribute("alt", "background");
+    img.setAttribute("loading", "lazy");
+    img.setAttribute("src", "asset/page-web/prj1/big-city.jpg");
+
+    Object.assign(bg.style, {
+      position: "absolute",
+      inset: "0",
+      height: "100%",
+      width: "100%",
+      // backgroundColor: "yellow",
     });
-    if (i === 0) {
-      span.textContent = owner;
-    } else {
-      Object.assign(span.style, {
-        fontSize: "0.9rem",
-      });
-      span.textContent = startCreate;
-    }
+
+    Object.assign(img.style, {
+      opacity: "0.5",
+    });
   }
-  Object.assign(conLinkOutward.style, {
-    position: "absolute",
-    height: "4rem",
-    aspectRatio: "1/1",
-    // backgroundColor: "yellow",
-    right: "0",
-    cursor: "pointer",
-  });
-  Object.assign(aOutward.style, {
-    display: "inline-flex",
-    height: "100%",
-    width: "100%",
-    backgroundImage: "url(asset/icon/arrowoutward.svg)",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    backgroundSize: "70%",
-    transition: "all 0.3s ease",
-  });
-  conLinkOutward.addEventListener("mouseenter", () => {
-    aOutward.style.transform = "rotate(45deg)";
-  });
-  conLinkOutward.addEventListener("mouseleave", () => {
-    aOutward.style.transform = "rotate(0)";
-  });
-  Object.assign(conTeknologi.style, {
-    position: "absolute",
-    height: "3rem",
-    width: "100%",
-    // backgroundColor: "green",
-    bottom: "0",
-    margin: "0 0 2rem 0",
-    display: "flex",
-    alignItems: "center",
-    gap: "2rem",
-    padding: "0 1rem 0 1rem",
-    // flexWrap: "wrap",
-    // overflow: "scroll",
-    overflowX: "auto",
-    overflowY: "hidden",
-    zIndex: "3",
-  });
-  for (let i = 0; i < tekonogiUse.length; i++) {
-    const span = document.createElement("span");
-    conTeknologi.appendChild(span);
-    span.textContent = tekonogiUse[i];
-    Object.assign(span.style, {
-      color: "var(--footer)",
-      fontWeight: "600",
-      // backgroundColor: "var(--footer)",
-      backgroundColor: "#FF9B00",
-      padding: "0.2rem 1rem",
-      borderRadius: "5px",
-      flexShrink: "0",
+  //con preview web
+  {
+    const lookWeb = document.createElement("div");
+    const img = document.createElement("img");
+
+    img.setAttribute("alt", "background");
+    img.setAttribute("loading", "lazy");
+    img.setAttribute("src", "asset/page-web/prj1/bg.png");
+
+    conPrevWeb.appendChild(lookWeb);
+    lookWeb.appendChild(img);
+
+    Object.assign(conPrevWeb.style, {
+      height: "100%",
+      width: "100%",
+      position: "absolute",
+      inset: "0",
+      // backgroundColor: "green",
+      display: "flex",
+      justifyContent: "end",
+      alignItems: "center",
     });
-    Object.assign(conDeskripsi.style, {
+    Object.assign(lookWeb.style, {
+      width: "60%",
+      aspectRatio: "16/9",
+      // backgroundColor: "green",
+      margin: "0 0.5rem 0 0",
+    });
+
+    Object.assign(img.style, {
+      objectFit: "cover",
+    });
+  }
+  // const teks
+  {
+    const header = document.createElement("header");
+    const name = document.createElement("p");
+    const btnLinkWeb = document.createElement("div");
+    const a = document.createElement("a");
+
+    conTeks.appendChild(header);
+    header.appendChild(name);
+    header.appendChild(btnLinkWeb);
+    btnLinkWeb.appendChild(a);
+
+    name.textContent = "NAME WEBSITE";
+
+    Object.assign(conTeks.style, {
+      height: "100%",
+      width: "100%",
+      position: "absolute",
+      inset: "0",
+      // backgroundColor: "green",
+    });
+
+    Object.assign(header.style, {
+      width: "100%",
       // height: "2rem",
+      // backgroundColor: "green",
+      display: "flex",
+      alignItems: "center",
+      gap: "2rem",
+    });
+    Object.assign(name.style, {
+      fontSize: "2em",
+      fontWeight: "700",
+      padding: "2rem 0 2rem 1rem",
+      color: "var(--main-font)",
+    });
+    Object.assign(btnLinkWeb.style, {
+      height: "4rem",
+      aspectRatio: "1/1",
+      // backgroundColor: "green",
+      borderRadius: "50%",
+      outline: "2px solid var(--footer)",
+      overflow: "hidden",
+      backgroundColor: "transparent",
+      // opacity: "0.6",
+    });
+    Object.assign(a.style, {
+      display: "inline-flex",
+      height: "100%",
       width: "100%",
       // backgroundColor: "green",
-      margin: "5rem 0 0 0",
-      padding: "0 0 0 1rem",
+      backgroundImage: "url(asset/icon/arrowoutward.svg)",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      backgroundSize: "70%",
+      cursor: "pointer",
+      transition: "all 0.2s ease",
     });
-    Object.assign(deskripsi.style, {
-      color: "var(--main-font)",
-      fontWeight: "600",
-    });
+    // link website hover
+    {
+      a.addEventListener("mouseenter", () => {
+        a.style.rotate = "45deg";
+        btnLinkWeb.style.backgroundColor = "var(--footer)";
+        btnLinkWeb.style.outline = "2px solid var(--line)";
+      });
+      a.addEventListener("mouseleave", () => {
+        a.style.rotate = "0deg";
+        btnLinkWeb.style.backgroundColor = "transparent";
+        btnLinkWeb.style.outline = "2px solid var(--footer)";
+      });
+    }
   }
 }
 

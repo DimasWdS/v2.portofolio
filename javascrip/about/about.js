@@ -420,7 +420,7 @@ Object.assign(mainAbout.style, {
 
   Object.assign(container.style, {
     position: "relative",
-    width: "90%",
+    width: "100%",
     maxWidth: "80rem",
     overflow: "hidden",
     backgroundColor: "var(--second-background)",

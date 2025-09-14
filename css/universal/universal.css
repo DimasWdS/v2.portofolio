@@ -198,3 +198,25 @@ img {
   background-color: var(--accen-color);
 }
 /* nav header end */
+
+/* card web illustrator start */
+@media (max-width: 640px) {
+  .con-card-web {
+    aspect-ratio: 10/16 !important;
+  }
+  /* layer 2 */
+  .con-card-web section:nth-child(2) div {
+    display: none;
+    /* background-color: green; */
+  }
+  /* layer 1 */
+  .con-card-web section:nth-child(3) header div {
+    /* background-color: green !important; */
+    gap: 0;
+    margin-left: 1rem !important;
+    flex-shrink: 0;
+    margin-right: 1rem;
+    /* position: absolute; */
+  }
+}
+/* card web illustrator end */
