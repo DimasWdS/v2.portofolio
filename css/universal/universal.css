@@ -207,6 +207,12 @@ img {
   .con-card-web {
     aspect-ratio: 10/16 !important;
   }
+  .width-full {
+    width: 100% !important;
+  }
+  .overflow-scroll {
+    overflow-y: scroll;
+  }
 }
 .gogok {
   transform: translateY(0) !important;

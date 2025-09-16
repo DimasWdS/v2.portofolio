@@ -40,7 +40,7 @@ function createCarProjectWeb(conTarget) {
     });
 
     Object.assign(img.style, {
-      opacity: "0.9",
+      opacity: "0.4",
     });
   }
   //con preview web (tampilan website kecil di kanan tengah)
@@ -85,12 +85,14 @@ function createCarProjectWeb(conTarget) {
     const conViewWeb = document.createElement("div");
     const conTech = document.createElement("section");
     const conMoreInfo = document.createElement("button");
+    const conDeskripsi = document.createElement("section");
 
     conTeks.appendChild(header);
     header.appendChild(name);
     header.appendChild(conViewWeb);
     conTeks.appendChild(conTech);
     conTeks.appendChild(conMoreInfo);
+    conTeks.appendChild(conDeskripsi);
 
     name.textContent = "NAME WEBSITE";
 
@@ -166,6 +168,44 @@ function createCarProjectWeb(conTarget) {
       });
       wrapper.addEventListener("mouseleave", () => {
         conImg.style.transform = "rotate(0deg)";
+      });
+    }
+
+    // deskripsi (penjelasan web singkat)
+    {
+      const wrapper = document.createElement("section");
+      const teks = document.createElement("p");
+
+      conDeskripsi.appendChild(wrapper);
+      wrapper.appendChild(teks);
+
+      wrapper.classList.add("width-full", "overflow-scroll");
+
+      teks.textContent = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, beatae temporibus officia eaque corrupti rem, quaerat aliquam ullam iste rerum doloribus enim placeat, debitis at sapiente dicta. Incidunt voluptates cumque odit non et exercitationem, dignissimos quod molestiae illum laborum deserunt dolorem error fugit odio enim ex, aut eligendi placeat. Perferendis, distinctio unde sapiente molestias minima explicabo incidunt illum eligendi, porro ut blanditiis pariatur quos ab eum modi veritatis? Ipsa saepe, magnam pariatur modi aut qui vitae consequuntur delectus perferendis, odit, doloremque nam? Sunt, soluta blanditiis? Odit, iusto! Reprehenderit adipisci dicta illo impedit quae alias recusandae, quaerat inventore, dolore ab cumque!`;
+
+      Object.assign(conDeskripsi.style, {
+        height: "100%",
+        width: "100%",
+        // backgroundColor: "green",
+      });
+
+      Object.assign(wrapper.style, {
+        height: "100%",
+        width: "40%",
+        // backgroundColor: "green",
+        padding: "1rem 0.5rem 1rem 1rem",
+      });
+
+      Object.assign(teks.style, {
+        width: "100%",
+        // backgroundColor: "gray",
+        height: "40rem",
+        whiteSpace: "normal",
+        wordWrap: "break-word", // lama tapi masih banyak dipakai
+        overflowWrap: "break-word", // modern
+        color: "var(--main-font)",
+        fontFamily: `"Google Sans Code", monospace`,
+        fontWeight: "800",
       });
     }
     // con tech
