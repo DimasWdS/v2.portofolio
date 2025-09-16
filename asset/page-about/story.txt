@@ -1,0 +1,6 @@
+{
+const nama='dimas'
+}
+{
+console.log(nama)
+}

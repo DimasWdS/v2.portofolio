@@ -424,7 +424,7 @@ Object.assign(mainAbout.style, {
     maxWidth: "80rem",
     overflow: "hidden",
     backgroundColor: "var(--second-background)",
-    borderRadius: "5px",
+    // borderRadius: "5px",
   });
 
   Object.assign(layarAtas.style, {

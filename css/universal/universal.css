@@ -204,6 +204,7 @@ img {
   .con-card-web {
     aspect-ratio: 10/16 !important;
   }
+
   /* layer 2 */
   .con-card-web section:nth-child(2) div {
     display: none;
@@ -220,3 +221,6 @@ img {
   }
 }
 /* card web illustrator end */
+.gogok {
+  transform: translateY(0) !important;
+}
