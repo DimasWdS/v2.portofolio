@@ -40,7 +40,7 @@ function createCarProjectWeb(conTarget) {
     });
 
     Object.assign(img.style, {
-      opacity: "0.5",
+      opacity: "0.9",
     });
   }
   //con preview web (tampilan website kecil di kanan tengah)
@@ -54,6 +54,8 @@ function createCarProjectWeb(conTarget) {
 
     conPrevWeb.appendChild(lookWeb);
     lookWeb.appendChild(img);
+
+    lookWeb.classList.add("displayNone");
 
     Object.assign(conPrevWeb.style, {
       height: "100%",
@@ -80,15 +82,13 @@ function createCarProjectWeb(conTarget) {
   {
     const header = document.createElement("header");
     const name = document.createElement("p");
-    const btnLinkWeb = document.createElement("div");
-    const a = document.createElement("a");
+    const conViewWeb = document.createElement("div");
     const conTech = document.createElement("section");
     const conMoreInfo = document.createElement("button");
 
     conTeks.appendChild(header);
     header.appendChild(name);
-    header.appendChild(btnLinkWeb);
-    btnLinkWeb.appendChild(a);
+    header.appendChild(conViewWeb);
     conTeks.appendChild(conTech);
     conTeks.appendChild(conMoreInfo);
 
@@ -104,52 +104,68 @@ function createCarProjectWeb(conTarget) {
 
     Object.assign(header.style, {
       width: "100%",
-      // height: "2rem",
       // backgroundColor: "green",
+      // height: "max-content",
       display: "flex",
       alignItems: "center",
       gap: "2rem",
+      flexWrap: "wrap",
+      // flexWrap: "wrap",
+      padding: "2rem 1rem 0 1rem",
     });
     Object.assign(name.style, {
-      fontSize: "2em",
+      fontSize: "clamp(0.8rem, calc(3vw + 1rem), 2.5rem)",
       fontWeight: "700",
-      padding: "2rem 0 2rem 1rem",
       color: "var(--main-font)",
     });
-    Object.assign(btnLinkWeb.style, {
-      height: "4rem",
-      aspectRatio: "1/1",
-      // backgroundColor: "green",
-      borderRadius: "50%",
-      border: "2px solid var(--footer)",
-      overflow: "hidden",
-      backgroundColor: "transparent",
-      transition: "all 0.2s ease",
-      // opacity: "0.6",
-    });
-    Object.assign(a.style, {
-      display: "inline-flex",
-      height: "100%",
-      width: "100%",
-      // backgroundColor: "green",
-      backgroundImage: "url(asset/icon/arrowoutward.svg)",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center",
-      backgroundSize: "70%",
-      cursor: "pointer",
-      transition: "all 0.2s ease",
-    });
-    // link website hover
+    //
     {
-      a.addEventListener("mouseenter", () => {
-        a.style.rotate = "45deg";
-        btnLinkWeb.style.backgroundColor = "var(--footer)";
-        btnLinkWeb.style.border = "2px solid var(--line)";
+      const wrapper = document.createElement("button");
+      const p = document.createElement("p");
+      const conImg = document.createElement("div");
+      const img = document.createElement("img");
+
+      p.textContent = "View Web";
+
+      img.setAttribute("alt", "icon");
+      img.setAttribute("loading", "lazy");
+      img.setAttribute("src", "asset/icon/arrowoutward.svg");
+
+      conViewWeb.appendChild(wrapper);
+      wrapper.appendChild(p);
+      wrapper.appendChild(conImg);
+      conImg.appendChild(img);
+
+      Object.assign(wrapper.style, {
+        height: "3rem",
+        width: "10rem",
+        backgroundColor: "var(--footer)",
+        display: "inline-flex",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "1rem",
+        borderRadius: "2px",
+        cursor: "pointer",
       });
-      a.addEventListener("mouseleave", () => {
-        a.style.rotate = "0deg";
-        btnLinkWeb.style.backgroundColor = "transparent";
-        btnLinkWeb.style.border = "2px solid var(--footer)";
+
+      Object.assign(p.style, {
+        color: "var(--main-font)",
+        fontWeight: "900",
+        fontFamily: `"Google Sans Code", monospace !important`,
+      });
+
+      Object.assign(conImg.style, {
+        height: "2rem",
+        aspectRatio: "1/1",
+        // backgroundColor: "green",
+        transition: "all 0.2s ease",
+      });
+
+      wrapper.addEventListener("mouseenter", () => {
+        conImg.style.transform = "rotate(45deg)";
+      });
+      wrapper.addEventListener("mouseleave", () => {
+        conImg.style.transform = "rotate(0deg)";
       });
     }
     // con tech
@@ -384,9 +400,6 @@ function createCarProjectWeb(conTarget) {
             teks.textContent = "Java Scrip";
 
             Object.assign(con.style, {
-              // width: "2rem",
-              // aspectRatio: "16/9",
-              // backgroundColor: "green",
               display: "flex",
               width: "max-content",
               alignItems: "center",
@@ -395,13 +408,14 @@ function createCarProjectWeb(conTarget) {
             });
 
             Object.assign(conIcon.style, {
-              height: "2.5rem",
+              height: "2rem",
               aspectRatio: "1/1",
               // backgroundColor: "green",
             });
             Object.assign(teks.style, {
               fontFamily: `"Google Sans Code", monospace`,
               color: "var(--main-font)",
+              fontSize: "0.8em",
             });
           }
 
@@ -446,6 +460,7 @@ function createCarProjectWeb(conTarget) {
     //style more info
     {
       conMoreInfo.textContent = "MORE INFO";
+      conMoreInfo.classList.add("displayNone");
 
       Object.assign(conMoreInfo.style, {
         backgroundColor: "var(--footer)",
