@@ -1,4 +1,13 @@
-function createCarProjectWeb(conTarget) {
+function createCarProjectWeb(
+  conTarget,
+  namaWebsite,
+  linkWebsite,
+  fotoWeb,
+  deskripsiWeb,
+  posisiJob,
+  teknologiWeb,
+  background
+) {
   const container = document.createElement("section");
   const bg = document.createElement("section");
   const conPrevWeb = document.createElement("section");
@@ -17,7 +26,7 @@ function createCarProjectWeb(conTarget) {
     backgroundColor: "var(--footer)",
     position: "relative",
     overflow: "hidden",
-    border: "2px solid var(--accen-color)",
+    border: "2px solid #848484ff",
     borderRadius: "5px",
   });
 
@@ -29,7 +38,7 @@ function createCarProjectWeb(conTarget) {
 
     img.setAttribute("alt", "background");
     img.setAttribute("loading", "lazy");
-    img.setAttribute("src", "asset/page-web/prj1/big-city.jpg");
+    img.setAttribute("src", `asset/page-web/${background}`);
 
     Object.assign(bg.style, {
       position: "absolute",
@@ -50,7 +59,7 @@ function createCarProjectWeb(conTarget) {
 
     img.setAttribute("alt", "background");
     img.setAttribute("loading", "lazy");
-    img.setAttribute("src", "asset/page-web/prj1/bg.png");
+    img.setAttribute("src", `asset/page-web/${fotoWeb}`);
 
     conPrevWeb.appendChild(lookWeb);
     lookWeb.appendChild(img);
@@ -94,7 +103,7 @@ function createCarProjectWeb(conTarget) {
     conTeks.appendChild(conMoreInfo);
     conTeks.appendChild(conDeskripsi);
 
-    name.textContent = "NAME WEBSITE";
+    name.textContent = namaWebsite;
 
     Object.assign(conTeks.style, {
       height: "100%",
@@ -117,15 +126,18 @@ function createCarProjectWeb(conTarget) {
     });
     Object.assign(name.style, {
       fontSize: "clamp(0.8rem, calc(3vw + 1rem), 2.5rem)",
-      fontWeight: "700",
+      fontWeight: "900",
       color: "var(--main-font)",
     });
     //
     {
-      const wrapper = document.createElement("button");
+      const wrapper = document.createElement("a");
       const p = document.createElement("p");
       const conImg = document.createElement("div");
       const img = document.createElement("img");
+
+      wrapper.setAttribute("href", `${linkWebsite}`);
+      wrapper.setAttribute("target", "_blank");
 
       p.textContent = "View Web";
 
@@ -181,7 +193,7 @@ function createCarProjectWeb(conTarget) {
 
       wrapper.classList.add("width-full", "overflow-scroll");
 
-      teks.textContent = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, beatae temporibus officia eaque corrupti rem, quaerat aliquam ullam iste rerum doloribus enim placeat, debitis at sapiente dicta. Incidunt voluptates cumque odit non et exercitationem, dignissimos quod molestiae illum laborum deserunt dolorem error fugit odio enim ex, aut eligendi placeat. Perferendis, distinctio unde sapiente molestias minima explicabo incidunt illum eligendi, porro ut blanditiis pariatur quos ab eum modi veritatis? Ipsa saepe, magnam pariatur modi aut qui vitae consequuntur delectus perferendis, odit, doloremque nam? Sunt, soluta blanditiis? Odit, iusto! Reprehenderit adipisci dicta illo impedit quae alias recusandae, quaerat inventore, dolore ab cumque!`;
+      teks.textContent = deskripsiWeb;
 
       Object.assign(conDeskripsi.style, {
         height: "100%",
@@ -397,7 +409,7 @@ function createCarProjectWeb(conTarget) {
           container.appendChild(p2);
 
           p1.textContent = "RESPONSIBILITIES";
-          p2.textContent = "FrontEnd Dev";
+          p2.textContent = posisiJob;
 
           Object.assign(container.style, {
             // height: "3rem",
@@ -422,7 +434,53 @@ function createCarProjectWeb(conTarget) {
           const container = document.createElement("section");
           const p1 = document.createElement("p");
           const conTech = document.createElement("section");
-          function cardTech() {
+
+          // function cardTech() {
+          //   const con = document.createElement("section");
+          //   const conIcon = document.createElement("section");
+          //   const imgIcon = document.createElement("img");
+          //   const teks = document.createElement("p");
+
+          //   conTech.appendChild(con);
+          //   con.appendChild(conIcon);
+          //   conIcon.appendChild(imgIcon);
+          //   con.appendChild(teks);
+
+          //   imgIcon.setAttribute("alt", "icon");
+          //   imgIcon.setAttribute("loading", "lazy");
+          //   imgIcon.setAttribute("src", "asset/icon/javascript.svg");
+
+          //   teks.textContent = "Java Scrip";
+
+          //   Object.assign(con.style, {
+          //     display: "flex",
+          //     width: "max-content",
+          //     alignItems: "center",
+          //     gap: "0.3rem",
+          //     flexShrink: "0",
+          //   });
+
+          //   Object.assign(conIcon.style, {
+          //     height: "2rem",
+          //     aspectRatio: "1/1",
+          //     // backgroundColor: "green",
+          //   });
+          //   Object.assign(teks.style, {
+          //     fontFamily: `"Google Sans Code", monospace`,
+          //     color: "var(--main-font)",
+          //     fontSize: "0.8em",
+          //   });
+          // }
+
+          // const techData = [
+          //   ["html.svg", "HTML"],
+          //   ["css.svg", "CSS"],
+          //   ["javascript.svg", "JavaScript"],
+          // ];
+
+          const techData = teknologiWeb;
+
+          function cardTech(iconSrc, title) {
             const con = document.createElement("section");
             const conIcon = document.createElement("section");
             const imgIcon = document.createElement("img");
@@ -433,12 +491,14 @@ function createCarProjectWeb(conTarget) {
             conIcon.appendChild(imgIcon);
             con.appendChild(teks);
 
-            imgIcon.setAttribute("alt", "icon");
+            // isi data dari parameter
+            imgIcon.setAttribute("alt", title + " icon");
             imgIcon.setAttribute("loading", "lazy");
-            imgIcon.setAttribute("src", "asset/icon/javascript.svg");
+            imgIcon.setAttribute("src", "asset/icon/" + iconSrc);
 
-            teks.textContent = "Java Scrip";
+            teks.textContent = title;
 
+            // styling
             Object.assign(con.style, {
               display: "flex",
               width: "max-content",
@@ -450,14 +510,19 @@ function createCarProjectWeb(conTarget) {
             Object.assign(conIcon.style, {
               height: "2rem",
               aspectRatio: "1/1",
-              // backgroundColor: "green",
             });
+
             Object.assign(teks.style, {
               fontFamily: `"Google Sans Code", monospace`,
               color: "var(--main-font)",
               fontSize: "0.8em",
             });
           }
+
+          // looping semua data
+          techData.forEach(([icon, title]) => {
+            cardTech(icon, title);
+          });
 
           konten.appendChild(container);
           container.appendChild(p1);
@@ -490,10 +555,6 @@ function createCarProjectWeb(conTarget) {
             gap: "1rem",
             flexWrap: "wrap",
           });
-
-          cardTech();
-          cardTech();
-          cardTech();
         }
       }
     }
