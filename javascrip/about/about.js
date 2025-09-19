@@ -792,11 +792,12 @@ Object.assign(mainAbout.style, {
   }
   //container pertanyaan
   {
-    function createQuestion(pertanyaan, jawaban, tinggiCon) {
+    function createQuestion(pertanyaan, jawaban) {
       const container = document.createElement("section");
       const header = document.createElement("header");
       const conBtn = document.createElement("div");
       const conAnswer = document.createElement("section");
+      const headerBlok = document.createElement("section");
 
       conQuestion.appendChild(container);
       container.appendChild(header);
@@ -827,6 +828,7 @@ Object.assign(mainAbout.style, {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          position: "relative",
         });
         Object.assign(p.style, {
           color: "var(--blue)",
@@ -838,6 +840,7 @@ Object.assign(mainAbout.style, {
           width: "80%",
           transition: "all 0.2s ease",
           // backgroundColor: "yellow",
+          position: "relative",
         });
         Object.assign(conBtn.style, {
           height: "1rem",
@@ -849,6 +852,7 @@ Object.assign(mainAbout.style, {
           alignItems: "center",
           transition: "all 0.2s ease",
         });
+
         for (let i = 0; i < 2; i++) {
           const span = document.createElement("span");
           conBtn.appendChild(span);
@@ -934,6 +938,18 @@ Object.assign(mainAbout.style, {
           });
         }
       }
+
+      // header blok
+
+      {
+        header.appendChild(headerBlok);
+        Object.assign(headerBlok.style, {
+          position: "absolute",
+          height: "100%",
+          width: "100%",
+          // backgroundColor: "green",
+        });
+      }
     }
 
     Object.assign(conQuestion.style, {
@@ -947,13 +963,22 @@ Object.assign(mainAbout.style, {
       margin: "2rem 0",
     });
 
-    for (let i = 0; i < 2; i++) {
-      createQuestion(
-        "Kenapa memilih 2 bidang keahlian?",
-        "karena bbbbbbbbbbbbbbbbbbbbbbbbbb saya mampu karena saya mampu karena saya mampu karena saya mampu karena saya mampu karena saya mampu",
-        "3rem"
-      );
-    }
+    createQuestion(
+      "Kenapa memilih 2 bidang keahlian?",
+      "Menurut saya diera sekarang jika seorang individu ingin berkerja didalam teknologi tidak cukup dengan hanya satu bidang keahlian."
+    );
+    createQuestion(
+      "Kenapa memilih Illustrator",
+      "Semua berasal dari menonton video dari konten kreator yang bernama Pamzky dari platfrom tiktok di tahun 2023, dari situ saya menjadikan menggambar sebagai hobi."
+    );
+    createQuestion(
+      "Kenapa memilih Frontend",
+      "Saya memasukan Frontend kedalam kemampuan saya karena itu adalah tujuan saya masuk kedalam dunia teknologi, hal itu dimulai saat saya masuk ke SMKN 1 GEGER jurusan Teknik Komputer dan Jaringan"
+    );
+    createQuestion(
+      "Tools apa yang saya gunakan untuk membuat Illustrasi?",
+      "Untuk sekarang saya sangat nyaman menggunakan software Adobe Illustrator"
+    );
   }
 }
 // footer

@@ -254,15 +254,21 @@
 .logoX {
   transform: rotate(140deg) !important;
 }
-.penutup::after {
+/* .penutup::before {
   position: absolute;
   width: 100%;
   height: 1rem;
   content: "";
-  /* background: linear-gradient(to top, var(--main-font), rgba(255, 255, 255, 0)); */
-  /* background-color: aqua; */
-}
+  background: linear-gradient(
+    to top,
+    var(--background-color),
+    rgba(255, 255, 255, 0)
+  );
+  z-index: 2;
+  background-color: aqua;
+} */
 .penutupTurun {
-  transform: translateY(100%) !important;
+  /* transform: translateY(100%) !important; */
+  opacity: 0;
 }
 /* page quick question end */
