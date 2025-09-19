@@ -1,8 +1,3 @@
-:root {
-  --con-vscode: rgb(40, 40, 40);
-  --konten: #262626;
-}
-
 @media (min-width: 1025px) {
 }
 @media (max-width: 1024px) {
@@ -251,3 +246,23 @@
   }
 }
 /* page story end */
+
+/* page quick question strat */
+.counterNone {
+  display: flex !important;
+}
+.logoX {
+  transform: rotate(140deg) !important;
+}
+.penutup::after {
+  position: absolute;
+  width: 100%;
+  height: 1rem;
+  content: "";
+  /* background: linear-gradient(to top, var(--main-font), rgba(255, 255, 255, 0)); */
+  /* background-color: aqua; */
+}
+.penutupTurun {
+  transform: translateY(100%) !important;
+}
+/* page quick question end */
