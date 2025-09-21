@@ -22,6 +22,34 @@ Object.assign(mainHome.style, {
   });
   headerNav(containerHeaderNavHome);
 }
+// background
+{
+  const conBackground = document.createElement("section");
+  const balok = document.createElement("div");
+
+  mainHome.appendChild(conBackground);
+
+  Object.assign(conBackground.style, {
+    height: "100%",
+    width: "100%",
+    // backgroundColor: "green",
+    position: "absolute",
+    overflow: "hidden",
+  });
+  // balok
+  {
+    conBackground.appendChild(balok);
+
+    Object.assign(balok.style, {
+      width: "100%",
+      height: "40%",
+      position: "absolute",
+      backgroundColor: "var(--second-background)",
+      top: "50%",
+      transform: "translateY(-50%) rotate(45deg) scaleX(200%)",
+    });
+  }
+}
 
 // home
 {
@@ -37,6 +65,8 @@ Object.assign(mainHome.style, {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    position: "relative",
+    zIndex: "2",
     // margin: "0 0 5rem 0",
   });
 
@@ -76,7 +106,7 @@ Object.assign(mainHome.style, {
       position: "fixed",
       zIndex: "0",
       filter: "drop-shadow(10px -10px 5px rgba(0, 0, 0, 0.4))",
-      opacity: "70%",
+      // opacity: "70%",
     });
   }
   // konten

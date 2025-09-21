@@ -46,6 +46,7 @@ Object.assign(main.style, {
     const conImg = document.createElement("section");
     const imgSatu = document.createElement("div");
     const imgDua = document.createElement("div");
+    const bgKarya = document.createElement("section");
 
     containerThumbnail.appendChild(background);
     background.appendChild(conApi);
@@ -67,8 +68,10 @@ Object.assign(main.style, {
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
       backgroundAttachment: "fixed",
-      opacity: "60%",
+      // opacity: "60%",
       filter: "drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.67))",
+      position: "relative",
+      zIndex: "2",
     });
 
     Object.assign(conImg.style, {
@@ -79,6 +82,7 @@ Object.assign(main.style, {
       bottom: "0",
       display: "flex",
       justifyContent: "space-between",
+      zIndex: "4",
     });
 
     [imgSatu, imgDua].forEach((el, dex) => {
@@ -100,6 +104,32 @@ Object.assign(main.style, {
             : "perspective(300px) rotateY(-10deg)",
       });
     });
+
+    //
+    {
+      const image = document.createElement("div");
+
+      background.appendChild(bgKarya);
+      bgKarya.appendChild(image);
+
+      Object.assign(bgKarya.style, {
+        height: "100%",
+        width: "100%",
+        // backgroundColor: "green",
+        position: "absolute",
+        inset: "0",
+      });
+
+      Object.assign(image.style, {
+        height: "100%",
+        width: "100%",
+        // backgroundColor: "yellow",
+        backgroundImage: "url(asset/page-illustrator/background.jpg",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      });
+    }
   }
 
   // konten teks
