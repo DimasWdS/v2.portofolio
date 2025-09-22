@@ -253,10 +253,9 @@ Object.assign(main.style, {
     justifyContent: "center",
   });
 
-  for (let i = 0; i < 2; i++) {
-    cardIllustrator(konten, "1.jpg", "adobeillustratoricon.svg");
-    cardIllustrator(konten, "2.jpg", "adobeillustratoricon.svg");
-  }
+  cardIllustrator(konten, "1.jpg", "adobeillustratoricon.svg");
+  cardIllustrator(konten, "2.jpg", "adobeillustratoricon.svg");
+  cardIllustrator(konten, "3.jpg", "adobeillustratoricon.svg");
 
   // btn more on
   {
