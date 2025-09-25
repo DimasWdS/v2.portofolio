@@ -46,7 +46,7 @@ Object.assign(mainHome.style, {
       position: "absolute",
       backgroundColor: "var(--second-background)",
       top: "50%",
-      transform: "translateY(-50%) rotate(45deg) scaleX(200%)",
+      transform: "translateY(-50%) rotate(45deg) scaleX(1000%)",
     });
   }
 }
