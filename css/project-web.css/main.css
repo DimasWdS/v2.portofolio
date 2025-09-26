@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+15&display=swap");
+
 @media (max-width: 1024px) {
   .con-web-home section:nth-child(2) div {
     /* background-color: green; */
@@ -7,4 +9,8 @@
   .con-web-home section:nth-child(2) div div {
     margin-top: 50% !important;
   }
+}
+
+.fontPixel {
+  font-family: "Jersey 15", sans-serif;
 }

@@ -28,91 +28,139 @@ Object.assign(mainDevoloper.style, {
   headerNav(containerHeaderNavAbout);
 }
 
-//HOME (3D)
+// home
 {
   const container = document.createElement("section");
-  const conBgLaptop = document.createElement("section");
+  const conMargin = document.createElement("section");
   const conKonten = document.createElement("section");
+  const conBlur = document.createElement("section");
+
   mainDevoloper.appendChild(container);
-  container.appendChild(conBgLaptop);
+  container.appendChild(conMargin);
   container.appendChild(conKonten);
-  container.classList.add("con-web-home");
+  container.appendChild(conBlur);
+
   Object.assign(container.style, {
-    position: "relative",
-    width: "100%",
-    maxWidth: "80rem",
     height: "100dvh",
-    backgroundColor: "var(--background-color)",
-    // backgroundColor: "yellow",
-    margin: "0 0 15rem 0",
-  });
-  Object.assign(conBgLaptop.style, {
-    height: "100%",
     width: "100%",
+    // position:"fixed"
   });
-  Object.assign(conKonten.style, {
-    position: "absolute",
-    top: "0",
-    width: "100%",
-    height: "100%",
-    display: "flex",
-    justifyContent: "end",
-    // backgroundColor: "green",
-  });
-  //konten
+
+  // style conMargin
   {
-    const firstCon = document.createElement("div");
-    const teks = document.createElement("div");
+    Object.assign(conMargin.style, {
+      height: "100%",
+      width: "100%",
+      // backgroundColor: "green",
+    });
+  }
+  // style conKonten
+  {
+    const conTeks = document.createElement("section");
 
-    for (let i = 0; i < 3; i++) {
-      const p = document.createElement("p");
+    conKonten.appendChild(conTeks);
 
-      teks.appendChild(p);
+    Object.assign(conKonten.style, {
+      height: "100%",
+      width: "100%",
+      maxWidth: "80rem",
+      // backgroundColor: "green",
+      position: "fixed",
+      inset: "0",
+      left: "50%",
+      transform: "translateX(-50%)",
+      // backgroundColor: "green",
+    });
 
-      Object.assign(p.style, {
-        color: "var(--main-font)",
-        fontSize: "3rem",
-        fontWeight: "800",
-        // textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
+    // conTeks
+    {
+      // pembungkus teks
+      const section = document.createElement("section");
+      const section2 = document.createElement("section");
+
+      // const span1 = document.createElement("span");
+
+      conKonten.appendChild(section);
+      conTeks.appendChild(section);
+      conTeks.appendChild(section2);
+
+      Object.assign(conTeks.style, {
+        height: "100%",
+        width: "100%",
+        // backgroundColor: "yellow",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
       });
 
-      switch (i) {
-        case 0:
-          p.textContent = "MY";
-          Object.assign(p.style, {
-            position: "absolute",
-            bottom: "2.5rem",
+      //
+      {
+        Object.assign(section.style, {
+          // backgroundColor: "green",
+          display: "flex",
+          flexDirection: "column",
+          position: "relative",
+          // justifyContent: "center",
+          alignItems: "center",
+        });
+
+        for (let i = 0; i < 3; i++) {
+          const span = document.createElement("span");
+
+          section.appendChild(span);
+
+          span.classList.add("fontPixel");
+
+          // span.textContent = "tess";
+
+          Object.assign(span.style, {
+            fontSize: "6em",
+            color: "var(--main-font)",
           });
-          break;
-        case 1:
-          p.textContent = "PROJECT";
-          break;
-        case 2:
-          p.textContent = "WEBSITE 🚀";
-          Object.assign(p.style, {
-            position: "absolute",
-            top: "2.5rem",
-          });
-          break;
+
+          switch (i) {
+            case 0:
+              span.textContent = "MY";
+              Object.assign(span.style, {
+                position: "absolute",
+                bottom: "60%",
+              });
+              break;
+            case 1:
+              span.textContent = "PROJECT";
+              break;
+            case 2:
+              span.textContent = "WEBSITE";
+              Object.assign(span.style, {
+                position: "absolute",
+                top: "60%",
+              });
+              break;
+          }
+        }
+      }
+      //
+      {
+        Object.assign(section2.style, {
+          height: "2rem",
+          width: "2rem",
+          // backgroundColor: "green",
+          margin: "5rem 0 0 0",
+        });
       }
     }
-
-    conKonten.appendChild(firstCon);
-    firstCon.appendChild(teks);
-
-    Object.assign(firstCon.style, {
+    // console.log(conKonten);
+  }
+  //conBlur
+  {
+    Object.assign(conBlur.style, {
       height: "100%",
-      width: "50%",
-      // backgroundColor: "green",
-      display: "flex",
-    });
-    Object.assign(teks.style, {
-      position: "relative",
-      // backgroundColor: "green",
       width: "100%",
-      // margin: "10% 0 0 0",
-      height: "max-content",
-      marginTop: "30%",
+      position: "fixed",
+      inset: "0",
+      // backgroundColor: "red",
+      // blur: "20px",
     });
   }
 }
@@ -176,6 +224,8 @@ Object.assign(mainDevoloper.style, {
     display: "flex",
     justifyContent: "center",
     backgroundColor: "var(--footer)",
+    position: "relative",
+    zIndex: "2",
     // height: "20rem",
   });
 

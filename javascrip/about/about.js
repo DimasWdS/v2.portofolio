@@ -298,7 +298,7 @@ Object.assign(mainAbout.style, {
     div.appendChild(teksSatu);
     div.appendChild(teksDua);
 
-    teksSatu.textContent = "I CAN DRAWING";
+    teksSatu.textContent = "I CAN MAKE ILLUSTRATION";
     teksDua.textContent = "FOR YOU.";
 
     Object.assign(conTeks.style, {
