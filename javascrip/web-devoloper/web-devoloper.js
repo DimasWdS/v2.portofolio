@@ -256,6 +256,7 @@ Object.assign(mainDevoloper.style, {
       // backgroundColor: "red",
       // backdropFilter: "blur(5px)",
       zIndex: "3",
+      transition: "0.2s ease",
     });
   }
   //
@@ -268,12 +269,14 @@ Object.assign(mainDevoloper.style, {
     window.addEventListener("scroll", () => {
       if (window.scrollY >= threshold) {
         conBlur.style.zIndex = "6";
-        conBlur.style.backdropFilter = "blur(5px)";
-        conBlur.style.background = "rgba(255, 255, 255, 0.02)";
+        conBlur.classList.add("glass");
+        // conBlur.style.backdropFilter = "blur(5px)";
+        // conBlur.style.background = "rgba(255, 255, 255, 0.02)";
       } else {
         conBlur.style.zIndex = "3";
-        conBlur.style.backdropFilter = "blur(0px)";
-        conBlur.style.background = "rgba(255, 255, 255, 0)";
+        conBlur.classList.remove("glass");
+        // conBlur.style.backdropFilter = "blur(0px)";
+        // conBlur.style.background = "rgba(255, 255, 255, 0)";
       }
     });
   }

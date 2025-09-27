@@ -14,3 +14,12 @@
 .fontPixel {
   font-family: "Jersey 15", sans-serif;
 }
+.glass {
+  background: rgba(255, 255, 255, 0.032); /* transparan */
+  backdrop-filter: blur(10px); /* efek blur belakang */
+  -webkit-backdrop-filter: blur(10px); /* support Safari */
+  /* border: 1px solid rgba(255, 255, 255, 0.2); border tipis */
+  /* border-radius: 1rem; sudut melengkung */
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); bayangan lembut */
+  /* color: white; teks biar kontras */
+}
