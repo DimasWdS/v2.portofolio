@@ -56,6 +56,7 @@ Object.assign(mainDevoloper.style, {
   }
   // style conKonten
   {
+    //container teks
     const conTeks = document.createElement("section");
 
     conKonten.appendChild(conTeks);
@@ -70,20 +71,11 @@ Object.assign(mainDevoloper.style, {
       left: "50%",
       transform: "translateX(-50%)",
       // backgroundColor: "green",
+      zIndex: "4",
     });
 
-    // conTeks
+    // konten teks
     {
-      // pembungkus teks
-      const section = document.createElement("section");
-      const section2 = document.createElement("section");
-
-      // const span1 = document.createElement("span");
-
-      conKonten.appendChild(section);
-      conTeks.appendChild(section);
-      conTeks.appendChild(section2);
-
       Object.assign(conTeks.style, {
         height: "100%",
         width: "100%",
@@ -94,7 +86,15 @@ Object.assign(mainDevoloper.style, {
         flexDirection: "column",
       });
 
-      //
+      // teks header
+      const section = document.createElement("section");
+      // github link
+      const section2 = document.createElement("section");
+
+      conTeks.appendChild(section);
+      conTeks.appendChild(section2);
+
+      // teks header
       {
         Object.assign(section.style, {
           // backgroundColor: "green",
@@ -117,6 +117,7 @@ Object.assign(mainDevoloper.style, {
           Object.assign(span.style, {
             fontSize: "6em",
             color: "var(--main-font)",
+            fontSize: "clamp(6rem, calc(2vw + 1rem), 1rem)",
           });
 
           switch (i) {
@@ -140,18 +141,84 @@ Object.assign(mainDevoloper.style, {
           }
         }
       }
-      //
+      // link github ke con teks
       {
+        const div = document.createElement("div");
+
+        section2.appendChild(div);
+
         Object.assign(section2.style, {
           height: "2rem",
-          width: "2rem",
+          width: "90%",
           // backgroundColor: "green",
           margin: "5rem 0 0 0",
         });
+        Object.assign(div.style, {
+          height: "2rem",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          // backgroundColor: "red",
+        });
+        for (let i = 0; i < 6; i++) {
+          const span = document.createElement("span");
+
+          div.appendChild(span);
+          Object.assign(span.style, {
+            fontWeight: "400",
+            fontSize: "1rem",
+            fontFamily: "monospace",
+            fontSize: "clamp(0.8rem, calc(1vw + 0.5rem), 1.2rem)",
+          });
+
+          switch (i) {
+            case 0:
+              Object.assign(span.style, {
+                color: "purple",
+              });
+              span.textContent = "const";
+              break;
+            case 1:
+              Object.assign(span.style, {
+                margin: "0 0 0 0.8rem",
+                color: "cyan",
+              });
+              span.textContent = "githubLink";
+              break;
+            case 2:
+              Object.assign(span.style, {
+                margin: "0 0 0 0.8rem",
+                color: "red",
+              });
+              span.textContent = "=";
+              break;
+            case 3:
+              Object.assign(span.style, {
+                margin: "0 0 0 0.8rem",
+                color: "green",
+              });
+              span.textContent = `"`;
+              break;
+            case 4:
+              Object.assign(span.style, {
+                color: "green",
+              });
+              span.textContent = `https://github.com/dimaswds`;
+              break;
+            case 5:
+              Object.assign(span.style, {
+                color: "green",
+              });
+              span.textContent = `"`;
+              break;
+          }
+        }
       }
     }
     // console.log(conKonten);
   }
+
   //conBlur
   {
     Object.assign(conBlur.style, {
@@ -180,6 +247,8 @@ Object.assign(mainDevoloper.style, {
     justifyContent: "center",
     flexWrap: "wrap",
     gap: "10rem",
+    position: "relative",
+    zIndex: "10",
   });
 
   createCarProjectWeb(
@@ -225,7 +294,7 @@ Object.assign(mainDevoloper.style, {
     justifyContent: "center",
     backgroundColor: "var(--footer)",
     position: "relative",
-    zIndex: "2",
+    zIndex: "10",
     // height: "20rem",
   });
 
