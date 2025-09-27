@@ -88,10 +88,13 @@ Object.assign(mainDevoloper.style, {
 
       // teks header
       const section = document.createElement("section");
+      // komen
+      const section1 = document.createElement("section");
       // github link
       const section2 = document.createElement("section");
 
       conTeks.appendChild(section);
+      conTeks.appendChild(section1);
       conTeks.appendChild(section2);
 
       // teks header
@@ -141,6 +144,31 @@ Object.assign(mainDevoloper.style, {
           }
         }
       }
+      // komen
+      {
+        Object.assign(section1.style, {
+          height: "2rem",
+          width: "90%",
+          // backgroundColor: "green",
+          margin: "5rem 0 0 0",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          // fontSize: "1rem",
+        });
+
+        const span = document.createElement("span");
+
+        section1.appendChild(span);
+
+        span.textContent = "// you can also see it on my github page";
+
+        Object.assign(span.style, {
+          fontFamily: "monospace",
+          fontSize: "clamp(0.8rem, calc(1vw + 0.5rem), 1rem)",
+          color: "gray",
+        });
+      }
       // link github ke con teks
       {
         const div = document.createElement("div");
@@ -151,7 +179,7 @@ Object.assign(mainDevoloper.style, {
           height: "2rem",
           width: "90%",
           // backgroundColor: "green",
-          margin: "5rem 0 0 0",
+          margin: "1rem 0 0 0",
         });
         Object.assign(div.style, {
           height: "2rem",
@@ -216,7 +244,6 @@ Object.assign(mainDevoloper.style, {
         }
       }
     }
-    // console.log(conKonten);
   }
 
   //conBlur
@@ -227,7 +254,27 @@ Object.assign(mainDevoloper.style, {
       position: "fixed",
       inset: "0",
       // backgroundColor: "red",
-      // blur: "20px",
+      // backdropFilter: "blur(5px)",
+      zIndex: "3",
+    });
+  }
+  //
+  {
+    const remToPx = parseFloat(
+      getComputedStyle(document.documentElement).fontSize
+    );
+    const threshold = 10 * remToPx; // 2rem → px
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= threshold) {
+        conBlur.style.zIndex = "6";
+        conBlur.style.backdropFilter = "blur(5px)";
+        conBlur.style.background = "rgba(255, 255, 255, 0.02)";
+      } else {
+        conBlur.style.zIndex = "3";
+        conBlur.style.backdropFilter = "blur(0px)";
+        conBlur.style.background = "rgba(255, 255, 255, 0)";
+      }
     });
   }
 }
