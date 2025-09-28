@@ -119,6 +119,14 @@ img {
 
 /* nav header start */
 
+@media (max-width: 640px) {
+  .positionHamMoble {
+    margin: 1rem 1rem 0 0 !important;
+    /* transform: scale(0.4) !important; */
+    scale: 90% !important;
+  }
+}
+
 .hiasan-active {
   border-radius: 0 !important;
 }

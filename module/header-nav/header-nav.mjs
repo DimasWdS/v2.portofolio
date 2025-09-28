@@ -23,6 +23,7 @@ function headerNav(containerTarget) {
     display: "flex",
     gap: "0.5rem",
     padding: "0.5rem 0 0.5rem 0",
+    // backgroundColor: "green",
   });
   for (let i = 0; i < 5; i++) {
     const aLink = document.createElement("a");
@@ -30,7 +31,7 @@ function headerNav(containerTarget) {
 
     Object.assign(aLink.style, {
       fontWeight: "600",
-      //   backgroundColor: "var(--footer)",
+      // backgroundColor: "var(--footer)",
       color: "var(--main-font)",
       padding: "0.5rem 1rem",
       // borderRadius: "10px",
@@ -39,7 +40,7 @@ function headerNav(containerTarget) {
     });
 
     // aLink.classList.add("alink-nav-header-active");
-    aLink.classList.add("alink-nav-header"); // ini bisa di luar switch, karena selalu dipakai
+    aLink.classList.add("alink-nav-header");
 
     switch (i) {
       case 0:
@@ -89,9 +90,10 @@ function headerNav(containerTarget) {
   // clone menu untuk nav down
   const menuClone = conMenu.cloneNode(true);
 
+  //
+  const containerHamBtn = document.createElement("section");
   // container btn nav muncul ketika discroll
   {
-    const containerHamBtn = document.createElement("section");
     const btn = document.createElement("button");
     for (let i = 0; i < 3; i++) {
       const span = document.createElement("div");
@@ -107,6 +109,8 @@ function headerNav(containerTarget) {
 
     containerTarget.appendChild(containerHamBtn);
     containerHamBtn.appendChild(btn);
+
+    containerHamBtn.classList.add("positionHamMoble");
 
     btn.classList.add("ham-btn");
     const hamBtn = document.querySelector(".ham-btn");
@@ -127,7 +131,9 @@ function headerNav(containerTarget) {
       transition: "all 0.2s ease",
       display: "grid",
       placeItems: "center",
-      border: "2px solid var(--background-color)",
+      // border: "2px solid var(--background-color)",
+      // backgroundColor: "yellow",
+      cursor: "pointer",
     });
     Object.assign(btn.style, {
       display: "inline-flex",
@@ -139,7 +145,7 @@ function headerNav(containerTarget) {
       transition: "all 0.2s ease",
       cursor: "pointer",
     });
-    hamBtn.addEventListener("click", () => {
+    containerHamBtn.addEventListener("click", () => {
       const hamBtn = document.querySelector(".ham-btn");
       hamBtn.classList.toggle("hamburger-active");
     });
@@ -261,8 +267,7 @@ function headerNav(containerTarget) {
     );
 
     // menghilangkan container nav ketika halaman kembali ke atas
-    const hamBtn = document.querySelector(".ham-btn");
-    hamBtn.addEventListener("click", () => {
+    containerHamBtn.addEventListener("click", () => {
       conNavDown.classList.toggle("navDown-hidden");
       hiasan.classList.toggle("hiasan-active");
     });
