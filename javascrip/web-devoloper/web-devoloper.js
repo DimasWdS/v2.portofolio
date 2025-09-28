@@ -306,7 +306,7 @@ Object.assign(mainDevoloper.style, {
     "MY OWN WEB PORTOFOLIO",
     "https://dimaswds.github.io/v2.portofolio/",
     "prj1/bg.png",
-    "molestiae illum laborum deserunt dolorem error fugit odio enim ex, aut eligendi placeat. Perferendis, distinctio unde sapiente molestias minima explicabo incidunt illum eligendi, porro ut blanditiis pariatur quos ab eum modi veritatis? Ipsa saepe, magnam pariatur modi aut qui vitae consequuntur delectus perferendis, odit, doloremque nam? Sunt, soluta blanditiis? Odit, iusto! Reprehenderit adipisci dicta illo impedit quae alias recusandae, quaerat inventore, dolore ab cumque!",
+    " blanditiis? Odit, iusto! Reprehenderit adipisci dicta illo impedit quae alias recusandae, quaerat inventore, dolore ab cumque! molestiae illum laborum deserunt dolorem error fugit odio enim ex, aut eligendi placeat. Perferendis, distinctio unde sapiente molestias minima molestiae illum laborum deserunt dolorem error fugit odio enim ex, aut eligendi placeat. Perferendis, distinctio unde sapiente molestias minima ",
     "Desainer Web | Frontend Dev",
     [
       ["html.svg", "HTML"],

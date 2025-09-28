@@ -105,6 +105,8 @@ function createCarProjectWeb(
 
     name.textContent = namaWebsite;
 
+    conMoreInfo.classList.add("displayMobileNone");
+
     Object.assign(conTeks.style, {
       height: "100%",
       width: "100%",
@@ -185,6 +187,11 @@ function createCarProjectWeb(
 
     // deskripsi (penjelasan web singkat)
     {
+      Object.assign(conDeskripsi.style, {
+        padding: "1rem 2rem 1rem 1rem",
+        // backgroundColor: "yellow",
+      });
+
       const wrapper = document.createElement("section");
       const teks = document.createElement("p");
 
@@ -205,13 +212,15 @@ function createCarProjectWeb(
         height: "100%",
         width: "40%",
         // backgroundColor: "green",
-        padding: "1rem 0.5rem 1rem 1rem",
+        // opacity: "0.3",
+        // margin: "1rem 0.5rem 1rem 1rem",
       });
 
       Object.assign(teks.style, {
         width: "100%",
         // backgroundColor: "gray",
-        height: "40rem",
+        // height: "40rem",
+
         whiteSpace: "normal",
         wordWrap: "break-word", // lama tapi masih banyak dipakai
         overflowWrap: "break-word", // modern
@@ -560,8 +569,13 @@ function createCarProjectWeb(
     }
     //style more info
     {
-      conMoreInfo.textContent = "MORE INFO";
-      conMoreInfo.classList.add("displayNone");
+      const teks = document.createElement("p");
+      const logoInfo = document.createElement("div");
+
+      conMoreInfo.appendChild(teks);
+      conMoreInfo.appendChild(logoInfo);
+
+      teks.textContent = "MORE INFO";
 
       Object.assign(conMoreInfo.style, {
         backgroundColor: "var(--footer)",
@@ -570,15 +584,85 @@ function createCarProjectWeb(
         margin: "0 0 2% 0",
         left: "50%",
         transform: "translateX(-50%)",
-        borderRadius: "1px",
-        padding: "0.5rem 2.2rem",
-        color: "var(--main-font)",
-        fontFamily: `"Google Sans Code", monospace`,
-        fontWeight: "800",
+        display: "flex",
+        alignItems: "center",
+        padding: "0.3rem 1rem 0.3rem 1.5rem",
+        borderRadius: "2px",
         cursor: "pointer",
-        fontSize: "1.2em",
-        borderRadius: "5px",
       });
+
+      // teks
+      {
+        Object.assign(teks.style, {
+          fontFamily: `"Google Sans Code", monospace`,
+          color: "var(--main-font)",
+          fontWeight: "600",
+          fontSize: "1.4em",
+        });
+      }
+      // icon
+      {
+        Object.assign(logoInfo.style, {
+          height: "2rem",
+          aspectRatio: "1/1",
+          // backgroundColor: "green",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          gap: "0.2rem",
+        });
+
+        const circle = document.createElement("span");
+        const line = document.createElement("span");
+
+        logoInfo.appendChild(circle);
+        logoInfo.appendChild(line);
+
+        [circle, line].forEach((el) => {
+          Object.assign(el.style, {
+            display: "inline-block",
+            backgroundColor: "var(--accen-color)",
+            flexShrink: "0",
+            transition: "all 0.2s ease",
+          });
+
+          Object.assign(circle.style, {
+            height: "0.3rem",
+            aspectRatio: "1/1",
+            borderRadius: "50%",
+          });
+
+          Object.assign(line.style, {
+            width: "0.3rem",
+            // aspectRatio: "9/16",
+            height: "1rem",
+            borderRadius: "5px",
+          });
+        });
+
+        // hover
+        conMoreInfo.addEventListener("mouseenter", () => {
+          Object.assign(circle.style, {
+            transform: "translateY(0.2rem)",
+          });
+          Object.assign(line.style, {
+            transform: "translateY(-0.2rem)",
+            borderTopLeftRadius: "0px",
+            borderTopRightRadius: "0px",
+          });
+        });
+        conMoreInfo.addEventListener("mouseleave", () => {
+          Object.assign(circle.style, {
+            transform: "translateY(0)",
+          });
+          Object.assign(line.style, {
+            transform: "translateY(0)",
+            borderTopLeftRadius: "5px",
+            borderTopRightRadius: "5px",
+          });
+        });
+      }
     }
   }
 }
