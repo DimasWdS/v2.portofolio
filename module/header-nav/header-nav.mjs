@@ -101,7 +101,7 @@ function headerNav(containerTarget) {
       Object.assign(span.style, {
         width: "100%",
         height: "4px",
-        backgroundColor: "var(--accen-color)",
+        backgroundColor: "var(--main-font)",
         borderRadius: "10px",
         transition: "all 0.2s ease",
       });
@@ -131,8 +131,8 @@ function headerNav(containerTarget) {
       transition: "all 0.2s ease",
       display: "grid",
       placeItems: "center",
-      // border: "2px solid var(--background-color)",
-      // backgroundColor: "yellow",
+      border: "10px solid rgba(255,255,255, 0.5)",
+      backgroundColor: "#211832",
       cursor: "pointer",
     });
     Object.assign(btn.style, {

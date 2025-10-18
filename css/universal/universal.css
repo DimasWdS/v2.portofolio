@@ -160,7 +160,7 @@ img {
 .hamburger-active {
   transition: all 0.2s ease;
   /* background-color: #c73659 !important; */
-  transform: translateX(4.5px);
+  transform: translateX(3.4px);
 }
 .hamburger-active div {
   transition: all 0.2s ease;
