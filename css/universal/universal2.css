@@ -1,0 +1,28 @@
+.teks-title {
+  color: var(--main-font);
+  font-weight: 800;
+  font-size: clamp(1rem, calc(3vw + 1rem), 3rem);
+}
+
+.key-goUp {
+  animation: goUp 20s linear infinite;
+}
+.key-goDown {
+  animation: goDown 20s linear infinite;
+}
+@keyframes goUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes goDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}

@@ -1,0 +1,9 @@
+@media (max-width: 640px) {
+  .asxsd {
+    display: none !important;
+  }
+  .sdsefc {
+    /* background-color: aqua; */
+    width: 90% !important;
+  }
+}
