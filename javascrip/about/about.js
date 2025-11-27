@@ -482,13 +482,24 @@ Object.assign(mainAbout.style, {
 }
 // halaman my story
 {
-  const container = document.createElement("section");
+  const containerGallery = document.createElement("section");
+  const containerStory = document.createElement("section");
 
-  mainAbout.appendChild(container);
+  mainAbout.appendChild(containerGallery);
+  mainAbout.appendChild(containerStory);
 
-  container.classList.add("about-mystory");
+  containerGallery.classList.add("about-mystory");
+  containerStory.classList.add("dlkuo");
 
-  Object.assign(container.style, {
+  Object.assign(containerStory.style, {
+    // height: "100dvh",
+    // width: "100%",
+    // backgroundColor: "red",
+    maxWidth: "60rem",
+    padding: "0 5%",
+  });
+
+  Object.assign(containerGallery.style, {
     // height: "100vh",
     position: "relative",
     width: "100%",

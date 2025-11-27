@@ -3,10 +3,13 @@ function createQuestion(conTarget, pertanyaan, jawaban) {
   const header = document.createElement("header");
   const conBtn = document.createElement("div");
   const conAnswer = document.createElement("section");
+  const teksAnswer = document.createElement("span");
   const headerBlok = document.createElement("section");
 
   conTarget.appendChild(container);
   container.appendChild(header);
+
+  teksAnswer.textContent = jawaban;
 
   Object.assign(container.style, {
     // height: "5rem",
@@ -70,6 +73,7 @@ function createQuestion(conTarget, pertanyaan, jawaban) {
         position: "absolute",
         // inset: "0",
         borderRadius: "5px",
+        // backgroundColor: "green",
       });
       if (i === 0) {
         Object.assign(span.style, {
@@ -90,63 +94,26 @@ function createQuestion(conTarget, pertanyaan, jawaban) {
       });
     }
   }
-  // con jawaban
+
   {
-    const p = document.createElement("p");
-    const penutup = document.createElement("section");
-
     container.appendChild(conAnswer);
-    conAnswer.appendChild(p);
-    conAnswer.appendChild(penutup);
 
-    penutup.classList.add("penutup");
-
-    p.textContent = jawaban;
-
+    conAnswer.appendChild(teksAnswer);
     Object.assign(conAnswer.style, {
+      height: "0rem",
       width: "100%",
-      // height: "4rem",
-      padding: "0 1.2rem",
-      position: "relative",
-
-      transition: "0.2s ease",
-      //   backgroundColor: "green",
-      margin: "0 0 1rem 0",
-
-      display: "none",
+      // backgroundColor: "yellow",
+      transition: "all 0.4s ease-in-out",
+      padding: "0 6% 0 5%",
     });
 
-    Object.assign(p.style, {
+    Object.assign(teksAnswer.style, {
       color: "var(--main-font)",
-      fontSize: "0.9em",
-      fontWeight: "300",
+      fontFamily: "Inter",
     });
-
-    Object.assign(penutup.style, {
-      height: "100%",
-      width: "100%",
-      backgroundColor: "var(--background-color)",
-      inset: "0",
-      position: "absolute",
-      transition: "all 0.7s ease",
-      // transition: "all 3s ease-in-out",
-    });
-    // header ketika di klik
-    {
-      header.addEventListener("click", () => {
-        conAnswer.classList.toggle("counterNone");
-        conBtn.classList.toggle("logoX");
-        // penutup.style.transform = "translateY(100%)";
-        setTimeout(() => {
-          // console.log("Ini muncul setelah 2 detik");
-          penutup.classList.toggle("penutupTurun");
-        }, 500);
-      });
-    }
   }
 
-  // header blok
-
+  // header blok(penting)
   {
     header.appendChild(headerBlok);
     Object.assign(headerBlok.style, {
@@ -154,6 +121,11 @@ function createQuestion(conTarget, pertanyaan, jawaban) {
       height: "100%",
       width: "100%",
       // backgroundColor: "green",
+    });
+
+    headerBlok.addEventListener("click", () => {
+      conAnswer.classList.toggle("asdw");
+      conBtn.classList.toggle("spin");
     });
   }
 }

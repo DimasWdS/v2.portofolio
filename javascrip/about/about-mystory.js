@@ -211,3 +211,39 @@ container.appendChild(layerAtas);
     div1.appendChild(containerImgClone);
   }
 }
+
+// story
+{
+  const containerStroy = document.querySelector(".dlkuo");
+  const teks = document.createElement("span");
+
+  containerStroy.appendChild(teks);
+
+  Object.assign(teks.style, {
+    color: "var(--main-font)",
+    // fontWeight: "bold",
+    fontFamily: "Inter",
+  });
+
+  teks.textContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+      consectetur nam officiis magni adipisci quidem aliquid odio, quo quia,
+      aspernatur libero ad aliquam cupiditate quae repudiandae maiores nisi
+      nulla est optio repellendus amet dignissimos. Sequi, excepturi eos! Eos
+      labore dolorem quos pariatur perferendis expedita, perspiciatis enim
+      reprehenderit, itaque molestias, consectetur numquam tempore ipsum maxime
+      accusamus voluptate fuga cumque delectus? Quis, fugit iste sed inventore
+      facere repellendus nobis et exercitationem quae, quam aut voluptas
+      perferendis ipsa laboriosam. Fugit, porro earum! Laborum placeat iste
+      doloremque nobis saepe. Hic, saepe maxime aut nisi recusandae eveniet id
+      sit reprehenderit. Aperiam facilis, rem reiciendis nobis quibusdam
+      voluptatum est quae impedit nemo earum suscipit sed in facere laborum
+      libero vel recusandae quaerat quo optio veritatis? Ipsum quos nihil
+      eveniet assumenda suscipit reiciendis sit. Illo a autem mollitia quidem
+      atque eligendi labore amet voluptatibus nemo officia, ducimus illum non
+      debitis commodi unde et doloribus exercitationem asperiores deserunt
+      maxime sequi ipsa! Molestias, nihil quos. Sit sequi molestias ut neque?
+      Cumque, voluptate recusandae. Eius ipsa asperiores expedita. Consequuntur
+      libero doloribus qui sed repellat consequatur et recusandae deleniti,
+      ducimus illum iste. Molestiae quibusdam optio iusto ab aut, natus a! Minus
+      rem, architecto minima quod ipsum eum sapiente inventore quia perferendis!`;
+}

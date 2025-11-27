@@ -45,6 +45,7 @@ function createCardKarir(conTarget, workDate, work, whatIcanDo) {
 
     Object.assign(li.style, {
       fontWeight: "500",
+      fontFamily: "Inter",
     });
   }
 
