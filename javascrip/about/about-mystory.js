@@ -137,7 +137,7 @@ container.appendChild(layerAtas);
       display: "flex",
       width: "100%",
       flexWrap: "wrap",
-      gap: "1rem",
+      gap: "0.5rem",
       margin: "0 0 1rem 0",
       //   backgroundColor: "red",
     });
@@ -162,7 +162,7 @@ container.appendChild(layerAtas);
       display: "flex",
       width: "100%",
       flexWrap: "wrap",
-      gap: "1rem",
+      gap: "0.5rem",
       margin: "0 0 1rem 0",
       //   backgroundColor: "red",
     });
@@ -187,7 +187,7 @@ container.appendChild(layerAtas);
       display: "flex",
       width: "100%",
       flexWrap: "wrap",
-      gap: "1rem",
+      gap: "0.5rem",
       margin: "0 0 1rem 0",
       //   backgroundColor: "red",
     });
