@@ -1,0 +1,26 @@
+.what-people-say {
+  position: fixed;
+  height: 60px;
+  width: 200px;
+  /* background-color: aqua; */
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 40px;
+  z-index: 10;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.126),
+    inset 0 0 5px rgba(255, 255, 255, 0.023);
+}
+.what-people-say a {
+  display: inline-flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}

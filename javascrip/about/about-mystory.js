@@ -10,14 +10,18 @@ container.appendChild(layerAtas);
   const lengkunganAtas = document.createElement("div");
   const lengkunganBawah = document.createElement("div");
   const header = document.createElement("header");
+  const headerbawah = document.createElement("header");
 
   layerAtas.appendChild(lengkunganAtas);
   layerAtas.appendChild(lengkunganBawah);
   lengkunganAtas.appendChild(header);
+  lengkunganBawah.appendChild(headerbawah);
 
   header.textContent = "MY STORY";
+  headerbawah.textContent = "I hope you don't get bored";
 
   header.classList.add("teks-title");
+  headerbawah.classList.add("teks-title");
 
   Object.assign(layerAtas.style, {
     position: "absolute",
@@ -37,6 +41,9 @@ container.appendChild(layerAtas);
       height: "15rem",
       backgroundColor: "var(--background-color)",
       scale: "1.1",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
     });
 
     if (dex === 0) {
@@ -151,31 +158,7 @@ container.appendChild(layerAtas);
 
     div2.appendChild(containerImgClone);
   }
-  {
-    const containerImg = document.createElement("div");
-
-    containerImg.classList.add("key-goDown");
-
-    div1.appendChild(containerImg);
-
-    Object.assign(containerImg.style, {
-      display: "flex",
-      width: "100%",
-      flexWrap: "wrap",
-      gap: "0.5rem",
-      margin: "0 0 1rem 0",
-      //   backgroundColor: "red",
-    });
-
-    createCardFoto(containerImg, "2.jpg");
-    createCardFoto(containerImg, "3.jpg");
-    createCardFoto(containerImg, "4.jpg");
-    createCardFoto(containerImg, "3.jpg");
-
-    const containerImgClone = containerImg.cloneNode(true);
-
-    div1.appendChild(containerImgClone);
-  }
+  // Div kanan
   {
     const containerImg = document.createElement("div");
 
@@ -201,6 +184,7 @@ container.appendChild(layerAtas);
 
     div3.appendChild(containerImgClone);
   }
+  //div kiri
   {
     const containerImg = document.createElement("div");
 

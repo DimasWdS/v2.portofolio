@@ -3,6 +3,7 @@ import {
   sum,
   headerNav,
   createCardKarir,
+  createQuestion,
 } from "../../module/module.mjs";
 
 const mainAbout = document.createElement("main");
@@ -499,184 +500,6 @@ Object.assign(mainAbout.style, {
     justifyContent: "center",
     height: "50rem",
   });
-
-  // // konten
-  // {
-  //   const conKonten = document.createElement("section");
-  //   const header = document.createElement("header");
-  //   const confoto = document.createElement("div");
-  //   const conTeks = document.createElement("section");
-
-  //   container.appendChild(conKonten);
-  //   conKonten.appendChild(header);
-  //   conKonten.appendChild(confoto);
-  //   conKonten.appendChild(conTeks);
-
-  //   header.textContent = "MY STORY";
-
-  //   conKonten.classList.add("con-konten-about");
-
-  //   Object.assign(conKonten.style, {
-  //     // height: "100vh",
-  //     width: "100%",
-  //     maxWidth: "80rem",
-  //     position: "relative",
-  //     zIndex: "2",
-  //   });
-
-  //   Object.assign(header.style, {
-  //     width: "100%",
-  //     display: "flex",
-  //     justifyContent: "center",
-  //     margin: "1rem 0 5rem 0",
-  //     fontWeight: "800",
-  //     fontSize: "clamp(1rem, calc(3vw + 1rem), 3rem)",
-  //     // textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
-  //     color: "var(--line)",
-  //   });
-
-  //   Object.assign(confoto.style, {
-  //     height: "20rem",
-  //     width: "100%",
-  //     // backgroundColor: "green",
-  //     display: "flex",
-  //     justifyContent: "space-evenly",
-  //     position: "relative",
-  //   });
-
-  //   //box foto
-  //   {
-  //     for (let i = 0; i < 3; i++) {
-  //       const div = document.createElement("div");
-  //       const section = document.createElement("section");
-  //       const img = document.createElement("img");
-  //       confoto.appendChild(div);
-  //       div.appendChild(section);
-  //       section.appendChild(img);
-
-  //       img.setAttribute("loading", "lazy");
-  //       img.setAttribute("alt", "foto");
-
-  //       Object.assign(div.style, {
-  //         height: "100%",
-  //         aspectRatio: "1/1",
-  //         position: "relative",
-  //         // backgroundColor: "red",
-  //         // borderRadius: "5px",
-  //       });
-
-  //       Object.assign(section.style, {
-  //         height: "100%",
-  //         width: "100%",
-  //         overflow: "hidden",
-  //         border: "1px solid var(--line)",
-  //         boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-  //         // backgroundColor: "green",
-  //         position: "absolute",
-  //       });
-
-  //       Object.assign(img.style, {
-  //         objectFit: "cover",
-  //       });
-  //       switch (i) {
-  //         case 0:
-  //           img.setAttribute("src", "asset/my-foto/3.jpg");
-  //           div.classList.add("wrapperImg");
-  //           section.classList.add("conImg1");
-  //           break;
-  //         case 1:
-  //           Object.assign(div.style, {
-  //             position: "absolute",
-  //             zIndex: "2",
-  //             // backgroundColor: "cyan",
-  //             // opacity: "0.5",
-  //             scale: "1.2",
-  //           });
-  //           img.setAttribute("src", "asset/my-foto/2.jpg");
-  //           break;
-  //         case 2:
-  //           img.setAttribute("src", "asset/my-foto/4.jpg");
-  //           div.classList.add("wrapperImg");
-  //           section.classList.add("conImg2");
-  //           // section.style.zIndex = "0";
-  //           break;
-  //         case 1:
-  //       }
-  //     }
-  //     //con foto hover
-  //     {
-  //       const wrapper = document.querySelectorAll(".wrapperImg");
-  //       const con2 = document.querySelector(".conImg2");
-  //       const con1 = document.querySelector(".conImg1");
-
-  //       console.log(con1);
-
-  //       wrapper.forEach((el, dex) => {
-  //         console.log(el);
-  //         if (dex === 0) {
-  //           el.addEventListener("mouseenter", () => {
-  //             con1.classList.add("fotoKiri");
-  //             con1.classList.remove("fotoKiriBack");
-  //             setTimeout(() => {
-  //               // console.log("Muncul setelah 3 detik!");
-  //               con1.classList.add("zIndex2");
-  //             }, 500);
-  //           });
-  //           el.addEventListener("mouseleave", () => {
-  //             con1.classList.remove("fotoKiri");
-  //             con1.classList.add("fotoKiriBack");
-
-  //             setTimeout(() => {
-  //               // console.log("Muncul setelah 3 detik!");
-  //               con1.classList.remove("zIndex2");
-  //             }, 500);
-  //           });
-  //           // foto 2
-  //         } else {
-  //           el.addEventListener("mouseenter", () => {
-  //             con2.classList.add("fotoKanan");
-  //             con2.classList.remove("fotoKananBack");
-  //             setTimeout(() => {
-  //               // console.log("Muncul setelah 3 detik!");
-  //               con2.classList.add("zIndex2");
-  //             }, 500);
-  //           });
-  //           el.addEventListener("mouseleave", () => {
-  //             con2.classList.remove("fotoKanan");
-  //             con2.classList.add("fotoKananBack");
-
-  //             setTimeout(() => {
-  //               // console.log("Muncul setelah 3 detik!");
-  //               con2.classList.remove("zIndex2");
-  //             }, 500);
-  //           });
-  //         }
-  //       });
-  //     }
-  //   }
-
-  //   Object.assign(conTeks.style, {
-  //     height: "10rem",
-  //     width: "100%",
-  //     // backgroundColor: "green",
-  //     margin: "5rem 0 0 0",
-  //     padding: "0 20%",
-  //   });
-  // }
-  // // background
-  // {
-  //   const conBackground = document.createElement("section");
-
-  //   container.appendChild(conBackground);
-
-  //   Object.assign(conBackground.style, {
-  //     height: "100%",
-  //     width: "100%",
-  //     // backgroundColor: "yellow",
-  //     position: "absolute",
-  //     top: "0",
-  //   });
-  // }
 }
 // halaman experince
 {
@@ -797,166 +620,6 @@ Object.assign(mainAbout.style, {
   }
   //container pertanyaan
   {
-    function createQuestion(pertanyaan, jawaban) {
-      const container = document.createElement("section");
-      const header = document.createElement("header");
-      const conBtn = document.createElement("div");
-      const conAnswer = document.createElement("section");
-      const headerBlok = document.createElement("section");
-
-      conQuestion.appendChild(container);
-      container.appendChild(header);
-
-      Object.assign(container.style, {
-        // height: "5rem",
-        width: "100%",
-        maxWidth: "40rem",
-        // backgroundColor: "cyan",
-        borderTop: "2px solid var(--line)",
-        borderBottom: "2px solid var(--line)",
-        overflow: "hidden",
-        // transition: "all 0.2s ease",
-      });
-      //header
-      {
-        const p = document.createElement("section");
-
-        header.appendChild(p);
-        header.appendChild(conBtn);
-
-        p.textContent = pertanyaan;
-
-        Object.assign(header.style, {
-          width: "100%",
-          padding: "0.5rem 1rem",
-          cursor: "pointer",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          position: "relative",
-        });
-        Object.assign(p.style, {
-          color: "var(--blue)",
-          fontWeight: "800",
-          fontSize: "clamp(0.5rem, calc(3vw + 1rem), 1.5rem)",
-          whiteSpace: "normal",
-          wordWrap: "break-word", // lama tapi masih banyak dipakai
-          overflowWrap: "break-word", // modern
-          width: "80%",
-          transition: "all 0.2s ease",
-          // backgroundColor: "yellow",
-          position: "relative",
-        });
-        Object.assign(conBtn.style, {
-          height: "1rem",
-          aspectRatio: "1/1",
-          // backgroundColor: "yellow",
-          position: "relative",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          transition: "all 0.2s ease",
-        });
-
-        for (let i = 0; i < 2; i++) {
-          const span = document.createElement("span");
-          conBtn.appendChild(span);
-          Object.assign(span.style, {
-            display: "inline-flex",
-            height: "3px",
-            width: "100%",
-            backgroundColor: "var(--line)",
-            position: "absolute",
-            // inset: "0",
-            borderRadius: "5px",
-          });
-          if (i === 0) {
-            Object.assign(span.style, {
-              transform: "rotate(90deg)",
-              backgroundColor: "var(--accen-color)",
-            });
-          }
-        }
-        // header hover
-        {
-          header.addEventListener("mouseenter", () => {
-            conBtn.style.transform = "translateX(-50%)";
-            p.style.transform = "translateX(2%)";
-          });
-          header.addEventListener("mouseleave", () => {
-            conBtn.style.transform = "translateX(0)";
-            p.style.transform = "translateX(0)";
-          });
-        }
-      }
-      // con jawaban
-      {
-        const p = document.createElement("p");
-        const penutup = document.createElement("section");
-
-        container.appendChild(conAnswer);
-        conAnswer.appendChild(p);
-        conAnswer.appendChild(penutup);
-
-        penutup.classList.add("penutup");
-
-        p.textContent = jawaban;
-
-        Object.assign(conAnswer.style, {
-          width: "100%",
-          // height: "4rem",
-          padding: "0 1.2rem",
-          position: "relative",
-
-          transition: "0.2s ease",
-          // backgroundColor: "green",
-          margin: "0 0 1rem 0",
-
-          display: "none",
-        });
-
-        Object.assign(p.style, {
-          color: "var(--main-font)",
-          fontSize: "0.9em",
-          fontWeight: "300",
-        });
-
-        Object.assign(penutup.style, {
-          height: "100%",
-          width: "100%",
-          backgroundColor: "var(--background-color)",
-          inset: "0",
-          position: "absolute",
-          transition: "all 0.7s ease",
-          // transition: "all 3s ease-in-out",
-        });
-        // header ketika di klik
-        {
-          header.addEventListener("click", () => {
-            conAnswer.classList.toggle("counterNone");
-            conBtn.classList.toggle("logoX");
-            // penutup.style.transform = "translateY(100%)";
-            setTimeout(() => {
-              // console.log("Ini muncul setelah 2 detik");
-              penutup.classList.toggle("penutupTurun");
-            }, 500);
-          });
-        }
-      }
-
-      // header blok
-
-      {
-        header.appendChild(headerBlok);
-        Object.assign(headerBlok.style, {
-          position: "absolute",
-          height: "100%",
-          width: "100%",
-          // backgroundColor: "green",
-        });
-      }
-    }
-
     Object.assign(conQuestion.style, {
       // height: "10rem",
       width: "100%",
@@ -969,18 +632,22 @@ Object.assign(mainAbout.style, {
     });
 
     createQuestion(
+      conQuestion,
       "Kenapa memilih 2 bidang keahlian?",
       "Menurut saya diera sekarang jika seorang individu ingin berkerja didalam teknologi tidak cukup dengan hanya satu bidang keahlian."
     );
     createQuestion(
+      conQuestion,
       "Kenapa memilih Illustrator",
       "Semua berasal dari menonton video dari konten kreator yang bernama Pamzky dari platfrom tiktok di tahun 2023, dari situ saya menjadikan menggambar sebagai hobi."
     );
     createQuestion(
+      conQuestion,
       "Kenapa memilih Frontend",
       "Saya memasukan Frontend kedalam kemampuan saya karena itu adalah tujuan saya masuk kedalam dunia teknologi, hal itu dimulai saat saya masuk ke SMKN 1 GEGER jurusan Teknik Komputer dan Jaringan"
     );
     createQuestion(
+      conQuestion,
       "Tools apa yang saya gunakan untuk membuat Illustrasi?",
       "Untuk sekarang saya sangat nyaman menggunakan software Adobe Illustrator"
     );
