@@ -96,7 +96,7 @@ Object.assign(main.style, {
         filter: "drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.67))",
         backgroundImage:
           dex === 0
-            ? "url(asset/page-illustrator/hellcatmobil.svg)"
+            ? "url(asset/page-illustrator/hellcatmobil.png)"
             : "url(asset/page-illustrator/moonknight.png)",
         transform:
           dex === 0

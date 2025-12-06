@@ -26,13 +26,13 @@ Object.assign(mainHome.style, {
 {
   const conBackground = document.createElement("section");
   const balok = document.createElement("div");
+  const bendera = document.createElement("div");
 
   mainHome.appendChild(conBackground);
 
   Object.assign(conBackground.style, {
     height: "100%",
     width: "100%",
-    // backgroundColor: "green",
     position: "absolute",
     overflow: "hidden",
   });
@@ -47,6 +47,25 @@ Object.assign(mainHome.style, {
       backgroundColor: "var(--second-background)",
       top: "50%",
       transform: "translateY(-50%) rotate(45deg) scaleX(1000%)",
+    });
+  }
+  // bendera
+  {
+    conBackground.appendChild(bendera);
+
+    Object.assign(bendera.style, {
+      position: "fixed",
+      top: "-20%",
+      left: "-5%",
+      rotate: "12deg",
+      height: "30rem",
+      aspectRatio: "1/1",
+      // backgroundColor: "green",
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      backgroundImage: "url(asset/page-contack/bendera.png)",
+      filter: "blur(3px)",
     });
   }
 }
