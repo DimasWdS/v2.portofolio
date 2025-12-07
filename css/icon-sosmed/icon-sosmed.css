@@ -1,4 +1,8 @@
-.csdjrkj:hover .csdjrkj:not(:hover) {
-  filter: blur(4px) !important;
-  opacity: 0.5;
+.hjguoh {
+  width: max-content !important;
+}
+
+.hjguoh:hover .jbasuag:not(:hover) {
+  filter: blur(2px);
+  transition: all 0.5s ease-in-out;
 }

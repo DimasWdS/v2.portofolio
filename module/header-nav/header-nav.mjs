@@ -241,6 +241,8 @@ function headerNav(containerTarget) {
       // backgroundColor: "yellow",
       padding: "1rem 0 2rem 0",
     });
+
+    conSosmed.classList.add("hjguoh");
     createIconSosmed(
       conSosmed,
       "40px",

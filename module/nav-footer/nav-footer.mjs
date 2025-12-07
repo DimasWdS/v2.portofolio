@@ -6,6 +6,8 @@ function sum(a, b) {
 
 function createNavFooter(targetContainer) {
   const container = document.createElement("section");
+
+  console.log(container);
   //
   const containerSatu = document.createElement("section");
   const containerDua = document.createElement("section");
@@ -152,6 +154,8 @@ function createNavFooter(targetContainer) {
     margin: "2rem 0 0 0",
     // backgroundColor: "green",
   });
+
+  conIconSosmed.classList.add("hjguoh");
 
   createIconSosmed(
     conIconSosmed,

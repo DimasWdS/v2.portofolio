@@ -10,8 +10,6 @@ function createIconSosmed(conTarget, ukuran, logo, link) {
   con.appendChild(conIcon);
   conIcon.appendChild(aLink);
 
-  conIcon.classList.add("csdjrkj");
-
   Object.assign(con.style, {
     display: "flex",
     // backgroundColor: "green",
@@ -27,6 +25,7 @@ function createIconSosmed(conTarget, ukuran, logo, link) {
     transition: "all 0.3s ease",
     // backgroundColor: "green",
   });
+  con.classList.add("jbasuag");
   Object.assign(aLink.style, {
     display: "inline-flex",
     width: "100%",
