@@ -244,26 +244,33 @@ function headerNav(containerTarget) {
     createIconSosmed(
       conSosmed,
       "40px",
-      "github.svg",
-      "https://github.com/DimasWdS"
+      "github.png",
+      "https://github.com/dimaswidysap"
     );
+
     createIconSosmed(
       conSosmed,
       "40px",
-      "inkedin.svg",
-      "https://youtu.be/xvFZjo5PgG0?si=NqyMXNXCUnGqJIAV"
-    );
-    createIconSosmed(
-      conSosmed,
-      "40px",
-      "instagram.svg",
+      "instagram.png",
       "https://www.instagram.com/dimaswidysaputraa/"
     );
     createIconSosmed(
       conSosmed,
       "40px",
-      "tiktok.svg",
-      "https://www.tiktok.com/@segogotol"
+      "tik-tok.png",
+      "https://www.tiktok.com/@dimaswidysap"
+    );
+    createIconSosmed(
+      conSosmed,
+      "40px",
+      "facebook.png",
+      "https://www.tiktok.com/@dimaswidysap"
+    );
+    createIconSosmed(
+      conSosmed,
+      "40px",
+      "linkedin.png",
+      "https://www.tiktok.com/@dimaswidysap"
     );
 
     // menghilangkan container nav ketika halaman kembali ke atas

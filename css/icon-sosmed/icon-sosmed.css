@@ -1,0 +1,4 @@
+.csdjrkj:hover .csdjrkj:not(:hover) {
+  filter: blur(4px) !important;
+  opacity: 0.5;
+}

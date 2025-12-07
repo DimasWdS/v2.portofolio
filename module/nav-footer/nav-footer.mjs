@@ -156,26 +156,33 @@ function createNavFooter(targetContainer) {
   createIconSosmed(
     conIconSosmed,
     "40px",
-    "github.svg",
+    "github.png",
     "https://github.com/DimasWdS"
   );
+
   createIconSosmed(
     conIconSosmed,
     "40px",
-    "inkedin.svg",
-    "https://youtu.be/xvFZjo5PgG0?si=NqyMXNXCUnGqJIAV"
-  );
-  createIconSosmed(
-    conIconSosmed,
-    "40px",
-    "instagram.svg",
+    "instagram.png",
     "https://www.instagram.com/dimaswidysaputraa/"
   );
   createIconSosmed(
     conIconSosmed,
     "40px",
-    "tiktok.svg",
+    "tik-tok.png",
     "https://www.tiktok.com/@segogotol"
+  );
+  createIconSosmed(
+    conIconSosmed,
+    "40px",
+    "facebook.png",
+    "https://www.tiktok.com/@dimaswidysap"
+  );
+  createIconSosmed(
+    conIconSosmed,
+    "40px",
+    "linkedin.png",
+    "https://www.tiktok.com/@dimaswidysap"
   );
 }
 

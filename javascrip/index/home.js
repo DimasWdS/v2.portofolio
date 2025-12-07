@@ -55,8 +55,8 @@ Object.assign(mainHome.style, {
 
     Object.assign(bendera.style, {
       position: "fixed",
-      top: "-20%",
-      left: "-5%",
+      // top: "-20%",
+      right: "-5%",
       rotate: "12deg",
       height: "30rem",
       aspectRatio: "1/1",
@@ -211,6 +211,7 @@ Object.assign(mainHome.style, {
     [teks1, teks2, teks3, konten].forEach((el) => {
       Object.assign(el.style, {
         // backgroundColor: "green",
+        // color: "#222222ff",
         // textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
       });
     });

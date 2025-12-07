@@ -10,8 +10,12 @@ function createIconSosmed(conTarget, ukuran, logo, link) {
   con.appendChild(conIcon);
   conIcon.appendChild(aLink);
 
+  conIcon.classList.add("csdjrkj");
+
   Object.assign(con.style, {
     display: "flex",
+    // backgroundColor: "green",
+    // filter: "blur(1px)",
   });
 
   Object.assign(conIcon.style, {
@@ -21,12 +25,13 @@ function createIconSosmed(conTarget, ukuran, logo, link) {
     overflow: "hidden",
     backgroundColor: "var(--background-color)",
     transition: "all 0.3s ease",
+    // backgroundColor: "green",
   });
   Object.assign(aLink.style, {
     display: "inline-flex",
     width: "100%",
     height: "100%",
-    backgroundImage: `url(asset/icon/${logo})`,
+    backgroundImage: `url(asset/icon/sosmed-icon/${logo})`,
     backgroundPosition: "center",
     backgroundSize: "70%",
     backgroundRepeat: "no-repeat",
