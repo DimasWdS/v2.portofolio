@@ -116,7 +116,7 @@ Object.assign(mainAbout.style, {
           backgroundRepeat: "no-repeat",
         });
 
-        gilapEffect(conImgKanan, "2");
+        gilapEffect(conImgKanan, "4");
 
         break;
     }
