@@ -1,3 +1,5 @@
+import { gilapEffect } from "../module.mjs";
+
 function cardIllustrator(conTarget, imgKonten, toolsImg) {
   const container = document.createElement("section");
   const firstContainer = document.createElement("section");
@@ -5,6 +7,7 @@ function cardIllustrator(conTarget, imgKonten, toolsImg) {
   const img = document.createElement("img");
   const conSosmed = document.createElement("div");
   const conTolls = document.createElement("div");
+
   for (let i = 0; i < 2; i++) {
     const span = document.createElement("span");
     container.appendChild(span);
@@ -99,9 +102,7 @@ function cardIllustrator(conTarget, imgKonten, toolsImg) {
   img.setAttribute("src", `asset/page-illustrator/project/${imgKonten}`);
   img.setAttribute("loading", "lazy");
 
-  const conCard = document.querySelectorAll(".con-card-illustrator");
-
-  //   console.log(conCard);
+  gilapEffect(container, "3");
 
   Object.assign(container.style, {
     width: "30rem",
@@ -115,11 +116,11 @@ function cardIllustrator(conTarget, imgKonten, toolsImg) {
     position: "relative",
     width: "100%",
     height: "100%",
-    // backgroundColor: "yellow",
     overflow: "hidden",
     borderRadius: "10px",
     transition: "all 0.3s ease",
   });
+
   Object.assign(conImg.style, {
     width: "100%",
     height: "100%",

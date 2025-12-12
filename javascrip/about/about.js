@@ -4,6 +4,7 @@ import {
   headerNav,
   createCardKarir,
   createQuestion,
+  gilapEffect,
 } from "../../module/module.mjs";
 
 const mainAbout = document.createElement("main");
@@ -96,6 +97,7 @@ Object.assign(mainAbout.style, {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          // backgroundColor: "yellow",
         });
 
         Object.assign(conImgKanan.style, {
@@ -113,6 +115,8 @@ Object.assign(mainAbout.style, {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         });
+
+        gilapEffect(conImgKanan, "2");
 
         break;
     }

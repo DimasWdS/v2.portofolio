@@ -26,3 +26,21 @@
     transform: translateY(100%);
   }
 }
+
+/* efek gilap start */
+
+@keyframes gilapGerak {
+  0% {
+    transform: translateX(-2000%);
+  }
+
+  80% {
+    transform: translateX(2000%); /* selesai bergerak di 80% */
+  }
+
+  100% {
+    transform: translateX(2000%); /* diam (delay) di akhir animasi */
+  }
+}
+
+/* efek gilap end */

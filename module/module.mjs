@@ -4,3 +4,4 @@ export { cardIllustrator } from "./card-project-illustrator/card-project-illustr
 export { createCardKarir } from "./card-karir/karir.mjs";
 export { createCarProjectWeb } from "./card-project-web/project-web.mjs";
 export { createQuestion } from "./quick-question/create-quick-question.mjs";
+export { gilapEffect } from "./efek-gilap/gilap.mjs";
