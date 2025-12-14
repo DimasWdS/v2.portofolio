@@ -7,7 +7,6 @@ function sum(a, b) {
 function createNavFooter(targetContainer) {
   const container = document.createElement("section");
 
-  console.log(container);
   //
   const containerSatu = document.createElement("section");
   const containerDua = document.createElement("section");

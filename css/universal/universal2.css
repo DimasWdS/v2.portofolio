@@ -44,3 +44,20 @@
 }
 
 /* efek gilap end */
+
+/* icon tolls about start */
+
+.adobeIllustrator {
+  animation: adobeIllustrator 100s linear infinite;
+}
+
+@keyframes adobeIllustrator {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* icon tolls about end*/

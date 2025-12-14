@@ -297,45 +297,102 @@ Object.assign(mainAbout.style, {
     const div = document.createElement("section");
     const teksSatu = document.createElement("p");
     const teksDua = document.createElement("p");
+    const conTollsIllustrator = document.createElement("section");
 
     container.appendChild(conTeks);
-    conTeks.appendChild(div);
-    div.appendChild(teksSatu);
-    div.appendChild(teksDua);
+    {
+      conTeks.appendChild(div);
+      div.appendChild(teksSatu);
+      div.appendChild(teksDua);
+      conTeks.appendChild(conTollsIllustrator);
 
-    teksSatu.textContent = "I CAN MAKE ILLUSTRATION";
-    teksDua.textContent = "FOR YOU.";
+      {
+        teksSatu.textContent = "I CAN MAKE ILLUSTRATION";
+        teksDua.textContent = "FOR YOU.";
 
-    Object.assign(conTeks.style, {
-      position: "absolute",
-      width: "100%",
-      height: "50rem",
-      // backgroundColor: "green",
-      top: "0",
-      display: "flex",
-      alignItems: "center",
-    });
+        Object.assign(conTeks.style, {
+          position: "absolute",
+          width: "100%",
+          height: "50rem",
+          // backgroundColor: "green",
+          top: "0",
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+        });
 
-    Object.assign(div.style, {
-      position: "relative",
-      // backgroundColor: "yellow",
-      width: "100%",
-      display: "flex",
-      flexDirection: "column",
-      padding: "0 0 0 1rem",
-    });
-    [teksSatu, teksDua].forEach((el, dex) => {
-      Object.assign(el.style, {
-        color: "var(--main-font)",
-        fontWeight: "800",
-        fontSize: "clamp(1rem, calc(3vw + 1rem), 3rem)",
-        // textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
-      });
-      if (dex === 1) {
-        el.style.position = "absolute";
-        el.style.top = "55%";
+        Object.assign(div.style, {
+          position: "relative",
+          // backgroundColor: "yellow",
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          padding: "0 0 0 1rem",
+        });
+        [teksSatu, teksDua].forEach((el, dex) => {
+          Object.assign(el.style, {
+            color: "var(--main-font)",
+            fontWeight: "800",
+            fontSize: "clamp(1rem, calc(3vw + 1rem), 3rem)",
+            // textShadow: "5px 5px 5px rgba(0, 0, 0, 1)",
+          });
+          if (dex === 1) {
+            el.style.position = "absolute";
+            el.style.top = "55%";
+          }
+        });
+
+        {
+          Object.assign(conTollsIllustrator.style, {
+            // backgroundColor: "green",
+            position: "relative",
+            margin: "2rem 0 0 1rem",
+            display: "flex",
+            gap: "1rem",
+            overflow: "hidden",
+            backgroundColor: "var(--second-background)",
+            width: "max-content",
+            padding: "1rem",
+            borderRadius: "20px",
+          });
+
+          gilapEffect(conTollsIllustrator, "5");
+
+          for (let i = 0; i < 1; i++) {
+            const div = document.createElement("div");
+            const img = document.createElement("img");
+
+            img.setAttribute("loading", "lazy");
+            img.setAttribute("alt", "icon-tools");
+
+            conTollsIllustrator.appendChild(div);
+            div.appendChild(img);
+
+            Object.assign(div.style, {
+              width: "4rem",
+              aspectRatio: "1/1",
+              // backgroundColor: "green",
+              borderRadius: "10px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            });
+
+            Object.assign(img.style, {
+              height: "100%",
+              width: "100%",
+            });
+
+            switch (true) {
+              case i === 0:
+                img.setAttribute("src", "asset/icon/adobeillustratoricon.svg");
+                break;
+            }
+          }
+        }
       }
-    });
+    }
+    //
   }
 }
 // halaman web devoloper
