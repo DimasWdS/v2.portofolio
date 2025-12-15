@@ -58,10 +58,36 @@ Object.assign(main.style, {
     conImg.appendChild(imgDua);
 
     imgSatu.classList.add("box");
+    imgDua.classList.add("box2");
+    conApi.classList.add("abdg");
 
     window.addEventListener("scroll", () => {
       const scroll = window.scrollY;
-      document.querySelector(".box").style.transform = `translateX(-${
+
+      const transformValue = `
+    translateX(-${scroll * 0.3}px)
+    perspective(300px)
+    rotateY(10deg)
+  `;
+
+      document.querySelector(".box").style.transform = transformValue;
+    });
+
+    window.addEventListener("scroll", () => {
+      const scroll = window.scrollY;
+
+      const transformValue = `
+    translateX(${scroll * 0.3}px)
+    perspective(300px)
+    rotateY(-10deg)
+  `;
+
+      document.querySelector(".box2").style.transform = transformValue;
+    });
+
+    window.addEventListener("scroll", () => {
+      const scroll = window.scrollY;
+      document.querySelector(".abdg").style.transform = `translateY(${
         scroll * 0.3
       }px)`;
     });
