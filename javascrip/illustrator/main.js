@@ -3,7 +3,10 @@ import {
   sum,
   headerNav,
   cardIllustrator,
+  smoothScroll,
 } from "./../../module/module.mjs";
+
+smoothScroll();
 
 const containerIllustrator = document.createElement("main");
 
@@ -53,6 +56,15 @@ Object.assign(main.style, {
     background.appendChild(conImg);
     conImg.appendChild(imgSatu);
     conImg.appendChild(imgDua);
+
+    imgSatu.classList.add("box");
+
+    window.addEventListener("scroll", () => {
+      const scroll = window.scrollY;
+      document.querySelector(".box").style.transform = `translateX(-${
+        scroll * 0.3
+      }px)`;
+    });
 
     Object.assign(background.style, {
       position: "relative",

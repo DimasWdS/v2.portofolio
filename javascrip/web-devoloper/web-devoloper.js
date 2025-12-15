@@ -3,7 +3,10 @@ import {
   sum,
   headerNav,
   createCarProjectWeb,
+  smoothScroll,
 } from "../../module/module.mjs";
+
+smoothScroll();
 
 const mainDevoloper = document.createElement("main");
 document.body.appendChild(mainDevoloper);

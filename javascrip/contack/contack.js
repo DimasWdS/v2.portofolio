@@ -1,4 +1,11 @@
-import { createNavFooter, sum, headerNav } from "../../module/module.mjs";
+import {
+  createNavFooter,
+  sum,
+  headerNav,
+  smoothScroll,
+} from "../../module/module.mjs";
+
+smoothScroll();
 
 const mainContack = document.createElement("main");
 document.body.appendChild(mainContack);
