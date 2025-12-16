@@ -375,7 +375,7 @@ Object.assign(mainAbout.style, {
 
           gilapEffect(conTollsIllustrator, "5");
 
-          for (let i = 0; i < 1; i++) {
+          for (let i = 0; i < 2; i++) {
             const div = document.createElement("div");
             const img = document.createElement("img");
 
@@ -403,6 +403,9 @@ Object.assign(mainAbout.style, {
             switch (true) {
               case i === 0:
                 img.setAttribute("src", "asset/icon/adobeillustratoricon.svg");
+                break;
+              case i === 1:
+                img.setAttribute("src", "asset/icon/clipstudiopaint.png");
                 break;
             }
           }

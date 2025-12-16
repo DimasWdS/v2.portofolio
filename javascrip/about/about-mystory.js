@@ -61,6 +61,11 @@ container.appendChild(layerAtas);
       });
     }
   });
+
+  Object.assign(headerbawah.style, {
+    padding: "0 4rem",
+    // backgroundColor: "green",
+  });
 }
 
 {
