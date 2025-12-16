@@ -1,40 +1,33 @@
-function smoothScroll(options = {}) {
-  const { speed = 0.1 } = options;
-
-  let currentScroll = window.scrollY;
-  let targetScroll = window.scrollY;
-
-  // Deteksi touchscreen
+function smoothScroll() {
   const isTouchDevice =
     "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
-  // Jangan jalankan di touchscreen
-  if (isTouchDevice) return;
+  if (!isTouchDevice) {
+    let current = window.scrollY;
+    let target = window.scrollY;
+    const speed = 0.08;
 
-  function onWheel(e) {
-    e.preventDefault();
-
-    targetScroll += e.deltaY;
-
-    targetScroll = Math.max(
-      0,
-      Math.min(targetScroll, document.body.scrollHeight - window.innerHeight)
+    window.addEventListener(
+      "wheel",
+      (e) => {
+        e.preventDefault();
+        target += e.deltaY;
+        target = Math.max(
+          0,
+          Math.min(target, document.body.scrollHeight - innerHeight)
+        );
+      },
+      { passive: false }
     );
+
+    function smooth() {
+      current += (target - current) * speed;
+      window.scrollTo(0, current);
+      requestAnimationFrame(smooth);
+    }
+
+    smooth();
   }
-
-  function smoothScroll() {
-    currentScroll += (targetScroll - currentScroll) * speed;
-    window.scrollTo(0, currentScroll);
-    requestAnimationFrame(smoothScroll);
-  }
-
-  window.addEventListener("wheel", onWheel, { passive: false });
-  smoothScroll();
-
-  // optional: return cleanup function
-  return () => {
-    window.removeEventListener("wheel", onWheel);
-  };
 }
 
 export { smoothScroll };

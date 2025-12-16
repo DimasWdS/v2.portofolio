@@ -8,7 +8,7 @@ import {
   smoothScroll,
 } from "../../module/module.mjs";
 
-// smoothScroll();
+smoothScroll();
 
 const mainAbout = document.createElement("main");
 document.body.appendChild(mainAbout);
