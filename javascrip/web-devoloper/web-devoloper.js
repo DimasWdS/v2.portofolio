@@ -6,8 +6,6 @@ import {
   smoothScroll,
 } from "../../module/module.mjs";
 
-smoothScroll();
-
 const mainDevoloper = document.createElement("main");
 document.body.appendChild(mainDevoloper);
 
@@ -17,6 +15,7 @@ Object.assign(mainDevoloper.style, {
   alignItems: "center",
   backgroundColor: "var(--background-color)",
 });
+smoothScroll();
 
 //NAV
 {
@@ -235,7 +234,7 @@ Object.assign(mainDevoloper.style, {
               Object.assign(span.style, {
                 color: "green",
               });
-              span.textContent = `https://github.com/dimaswds`;
+              span.textContent = `https://github.com/dimaswidysap`;
               break;
             case 5:
               Object.assign(span.style, {
