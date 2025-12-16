@@ -230,21 +230,35 @@ Object.assign(mainAbout.style, {
     firstCon.appendChild(secondCon);
 
     Object.assign(garuda.style, {
+      position: "relative",
       width: "100%",
       height: "50rem",
       // backgroundColor: "yellow",
+      // transform: "translateX(20rem)",
+      left: "20rem",
       display: "flex",
       justifyContent: "end",
     });
 
     Object.assign(firstCon.style, {
+      position: "absolute",
       height: "80%",
       aspectRatio: "16/9",
       // backgroundColor: "gray",
-      transform: "translateX(20%)",
+      transform: "translateX(40%)",
       scale: "1.2",
       margin: "5rem 0 0 0",
     });
+
+    firstCon.classList.add("abdg");
+
+    window.addEventListener("scroll", () => {
+      const scroll = window.scrollY;
+      document.querySelector(".abdg").style.transform = `translateX(-${
+        scroll * 0.1
+      }px)`;
+    });
+
     Object.assign(secondCon.style, {
       position: "relative",
       width: "100%",
