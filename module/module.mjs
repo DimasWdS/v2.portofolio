@@ -5,4 +5,3 @@ export { createCardKarir } from "./card-karir/karir.mjs";
 export { createCarProjectWeb } from "./card-project-web/project-web.mjs";
 export { createQuestion } from "./quick-question/create-quick-question.mjs";
 export { gilapEffect } from "./efek-gilap/gilap.mjs";
-export { smoothScroll } from "./smooth-scroll/smooth-scroll.mjs";

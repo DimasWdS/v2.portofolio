@@ -54,11 +54,8 @@ Object.assign(main.style, {
     conImg.appendChild(imgSatu);
     conImg.appendChild(imgDua);
 
-    imgSatu.classList.add("box");
-    imgDua.classList.add("box2");
-    conApi.classList.add("abdg");
-
     {
+      imgSatu.classList.add("box");
       const box = document.querySelector(".box");
 
       let current = 0;
@@ -84,24 +81,45 @@ Object.assign(main.style, {
       animate();
     }
 
-    window.addEventListener("scroll", () => {
-      const scroll = window.scrollY;
+    {
+      imgDua.classList.add("box2");
+      const box = document.querySelector(".box2");
 
-      const transformValue = `
-    translateX(${scroll * 0.3}px)
+      let currentScroll = 0;
+      let targetScroll = 0;
+      const ease = 0.08; // makin kecil = makin smooth
+
+      window.addEventListener("scroll", () => {
+        targetScroll = window.scrollY;
+      });
+
+      function animate() {
+        // lerp
+        currentScroll += (targetScroll - currentScroll) * ease;
+
+        const transformValue = `
+    translateX(${currentScroll * 0.3}px)
     perspective(300px)
     rotateY(-10deg)
   `;
 
-      document.querySelector(".box2").style.transform = transformValue;
-    });
+        box.style.transform = transformValue;
 
-    window.addEventListener("scroll", () => {
-      const scroll = window.scrollY;
-      document.querySelector(".abdg").style.transform = `translateY(${
-        scroll * 0.3
-      }px)`;
-    });
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    }
+
+    {
+      conApi.classList.add("abdg");
+      window.addEventListener("scroll", () => {
+        const scroll = window.scrollY;
+        document.querySelector(".abdg").style.transform = `translateY(${
+          scroll * 0.3
+        }px)`;
+      });
+    }
 
     Object.assign(background.style, {
       position: "relative",
@@ -368,7 +386,7 @@ Object.assign(main.style, {
     conBtn.classList.add("btn-more-instagram");
     konten.classList.add("konten-more-instagram");
 
-    a.setAttribute("href", "illustrator.html");
+    a.setAttribute("href", "#");
 
     Object.assign(section.style, {
       width: "100%",
