@@ -3,10 +3,7 @@ import {
   sum,
   headerNav,
   cardIllustrator,
-  smoothScroll,
 } from "./../../module/module.mjs";
-
-smoothScroll();
 
 const containerIllustrator = document.createElement("main");
 
@@ -371,7 +368,7 @@ Object.assign(main.style, {
     conBtn.classList.add("btn-more-instagram");
     konten.classList.add("konten-more-instagram");
 
-    a.setAttribute("href", "#");
+    a.setAttribute("href", "illustrator.html");
 
     Object.assign(section.style, {
       width: "100%",

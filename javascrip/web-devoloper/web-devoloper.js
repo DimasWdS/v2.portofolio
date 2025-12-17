@@ -3,7 +3,6 @@ import {
   sum,
   headerNav,
   createCarProjectWeb,
-  smoothScroll,
 } from "../../module/module.mjs";
 
 const mainDevoloper = document.createElement("main");
@@ -15,7 +14,6 @@ Object.assign(mainDevoloper.style, {
   alignItems: "center",
   backgroundColor: "var(--background-color)",
 });
-smoothScroll();
 
 //NAV
 {
