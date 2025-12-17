@@ -652,8 +652,8 @@ Object.assign(mainAbout.style, {
     ["2025", "until now"],
     ["Freelance Illustrator", "Happy to work with you."],
     [
-      "Saya senang menggunakan Adobe Illustrator untuk membuat karya saya.",
-      "Saya juga sedang belajar menggunakan Software Clip Studio Paint.",
+      "I enjoy using Adobe Illustrator to create my work.",
+      "I am also learning to use Clip Studio Paint software.",
     ]
   );
 
@@ -662,9 +662,8 @@ Object.assign(mainAbout.style, {
     ["2023", "5 months"],
     ["Network Installation Technician", "@MENAKSOPAL LINK LUSANTARA"],
     [
-      "Dapat melakukan instalasi FFTH, mampu menyambung kabel fiber optic menggunakan splicer ataupun menggunakan konektor fiber optic tipe SC.",
-      "Dapat melakukan instalasi wifi dengam metode paralel, mampu memasang konektor RJ45 ke kabel lan",
-      "Dapat melakukan konfigurasi ke Router.",
+      "Able to perform FTTH installation and capable of connecting fiber optic cables using a splicer or SC-type fiber optic connectors.",
+      "Able to install Wi-Fi using a parallel method and capable of attaching RJ45 connectors to LAN cables.",
     ]
   );
 }
@@ -722,23 +721,18 @@ Object.assign(mainAbout.style, {
 
     createQuestion(
       conQuestion,
-      "Kenapa memilih 2 bidang keahlian?",
-      "Menurut saya diera sekarang jika seorang individu ingin berkerja didalam teknologi tidak cukup dengan hanya satu bidang keahlian."
+      "Why choose two fields of expertise?",
+      "In this digital era, having only one skill is no longer sufficient for those who want to work in the technology industry. That is the main reason why I chose coding and design."
     );
     createQuestion(
       conQuestion,
-      "Kenapa memilih Illustrator",
-      "Semua berasal dari menonton video dari konten kreator yang bernama Pamzky dari platfrom tiktok di tahun 2023, dari situ saya menjadikan menggambar sebagai hobi."
+      "Why did you choose Illustrator?",
+      "It all started from watching videos by a content creator named Pamzky on the TikTok platform in 2023. From there, I made drawing my hobby."
     );
     createQuestion(
       conQuestion,
-      "Kenapa memilih Frontend",
-      "Saya memasukan Frontend kedalam kemampuan saya karena itu adalah tujuan saya masuk kedalam dunia teknologi, hal itu dimulai saat saya masuk ke SMKN 1 GEGER jurusan Teknik Komputer dan Jaringan"
-    );
-    createQuestion(
-      conQuestion,
-      "Tools apa yang saya gunakan untuk membuat Illustrasi?",
-      "Untuk sekarang saya sangat nyaman menggunakan software Adobe Illustrator"
+      "Why did you choose Frontend Development?",
+      "I included Frontend as one of my skills because it is my goal to enter the world of technology. This journey began when I enrolled at SMKN 1 Geger, majoring in Computer and Network Engineering."
     );
   }
 }
