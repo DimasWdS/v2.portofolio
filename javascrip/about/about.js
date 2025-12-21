@@ -667,7 +667,7 @@ Object.assign(mainAbout.style, {
     ]
   );
 }
-// quit quettion
+// quick quettion
 {
   const container = document.createElement("section");
   const header = document.createElement("header");

@@ -44,6 +44,7 @@ container.appendChild(layerAtas);
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
+      willChange: "transform",
     });
 
     if (dex === 0) {
@@ -116,7 +117,7 @@ container.appendChild(layerAtas);
     Object.assign(el.style, {
       width: "33.3%",
       height: "100%",
-      //   backgroundColor: "green",
+      // backgroundColor: "green",
       display: "flex",
       overflow: "hidden",
       flexDirection: "column",

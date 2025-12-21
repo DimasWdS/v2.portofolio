@@ -78,7 +78,7 @@ Object.assign(mainHome.style, {
   mainHome.appendChild(container);
 
   Object.assign(container.style, {
-    height: "100dvh",
+    minHeight: "100dvh",
     width: "100%",
     // backgroundColor: "green",
     overflow: "hidden",
