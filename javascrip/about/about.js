@@ -275,7 +275,7 @@ Object.assign(mainAbout.style, {
         width: "100%",
         height: "100%",
         // backgroundColor: "blue",
-        filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.73))",
+        // filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.73))",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeate",
         backgroundSize: "cover",
