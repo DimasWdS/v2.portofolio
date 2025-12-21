@@ -231,6 +231,7 @@ Object.assign(mainAbout.style, {
       width: "100%",
       height: "50rem",
       // backgroundColor: "yellow",
+      // opacity: "1",
       // transform: "translateX(20rem)",
       left: "20rem",
       display: "flex",
@@ -274,9 +275,11 @@ Object.assign(mainAbout.style, {
         width: "100%",
         height: "100%",
         // backgroundColor: "blue",
+        filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.73))",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeate",
         backgroundSize: "cover",
+        willChange: "transform",
       });
 
       img.setAttribute("loading", "lazy");
@@ -429,6 +432,7 @@ Object.assign(mainAbout.style, {
       const div = document.createElement("div");
       container.appendChild(div);
       Object.assign(div.style, {
+        willChange: "transform",
         position: "absolute",
         height: "80%",
         aspectRatio: "1/1",
@@ -441,6 +445,7 @@ Object.assign(mainAbout.style, {
           bottom: "0",
           right: "0",
           transform: "translateY(3px) translateX(3px)",
+          // backgroundColor: "green",
         });
       }
     }
@@ -459,8 +464,6 @@ Object.assign(mainAbout.style, {
 
     Object.assign(container.style, {
       position: "relative",
-      // backgroundColor: "yellow",
-      // margin: "0 3rem 0 0",
     });
     Object.assign(containerDua.style, {
       backgroundColor: "var(--main-font)",
@@ -498,12 +501,15 @@ Object.assign(mainAbout.style, {
   header.textContent = "AND I CAN MAKE WEB FOR YOU.";
 
   Object.assign(container.style, {
+    willChange: "transform",
     position: "relative",
     width: "100%",
     maxWidth: "80rem",
     overflow: "hidden",
-    backgroundColor: "var(--second-background)",
+    // backgroundColor: "var(--second-background)",
+
     // borderRadius: "5px",
+    // border: "5px solid black",
   });
 
   Object.assign(layarAtas.style, {
@@ -512,10 +518,12 @@ Object.assign(mainAbout.style, {
     width: "100%",
     // backgroundColor: "green",
     zIndex: "5",
+    willChange: "transform",
     boxShadow: "inset 0 0 30px rgba(0, 0, 0, 0.76)",
   });
 
   Object.assign(header.style, {
+    willChange: "transform",
     width: "100%",
     padding: "0 0 0 1rem",
     color: "var(--main-font)",
@@ -531,12 +539,15 @@ Object.assign(mainAbout.style, {
     gap: "2.5rem",
     // flexDirection: "column",
     // backgroundColor: "green",
+    willChange: "transform",
   });
 
   Object.assign(secondCon.style, {
     display: "flex",
     gap: "2.5rem",
     flexShrink: "0",
+    // backgroundColor: "green",
+    willChange: "transform",
   });
 
   createCard("html.svg", "HTML");
@@ -546,6 +557,11 @@ Object.assign(mainAbout.style, {
 
   for (let i = 0; i < 2; i++) {
     const secondConClone = secondCon.cloneNode(true);
+
+    Object.assign(secondConClone.style, {
+      // backgroundColor: "green",
+      willChange: "transform",
+    });
 
     firstCon.appendChild(secondConClone);
   }
