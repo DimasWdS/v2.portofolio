@@ -37,6 +37,10 @@ Object.assign(container.style, {
     padding: "1rem",
     // backgroundColor: "green",
   });
+
+  // berada di file web-devoloper.css
+  conKonten.classList.add("jbsuia");
+
   //style header
   {
     const headerTeks = document.createElement("h1");

@@ -433,6 +433,7 @@ Object.assign(mainAbout.style, {
     // backgroundColor: "green",
   });
 
+  // berada di file web-devoloper.css
   conWebSection.classList.add("mnhlkju");
 }
 // halaman my story
