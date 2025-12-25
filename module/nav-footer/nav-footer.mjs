@@ -56,7 +56,7 @@ function createNavFooter(targetContainer) {
         aLink.setAttribute("href", "about.html");
         break;
       case 4:
-        aLink.textContent = "Contack";
+        aLink.textContent = "Contact";
         aLink.setAttribute("href", "contack.html");
         break;
       default:

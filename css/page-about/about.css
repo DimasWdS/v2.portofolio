@@ -272,3 +272,9 @@
   opacity: 0;
 }
 /* page quick question end */
+
+@media (max-width: 640px) {
+  .djuumb {
+    width: 3rem !important;
+  }
+}

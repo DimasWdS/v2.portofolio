@@ -371,6 +371,7 @@ Object.assign(mainAbout.style, {
             width: "max-content",
             padding: "1rem",
             borderRadius: "20px",
+            // backgroundColor: "green",
           });
 
           gilapEffect(conTollsIllustrator, "5");
@@ -395,6 +396,9 @@ Object.assign(mainAbout.style, {
               alignItems: "center",
             });
 
+            //berada di file about.css line 276
+            div.classList.add("djuumb");
+
             Object.assign(img.style, {
               height: "100%",
               width: "100%",
@@ -417,162 +421,19 @@ Object.assign(mainAbout.style, {
 }
 // halaman web devoloper
 {
-  const container = document.createElement("section");
-  const header = document.createElement("header");
-  const firstCon = document.createElement("section");
-  const secondCon = document.createElement("section");
-  const layarAtas = document.createElement("section");
-  function createCard(iconLogo, teksKonten) {
-    const container = document.createElement("div");
-    const containerDua = document.createElement("section");
-    const conImg = document.createElement("div");
-    const img = document.createElement("img");
-    const span = document.createElement("span");
-    for (let i = 0; i < 2; i++) {
-      const div = document.createElement("div");
-      container.appendChild(div);
-      Object.assign(div.style, {
-        willChange: "transform",
-        position: "absolute",
-        height: "80%",
-        aspectRatio: "1/1",
-        backgroundColor: "var(--accen-color)",
-        borderRadius: "12px",
-        transform: "translateY(-3px) translateX(-3px)",
-      });
-      if (i === 1) {
-        Object.assign(div.style, {
-          bottom: "0",
-          right: "0",
-          transform: "translateY(3px) translateX(3px)",
-          // backgroundColor: "green",
-        });
-      }
-    }
+  const conWebSection = document.createElement("section");
 
-    secondCon.appendChild(container);
-    container.appendChild(containerDua);
-    containerDua.appendChild(conImg);
-    conImg.appendChild(img);
-    containerDua.appendChild(span);
+  mainAbout.appendChild(conWebSection);
 
-    span.textContent = teksKonten;
-
-    img.setAttribute("src", `asset/icon/${iconLogo}`);
-    img.setAttribute("alt", "logo");
-    img.setAttribute("loading", "lazy");
-
-    Object.assign(container.style, {
-      position: "relative",
-    });
-    Object.assign(containerDua.style, {
-      backgroundColor: "var(--main-font)",
-      display: "flex",
-      padding: "0.2rem 1rem 0.2rem 0.2rem",
-      borderRadius: "10px",
-      gap: "1rem",
-      alignItems: "center",
-      position: "relative",
-      zIndex: "2",
-      boxShadow:
-        "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
-    });
-
-    Object.assign(conImg.style, {
-      height: "3rem",
-      aspectRatio: "1/1",
-      // backgroundColor: "cyan",
-      borderRadius: "5px",
-    });
-    Object.assign(span.style, {
-      color: "var(--background-color)",
-      fontWeight: "800",
-    });
-  }
-  //
-  mainAbout.appendChild(container);
-  container.appendChild(layarAtas);
-  container.appendChild(header);
-  container.appendChild(firstCon);
-  firstCon.appendChild(secondCon);
-
-  secondCon.classList.add("con-tech-scroll");
-
-  header.textContent = "AND I CAN MAKE WEB FOR YOU.";
-
-  Object.assign(container.style, {
-    willChange: "transform",
-    position: "relative",
+  Object.assign(conWebSection.style, {
     width: "100%",
     maxWidth: "80rem",
-    overflow: "hidden",
-    // backgroundColor: "var(--second-background)",
-
-    // borderRadius: "5px",
-    // border: "5px solid black",
-  });
-
-  Object.assign(layarAtas.style, {
-    position: "absolute",
-    height: "100%",
-    width: "100%",
+    // height: "3rem",
+    aspectRatio: "16/9",
     // backgroundColor: "green",
-    zIndex: "5",
-    willChange: "transform",
-    boxShadow: "inset 0 0 30px rgba(0, 0, 0, 0.76)",
   });
 
-  Object.assign(header.style, {
-    willChange: "transform",
-    width: "100%",
-    padding: "0 0 0 1rem",
-    color: "var(--main-font)",
-    fontWeight: "800",
-    fontSize: "clamp(1rem, calc(3vw + 1rem), 3rem)",
-    margin: "0 0 3rem 0",
-  });
-
-  Object.assign(firstCon.style, {
-    width: "100%",
-    display: "flex",
-    margin: "1rem 0 1rem 0",
-    gap: "2.5rem",
-    // flexDirection: "column",
-    // backgroundColor: "green",
-    willChange: "transform",
-  });
-
-  Object.assign(secondCon.style, {
-    display: "flex",
-    gap: "2.5rem",
-    flexShrink: "0",
-    // backgroundColor: "green",
-    willChange: "transform",
-  });
-
-  createCard("html.svg", "HTML");
-  createCard("css.svg", "CSS");
-  createCard("tailwindcss.svg", "Tailwind CSS");
-  createCard("javascript.svg", "JavaScrip");
-
-  for (let i = 0; i < 2; i++) {
-    const secondConClone = secondCon.cloneNode(true);
-
-    Object.assign(secondConClone.style, {
-      // backgroundColor: "green",
-      willChange: "transform",
-    });
-
-    firstCon.appendChild(secondConClone);
-  }
-
-  {
-    const tes = firstCon.cloneNode(true);
-
-    container.appendChild(tes);
-
-    tes.classList.add("clone-tech-scroll");
-  }
+  conWebSection.classList.add("mnhlkju");
 }
 // halaman my story
 {

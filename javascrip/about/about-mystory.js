@@ -84,8 +84,10 @@ container.appendChild(layerAtas);
     Object.assign(container.style, {
       width: "100%",
       aspectRatio: "1/1",
-      backgroundColor: "yellow",
+      // backgroundColor: "yellow",
       flexShrink: "0",
+      borderRadius: "15px",
+      overflow: "hidden",
     });
 
     Object.assign(img.style, {
@@ -107,10 +109,10 @@ container.appendChild(layerAtas);
   Object.assign(layerbawah.style, {
     height: "100%",
     width: "100%",
-    backgroundColor: "var(--main-font)",
+    backgroundColor: "var(--second-background)",
     display: "flex",
     justifyContent: "center",
-    gap: "0.5rem",
+    gap: "0.8rem",
   });
 
   [div1, div2, div3].forEach((el, dex) => {
@@ -124,11 +126,13 @@ container.appendChild(layerAtas);
     });
 
     if (dex === 0) {
+      // class berada di file css/page-about about-mystory.css line 1
       el.classList.add("asxsd");
       Object.assign(el.style, {
         flexDirection: "column-reverse",
       });
     } else if (dex === 2) {
+      // class berada di file css/page-about about-mystory.css line 1
       el.classList.add("asxsd");
       Object.assign(el.style, {
         flexDirection: "column-reverse",
@@ -150,9 +154,9 @@ container.appendChild(layerAtas);
       display: "flex",
       width: "100%",
       flexWrap: "wrap",
-      gap: "0.5rem",
+      gap: "1rem",
       margin: "0 0 1rem 0",
-      //   backgroundColor: "red",
+      // backgroundColor: "red",
     });
 
     createCardFoto(containerImg, "2.jpg");
@@ -176,7 +180,7 @@ container.appendChild(layerAtas);
       display: "flex",
       width: "100%",
       flexWrap: "wrap",
-      gap: "0.5rem",
+      gap: "1rem",
       margin: "0 0 1rem 0",
       //   backgroundColor: "red",
     });

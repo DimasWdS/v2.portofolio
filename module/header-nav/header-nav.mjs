@@ -76,7 +76,7 @@ function headerNav(containerTarget) {
         break;
 
       case 4:
-        aLink.textContent = "Contack";
+        aLink.textContent = "Contact";
         aLink.setAttribute("href", "contack.html");
         if (markPage === "CONTACK") {
           aLink.classList.add("alink-nav-header-active");
