@@ -6,3 +6,8 @@
   filter: blur(2px);
   transition: all 0.5s ease-in-out;
 }
+
+.hdyiis:hover .jbasuag:not(:hover) {
+  filter: blur(2px);
+  transition: all 0.5s ease-in-out;
+}
