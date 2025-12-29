@@ -1,8 +1,3 @@
-@media (max-width: 640px) {
-  .mnhlkju {
-    aspect-ratio: 9/16 !important;
-  }
-  .jbsuia {
-    align-items: center !important;
-  }
+.go-right {
+  transform: translateX(100%);
 }

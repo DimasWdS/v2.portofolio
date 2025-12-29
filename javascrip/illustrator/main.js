@@ -130,7 +130,7 @@ Object.assign(main.style, {
     Object.assign(conApi.style, {
       width: "100%",
       height: "100%",
-      backgroundImage: "url(asset/page-illustrator/bgapi.png",
+      backgroundImage: "url(asset/page-illustrator/bgapi.webp",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
@@ -163,8 +163,8 @@ Object.assign(main.style, {
         filter: "drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.67))",
         backgroundImage:
           dex === 0
-            ? "url(asset/page-illustrator/hellcatmobil.png)"
-            : "url(asset/page-illustrator/moonknight.png)",
+            ? "url(asset/page-illustrator/hellcatmobil.webp)"
+            : "url(asset/page-illustrator/moonknight.webp)",
         transform:
           dex === 0
             ? "perspective(300px) rotateY(10deg)"
@@ -191,7 +191,7 @@ Object.assign(main.style, {
         height: "100%",
         width: "100%",
         // backgroundColor: "yellow",
-        backgroundImage: "url(asset/page-illustrator/background.jpg",
+        backgroundImage: "url(asset/page-illustrator/background.webp",
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",

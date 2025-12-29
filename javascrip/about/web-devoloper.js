@@ -35,7 +35,7 @@ Object.assign(container.style, {
     flexDirection: "column",
     alignItems: "end",
     padding: "1rem",
-    // backgroundColor: "green",
+    // backgroundColor: "red",
   });
 
   // berada di file web-devoloper.css
@@ -58,160 +58,88 @@ Object.assign(container.style, {
     });
   }
 
-  //teknologi
   {
-    const header = document.createElement("header");
-    const conKonten = document.createElement("section");
-
-    teknologi.appendChild(header);
-    teknologi.appendChild(conKonten);
-
-    Object.assign(teknologi.style, {
-      height: "100%",
-      width: "90%",
-      maxWidth: "25rem",
-      backgroundColor: "var(--background-color",
-      outline: "2px solid var(--main-font)",
-      borderRadius: "10px",
-      boxShadow:
-        "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
-      overflow: "hidden",
-    });
-
-    function createIcon(conTarget, icon) {
+    function createBtnSlide(conTarget, content, idButton, jarak) {
       const container = document.createElement("section");
-      const img = document.createElement("img");
-
+      const button = document.createElement("button");
       conTarget.appendChild(container);
-      container.appendChild(img);
+      container.appendChild(button);
 
-      img.setAttribute("alt", "icon");
-      img.setAttribute("loading", "lazy");
-      img.setAttribute("src", `asset/icon/tecnology/${icon}`);
+      button.setAttribute("id", `${idButton}`);
 
-      container.classList.add("jbasuag");
+      button.textContent = `${content}`;
 
       Object.assign(container.style, {
-        width: "4rem",
-        height: "4rem",
-        // backgroundColor: "green",
-        borderRadius: "20px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexShrink: "0",
-      });
-    }
-
-    // header style
-    {
-      Object.assign(header.style, {
-        width: "100%",
-        height: "5rem",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        // backgroundColor: "red",
-        borderBottom: "2px solid var(--main-font)",
+        position: "absolute",
+        width: "10rem",
+        height: "3rem",
+        backgroundColor: "red",
+        right: "100%",
+        top: `${jarak}rem`,
       });
 
-      for (let i = 0; i < 1; i++) {
-        const button = document.createElement("button");
-
-        header.appendChild(button);
-
-        Object.assign(button.style, {
-          fontWeight: "900",
-          color: "var(--main-font)",
-          fontSize: "1.5em",
-        });
-
-        switch (true) {
-          case i === 0:
-            button.textContent = "Technology";
-            break;
-        }
-      }
-    }
-    // container konten
-    {
-      const conTeknologi = document.createElement("section");
-
-      Object.assign(conKonten.style, {
-        position: "relative",
+      Object.assign(button.style, {
+        display: "inline-flex",
         height: "100%",
         width: "100%",
-        // backgroundColor: "green",
+        // background: 'color:"green',
+        cursor: "pointer",
+        justifyContent: "center",
+        alignItems: "center",
+        fontSize: "1.2em",
+        fontWeight: "800",
       });
-
-      conKonten.appendChild(conTeknologi);
-
-      [conTeknologi].forEach((el, dex) => {
-        Object.assign(el.style, {
-          position: "relative",
-          height: "100%",
-          width: "100%",
-        });
-      });
-      // //teknologi web programing
-      {
-        const bg = document.createElement("section");
-        const konten = document.createElement("section");
-
-        conTeknologi.appendChild(bg);
-        conTeknologi.appendChild(konten);
-
-        [bg, konten].forEach((el) => {
-          Object.assign(el.style, {
-            position: "absolute",
-            height: "100%",
-            width: "100%",
-            // backgroundColor: "red",
-            overflow: "hidden",
-            inset: "0",
-          });
-        });
-        // bg
-        {
-          const teks = document.createElement("span");
-
-          bg.appendChild(teks);
-          teks.textContent = "FRONTEND";
-
-          Object.assign(teks.style, {
-            fontWeight: "900",
-            fontSize: "10em",
-            color: "var(--main-font)",
-            transform: "rotate(70deg)",
-            opacity: "0.7",
-          });
-
-          Object.assign(bg.style, {
-            // backgroundColor: "green",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          });
-        }
-        //konten
-        {
-          Object.assign(konten.style, {
-            display: "flex",
-            flexWrap: "wrap",
-            alignContent: "flex-start",
-            justifyContent: "center",
-            padding: "1rem",
-            // backgroundColor: "red",
-          });
-
-          konten.classList.add("hdyiis");
-
-          createIcon(konten, "html.svg");
-          createIcon(konten, "css.svg");
-          createIcon(konten, "javascript.svg");
-          createIcon(konten, "tailwindcss.svg");
-        }
-      }
     }
+
+    const container = document.createElement("section");
+    const conFrontEnd = document.createElement("section");
+    const conBackEnd = document.createElement("section");
+    const tools = document.createElement("section");
+
+    console.log(container);
+    Object.assign(teknologi.style, {
+      width: "100%",
+      height: "100%",
+      // backgroundColor: "red",
+      display: "flex",
+      justifyContent: "end",
+    });
+    teknologi.appendChild(container);
+    container.appendChild(conFrontEnd);
+    container.appendChild(conBackEnd);
+    container.appendChild(tools);
+
+    Object.assign(container.style, {
+      position: "relative",
+      width: "50%",
+      height: "100%",
+      overflow: "hidden",
+      // backgroundColor: "cyan",
+    });
+
+    [conFrontEnd, conBackEnd, tools].forEach((el, dex) => {
+      Object.assign(el.style, {
+        position: "absolute",
+        inset: "0",
+        height: "100%",
+        width: "100%",
+        backgroundColor: "yellow",
+        // transform: "translateX(100%)",
+      });
+      // class berada di file web-devoloper.css
+      el.classList.add("go-right");
+
+      switch (true) {
+        case dex === 0:
+          createBtnSlide(el, "Front End", "btn-frontend", "0");
+          break;
+        case dex === 1:
+          createBtnSlide(el, "Back End", "btn-backend", "4");
+          break;
+        case dex === 2:
+          createBtnSlide(el, "Tools", "btn-tools", "8");
+          break;
+      }
+    });
   }
 }
