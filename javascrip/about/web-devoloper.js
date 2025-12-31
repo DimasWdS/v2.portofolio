@@ -14,6 +14,35 @@ Object.assign(container.style, {
     height: "100%",
     width: "100%",
   });
+  {
+    const conParalax = document.createElement("section");
+    const gambar = document.createElement("div");
+
+    conBg.appendChild(conParalax);
+    conParalax.appendChild(gambar);
+
+    Object.assign(conParalax.style, {
+      position: "relative",
+      height: "100%",
+      width: "100%",
+      // backgroundColor: "red",
+      overflow: "hidden",
+    });
+
+    Object.assign(gambar.style, {
+      height: "100%",
+      width: "100%",
+      // backgroundColor: "green",
+      position: "sticky",
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      baclgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+      // backgroundImage: "url(bgpesawat.jpg)",
+
+      // inset: "0",
+    });
+  }
 }
 
 //konten
@@ -65,7 +94,8 @@ Object.assign(container.style, {
       conTarget.appendChild(container);
       container.appendChild(button);
 
-      button.setAttribute("id", `${idButton}`);
+      // button.setAttribute("id", `${idButton}`);
+      container.setAttribute("id", `${idButton}`);
 
       button.textContent = `${content}`;
 
@@ -73,15 +103,20 @@ Object.assign(container.style, {
         position: "absolute",
         width: "10rem",
         height: "3rem",
-        backgroundColor: "red",
+        // backgroundColor: "red",
         right: "100%",
         top: `${jarak}rem`,
+        transition: "all 0.5s ease-in-out",
+        border: "2px solid var(--accen-color)",
+        // backgroundColor: "white",
+        backdropFilter: "blur(4px)",
       });
 
       Object.assign(button.style, {
         display: "inline-flex",
         height: "100%",
         width: "100%",
+        color: "var(--main-font)",
         // background: 'color:"green',
         cursor: "pointer",
         justifyContent: "center",
@@ -91,12 +126,39 @@ Object.assign(container.style, {
       });
     }
 
+    function createIcon(conTarget, link, width) {
+      const container = document.createElement("section");
+      const img = document.createElement("img");
+
+      conTarget.appendChild(container);
+      container.appendChild(img);
+
+      container.classList.add("jbasuag");
+
+      img.setAttribute("src", `${link}`);
+      img.setAttribute("width", `${width}`);
+
+      Object.assign(container.style, {
+        height: "3.5rem",
+        aspectRatio: "1/1",
+        backgroundColor: "var(--footer)",
+        padding: "0.8rem",
+        borderRadius: "50%",
+        boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+        transition: "all 0.2s ease-in-out",
+      });
+
+      Object.assign(img.style, {
+        // backgroundColor: "red",
+        // borderRadius: "50%",
+      });
+    }
+
     const container = document.createElement("section");
     const conFrontEnd = document.createElement("section");
     const conBackEnd = document.createElement("section");
     const tools = document.createElement("section");
 
-    console.log(container);
     Object.assign(teknologi.style, {
       width: "100%",
       height: "100%",
@@ -109,23 +171,35 @@ Object.assign(container.style, {
     container.appendChild(conBackEnd);
     container.appendChild(tools);
 
+    container.classList.add("displayMobileNone");
+
     Object.assign(container.style, {
       position: "relative",
-      width: "50%",
+      width: "100%",
       height: "100%",
       overflow: "hidden",
       // backgroundColor: "cyan",
+      padding: "0.5rem 0",
     });
 
     [conFrontEnd, conBackEnd, tools].forEach((el, dex) => {
+      el.classList.add("hdyiis");
       Object.assign(el.style, {
         position: "absolute",
-        inset: "0",
+        // inset: "0",
         height: "100%",
-        width: "100%",
-        backgroundColor: "yellow",
-        // transform: "translateX(100%)",
+        width: "50%",
+        backgroundColor: "var(--second-background)",
+        transition: "0.3s ease-in-out",
+        right: "0",
+        // borderRadius: "10px",
+        padding: "1rem",
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "1rem",
+        alignContent: "flex-start",
       });
+
       // class berada di file web-devoloper.css
       el.classList.add("go-right");
 
@@ -141,5 +215,54 @@ Object.assign(container.style, {
           break;
       }
     });
+    // fitur buka tutup
+    {
+      const frontEndBtn = document.getElementById("btn-frontend");
+      const backendBtn = document.getElementById("btn-backend");
+      const toolsBtn = document.getElementById("btn-tools");
+
+      frontEndBtn.addEventListener("click", () => {
+        conFrontEnd.classList.toggle("go-left");
+        conFrontEnd.classList.toggle("zIndex");
+        backendBtn.classList.toggle("go-right");
+        backendBtn.classList.toggle("opacity");
+        toolsBtn.classList.toggle("go-right");
+        toolsBtn.classList.toggle("opacity");
+      });
+      backendBtn.addEventListener("click", () => {
+        conBackEnd.classList.toggle("go-left");
+        conBackEnd.classList.toggle("zIndex");
+        //
+        frontEndBtn.classList.toggle("go-right");
+        frontEndBtn.classList.toggle("opacity");
+        toolsBtn.classList.toggle("go-right");
+        toolsBtn.classList.toggle("opacity");
+      });
+      toolsBtn.addEventListener("click", () => {
+        tools.classList.toggle("go-left");
+        tools.classList.toggle("zIndex");
+        frontEndBtn.classList.toggle("go-right");
+        frontEndBtn.classList.toggle("opacity");
+        backendBtn.classList.toggle("go-right");
+        backendBtn.classList.toggle("opacity");
+      });
+    }
+    // icon front end
+    {
+      createIcon(conFrontEnd, "https://cdn.simpleicons.org/html5", "10");
+      createIcon(conFrontEnd, "https://cdn.simpleicons.org/css", "10");
+      createIcon(conFrontEnd, "https://cdn.simpleicons.org/javascript", "10");
+      createIcon(conFrontEnd, "https://cdn.simpleicons.org/tailwindcss", "10");
+      createIcon(conFrontEnd, "https://cdn.simpleicons.org/php", "10");
+    }
+    //icon back end
+    {
+      createIcon(conBackEnd, "https://cdn.simpleicons.org/mysql", "10");
+    }
+    // icon tools
+    {
+      createIcon(tools, "https://cdn.simpleicons.org/Git", "10");
+      createIcon(tools, "https://cdn.simpleicons.org/GitHub/FFFF", "10");
+    }
   }
 }
