@@ -31,7 +31,7 @@ function cardIllustrator(conTarget, imgKonten, toolsImg) {
       });
     }
   }
-  function createIconSosmed(conTarget, logoIcon) {
+  function createIconSosmed(conTarget, logoIcon, href) {
     const container = document.createElement("div");
     const a = document.createElement("a");
     const img = document.createElement("img");
@@ -40,6 +40,8 @@ function cardIllustrator(conTarget, imgKonten, toolsImg) {
     container.appendChild(a);
     a.appendChild(img);
 
+    a.setAttribute("href", `${href}`);
+    a.setAttribute("target", "_blanks");
     img.setAttribute("src", `${logoIcon}`);
 
     Object.assign(container.style, {
@@ -63,6 +65,9 @@ function cardIllustrator(conTarget, imgKonten, toolsImg) {
     Object.assign(img.style, {
       height: "60%",
       aspectRatio: "1/1",
+    });
+    a.addEventListener("click", () => {
+      console.log("tes");
     });
   }
   function createIconTolls(conTarget, logoIcon) {
@@ -134,6 +139,8 @@ function cardIllustrator(conTarget, imgKonten, toolsImg) {
     transition: "all 0.3s ease",
   });
   Object.assign(conSosmed.style, {
+    position: "absolute",
+    zIndex: "20",
     display: "flex",
     gap: "1rem",
     padding: "0.5rem 1rem",
@@ -147,8 +154,16 @@ function cardIllustrator(conTarget, imgKonten, toolsImg) {
     transform: "translateY(120%)",
     transition: "all 0.5s ease",
   });
-  createIconSosmed(conSosmed, "https://cdn.simpleicons.org/instagram/ffff");
-  createIconSosmed(conSosmed, "https://cdn.simpleicons.org/whatsapp/ffff");
+  createIconSosmed(
+    conSosmed,
+    "https://cdn.simpleicons.org/instagram/ffff",
+    "https://www.instagram.com/dimaswidysaputraa/"
+  );
+  createIconSosmed(
+    conSosmed,
+    "https://cdn.simpleicons.org/whatsapp/ffff",
+    "https://www.instagram.com/dimaswidysaputraa/"
+  );
   Object.assign(conTolls.style, {
     display: "flex",
     gap: "1rem",
