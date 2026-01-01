@@ -2,18 +2,21 @@ function createIconSosmed(conTarget, ukuran, logo, link) {
   const con = document.createElement("section");
   const conIcon = document.createElement("div");
   const aLink = document.createElement("a");
+  const img = document.createElement("img");
 
   aLink.setAttribute("href", `${link}`);
   aLink.setAttribute("target", "_blanks");
+  img.setAttribute("src", `${logo}`);
 
   conTarget.appendChild(con);
   con.appendChild(conIcon);
   conIcon.appendChild(aLink);
+  aLink.appendChild(img);
+
+  con.classList.add("jbasuag");
 
   Object.assign(con.style, {
     display: "flex",
-    // backgroundColor: "green",
-    // filter: "blur(1px)",
   });
 
   Object.assign(conIcon.style, {
@@ -25,22 +28,30 @@ function createIconSosmed(conTarget, ukuran, logo, link) {
     transition: "all 0.3s ease",
     // backgroundColor: "green",
   });
-  con.classList.add("jbasuag");
+
   Object.assign(aLink.style, {
     display: "inline-flex",
-    width: "100%",
     height: "100%",
-    backgroundImage: `url(asset/icon/sosmed-icon/${logo})`,
-    backgroundPosition: "center",
-    backgroundSize: "70%",
-    backgroundRepeat: "no-repeat",
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    // padding: "0.2rem",
+    // backgroundColor: "green",
   });
-  conIcon.addEventListener("mouseenter", () => {
-    conIcon.style.backgroundColor = "var(--main-font)";
+
+  Object.assign(img.style, {
+    height: "70%",
+    width: "70%",
+    // backgroundColor: "red",
+    // borderRadius: "50%",
   });
-  conIcon.addEventListener("mouseleave", () => {
-    conIcon.style.backgroundColor = "var(--background-color)";
-  });
+
+  // conIcon.addEventListener("mouseenter", () => {
+  //   conIcon.style.backgroundColor = "var(--main-font)";
+  // });
+  // conIcon.addEventListener("mouseleave", () => {
+  //   conIcon.style.backgroundColor = "var(--background-color)";
+  // });
 }
 
 export { createIconSosmed };

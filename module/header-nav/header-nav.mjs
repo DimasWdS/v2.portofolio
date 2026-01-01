@@ -243,36 +243,31 @@ function headerNav(containerTarget) {
     });
 
     conSosmed.classList.add("hjguoh");
+
     createIconSosmed(
       conSosmed,
-      "40px",
-      "github.png",
+      "45px",
+      "https://cdn.simpleicons.org/GitHub/ffff",
       "https://github.com/dimaswidysap"
     );
 
     createIconSosmed(
       conSosmed,
-      "40px",
-      "instagram.png",
+      "45px",
+      "https://cdn.simpleicons.org/instagram/ffff",
       "https://www.instagram.com/dimaswidysaputraa/"
     );
     createIconSosmed(
       conSosmed,
-      "40px",
-      "tik-tok.png",
-      "https://www.tiktok.com/@dimaswidysap"
+      "45px",
+      "https://cdn.simpleicons.org/TikTok/ffff",
+      "https://www.tiktok.com/@segogotol"
     );
     createIconSosmed(
       conSosmed,
-      "40px",
-      "facebook.png",
-      "https://www.tiktok.com/@dimaswidysap"
-    );
-    createIconSosmed(
-      conSosmed,
-      "40px",
-      "linkedin.png",
-      "https://www.tiktok.com/@dimaswidysap"
+      "45px",
+      "https://cdn.simpleicons.org/facebook/ffff",
+      "https://www.facebook.com/dimaswidysaputra.dimaswidysaputra"
     );
 
     // menghilangkan container nav ketika halaman kembali ke atas

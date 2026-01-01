@@ -71,7 +71,7 @@ function createNavFooter(targetContainer) {
   containerMenu.appendChild(conIconSosmed);
 
   headerTouchMe.textContent = "Let’s talk about your next project !";
-  containerDua.textContent = "Dimas Widy Saputra©2025";
+  containerDua.textContent = "Dimas Widy Saputra©2026";
   btnContackMe.textContent = "CONTACK ME";
   btnEmail.textContent = "dimaswidysaputra41@gmail.com";
 
@@ -158,34 +158,27 @@ function createNavFooter(targetContainer) {
 
   createIconSosmed(
     conIconSosmed,
-    "40px",
-    "github.png",
-    "https://github.com/DimasWdS"
+    "45px",
+    "https://cdn.simpleicons.org/GitHub/ffff",
+    "https://github.com/dimaswidysap"
   );
-
   createIconSosmed(
     conIconSosmed,
-    "40px",
-    "instagram.png",
+    "45px",
+    "https://cdn.simpleicons.org/instagram/ffff",
     "https://www.instagram.com/dimaswidysaputraa/"
   );
   createIconSosmed(
     conIconSosmed,
-    "40px",
-    "tik-tok.png",
+    "45px",
+    "https://cdn.simpleicons.org/TikTok/ffff",
     "https://www.tiktok.com/@segogotol"
   );
   createIconSosmed(
     conIconSosmed,
-    "40px",
-    "facebook.png",
-    "https://www.tiktok.com/@dimaswidysap"
-  );
-  createIconSosmed(
-    conIconSosmed,
-    "40px",
-    "linkedin.png",
-    "https://www.tiktok.com/@dimaswidysap"
+    "45px",
+    "https://cdn.simpleicons.org/facebook/ffff",
+    "https://www.facebook.com/dimaswidysaputra.dimaswidysaputra"
   );
 }
 

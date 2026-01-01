@@ -253,11 +253,11 @@ Object.assign(container.style, {
       createIcon(conFrontEnd, "https://cdn.simpleicons.org/css", "10");
       createIcon(conFrontEnd, "https://cdn.simpleicons.org/javascript", "10");
       createIcon(conFrontEnd, "https://cdn.simpleicons.org/tailwindcss", "10");
-      createIcon(conFrontEnd, "https://cdn.simpleicons.org/php", "10");
     }
     //icon back end
     {
       createIcon(conBackEnd, "https://cdn.simpleicons.org/mysql", "10");
+      createIcon(conBackEnd, "https://cdn.simpleicons.org/php", "10");
     }
     // icon tools
     {
