@@ -25,3 +25,9 @@
   transform: rotate(45deg);
   background-color: var(--footer) !important;
 }
+
+@media (max-width: 1025px) {
+  .mbgidk {
+    width: 20rem !important;
+  }
+}

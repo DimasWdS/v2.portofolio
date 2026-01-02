@@ -1,9 +1,4 @@
-import {
-  createNavFooter,
-  sum,
-  headerNav,
-  createCarProjectWeb,
-} from "../../module/module.mjs";
+import { createNavFooter, sum, headerNav } from "../../module/module.mjs";
 
 const mainDevoloper = document.createElement("main");
 document.body.appendChild(mainDevoloper);

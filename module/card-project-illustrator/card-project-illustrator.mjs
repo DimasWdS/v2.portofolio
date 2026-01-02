@@ -124,6 +124,9 @@ function cardIllustrator(conTarget, imgKonten, toolsImg) {
     transition: "all 0.3s ease",
   });
 
+  // style berada di file project-illustartor/main.css
+  container.classList.add("mbgidk");
+
   Object.assign(firstContainer.style, {
     position: "relative",
     width: "100%",
