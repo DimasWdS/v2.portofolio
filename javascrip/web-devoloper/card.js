@@ -1,4 +1,3 @@
-// Function Card Project
 function cardKanan(
   conTarget,
   displayWeb,
@@ -315,7 +314,7 @@ cardKanan(
   "Rekomendasi Smartphone",
   "Help you find your dream phone",
   ["HTML", "CSS", "JavaScript"],
-  "https://dimaswidysap.github.io/rekomendasihp/",
+  "https://github.com/dimaswidysap/rekomendasihp",
   "https://dimaswidysap.github.io/rekomendasihp/"
 );
 cardKanan(
@@ -324,7 +323,7 @@ cardKanan(
   "Rekomendasi Smartphone",
   "Help you find your dream phone",
   ["HTML", "CSS", "JavaScript"],
-  "https://dimaswidysap.github.io/rekomendasihp/",
+  "https://github.com/dimaswidysap/rekomendasihp",
   "https://dimaswidysap.github.io/rekomendasihp/"
 );
 cardKanan(
@@ -333,7 +332,7 @@ cardKanan(
   "Rekomendasi Smartphone",
   "Help you find your dream phone",
   ["HTML", "CSS", "JavaScript"],
-  "https://dimaswidysap.github.io/rekomendasihp/",
+  "https://github.com/dimaswidysap/rekomendasihp",
   "https://dimaswidysap.github.io/rekomendasihp/"
 );
 cardKanan(
@@ -342,6 +341,6 @@ cardKanan(
   "Rekomendasi Smartphone",
   "Help you find your dream phone",
   ["HTML", "CSS", "JavaScript"],
-  "https://dimaswidysap.github.io/rekomendasihp/",
+  "https://github.com/dimaswidysap/rekomendasihp",
   "https://dimaswidysap.github.io/rekomendasihp/"
 );
