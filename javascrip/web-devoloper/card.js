@@ -1,8 +1,9 @@
+// Function Card Project
 function cardKanan(
   conTarget,
-  posisi,
+
   displayWeb,
-  nomorProject,
+  // nomorProject, -> Parameter ini DIHAPUS agar otomatis
   judulProject,
   deskripsiTeks,
   teknologi,
@@ -13,9 +14,13 @@ function cardKanan(
   const bg = document.createElement("section");
   const konten = document.createElement("section");
 
-  conTarget.appendChild(container);
+  // PERUBAHAN 1: Menggunakan prepend agar card baru ada di Posisi Paling Atas
+  conTarget.prepend(container);
+
   container.appendChild(bg);
   container.appendChild(konten);
+
+  konten.classList.add("ndguaus");
 
   Object.assign(container.style, {
     position: "relative",
@@ -24,7 +29,7 @@ function cardKanan(
     borderRadius: "20px",
     overflow: "hidden",
     boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-    marginBottom: "20px", // Tambahan agar ada jarak antar card
+    marginBottom: "20px",
   });
 
   // background
@@ -32,7 +37,7 @@ function cardKanan(
     Object.assign(bg.style, {
       width: "100%",
       height: "100%",
-      backgroundColor: "var(--second-background, #ccc)", // Fallback color
+      backgroundColor: "var(--second-background, #ccc)",
       opacity: "0.6",
     });
   }
@@ -48,7 +53,7 @@ function cardKanan(
       position: "absolute",
       inset: "0",
       display: "flex",
-      flexDirection: posisi % 2 === 0 ? "row" : "row-reverse",
+      // flexDirection: posisi % 2 === 0 ? "row" : "row-reverse",
     });
 
     konten.appendChild(div1);
@@ -74,7 +79,6 @@ function cardKanan(
         position: "relative",
         width: "90%",
         aspectRatio: "16/10",
-        // backgroundColor: "green",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
@@ -138,7 +142,6 @@ function cardKanan(
       div2.appendChild(section3);
 
       Object.assign(div2.style, {
-        // backgroundColor: "red",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -147,7 +150,6 @@ function cardKanan(
       // section 1
       {
         Object.assign(section1.style, {
-          // backgroundColor: "red",
           width: "100%",
           padding: "0.5rem 1rem",
         });
@@ -155,6 +157,9 @@ function cardKanan(
         const number = document.createElement("span");
         const title = document.createElement("h3");
         const deskripsi = document.createElement("p");
+
+        // PERUBAHAN 2: Menambahkan class khusus untuk target update nomor
+        number.classList.add("auto-nomor");
 
         section1.appendChild(number);
         section1.appendChild(title);
@@ -183,7 +188,6 @@ function cardKanan(
           });
         }
 
-        number.textContent = nomorProject;
         title.textContent = judulProject;
         deskripsi.textContent = deskripsiTeks;
 
@@ -232,7 +236,6 @@ function cardKanan(
 
           teks.textContent = el;
           Object.assign(container.style, {
-            // backgroundColor: "red",
             padding: "0.2rem 1rem",
             fontWeight: "700",
             border: "2px solid #ffffff78",
@@ -278,36 +281,71 @@ function cardKanan(
           height: "1.5rem",
           aspectRatio: "1/1",
           color: "var(--main-font)",
-          // backgroundColor: "red",
         });
       }
     }
   }
+
+  // class card project
+  container.classList.add("hugsudy");
+
+  // PERUBAHAN 3: LOGIKA UPDATE NOMOR OTOMATIS
+  // Setiap kali fungsi ini dijalankan, dia akan mencari semua card "hugsudy"
+  // di dalam "conTarget" dan mengurutkan nomornya ulang.
+  const allCards = conTarget.querySelectorAll(".hugsudy");
+  allCards.forEach((card, index) => {
+    const numElement = card.querySelector(".auto-nomor");
+    const konten = document.querySelector(".ndguaus");
+    if (numElement) {
+      let currentNum = index + 1;
+
+      konten.style.flexDirection = currentNum % 2 === 0 ? "row" : "row-reverse";
+      // Format "01", "02", dst.
+      numElement.textContent = currentNum < 10 ? "0" + currentNum : currentNum;
+      console.log(currentNum);
+    }
+  });
 }
 
 const containerCard = document.querySelector(".bsyusdj");
 
-for (let i = 0; i < 5; i++) {
-  cardKanan(
-    containerCard,
-    0,
-    "prj1/1.png",
-    "01",
-    "Rekomendasi Smartphone",
-    "Help you find your dream phone",
-    ["HTML", "CSS", "JavaScript"],
-    "https://dimaswidysap.github.io/rekomendasihp/",
-    "https://dimaswidysap.github.io/rekomendasihp/"
-  ); // Row
-  cardKanan(
-    containerCard,
-    1,
-    "prj1/1.png",
-    "02",
-    "Rekomendasi Smartphone",
-    "Help you find your dream phone",
-    ["HTML", "CSS", "JavaScript"],
-    "https://dimaswidysap.github.io/rekomendasihp/",
-    "https://dimaswidysap.github.io/rekomendasihp/"
-  ); // Row-Reverse
-}
+cardKanan(
+  containerCard,
+
+  "prj1/1.png",
+  "Rekomendasi Smartphone",
+  "Help you find your dream phone",
+  ["HTML", "CSS", "JavaScript"],
+  "https://dimaswidysap.github.io/rekomendasihp/",
+  "https://dimaswidysap.github.io/rekomendasihp/"
+);
+cardKanan(
+  containerCard,
+
+  "prj1/1.png",
+  "Rekomendasi Smartphone",
+  "Help you find your dream phone",
+  ["HTML", "CSS", "JavaScript"],
+  "https://dimaswidysap.github.io/rekomendasihp/",
+  "https://dimaswidysap.github.io/rekomendasihp/"
+);
+cardKanan(
+  containerCard,
+
+  "prj1/1.png",
+  "Rekomendasi Smartphone",
+  "Help you find your dream phone",
+  ["HTML", "CSS", "JavaScript"],
+  "https://dimaswidysap.github.io/rekomendasihp/",
+  "https://dimaswidysap.github.io/rekomendasihp/"
+);
+cardKanan(
+  containerCard,
+
+  "prj1/1.png",
+  "Rekomendasi Smartphone",
+  "Help you find your dream phone",
+  ["HTML", "CSS", "JavaScript"],
+  "https://dimaswidysap.github.io/rekomendasihp/",
+  "https://dimaswidysap.github.io/rekomendasihp/"
+);
