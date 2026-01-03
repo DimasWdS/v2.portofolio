@@ -6,7 +6,8 @@ function cardKanan(
   judulProject,
   deskripsiTeks,
   teknologi,
-  linkRepositori
+  linkRepositori,
+  linkWebsite
 ) {
   const container = document.createElement("section");
   const bg = document.createElement("section");
@@ -66,8 +67,11 @@ function cardKanan(
     // div1 (Area Foto)
     {
       const conFoto = document.createElement("section");
+      const conBtn = document.createElement("section");
+
       div1.appendChild(conFoto);
       Object.assign(conFoto.style, {
+        position: "relative",
         width: "90%",
         aspectRatio: "16/10",
         // backgroundColor: "green",
@@ -75,7 +79,53 @@ function cardKanan(
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundImage: `url(asset/page-web/${displayWeb})`,
+        overflow: "hidden",
       });
+
+      conFoto.appendChild(conBtn);
+
+      // container btn liat website
+      {
+        const a = document.createElement("a");
+        const teks = document.createElement("p");
+        const icon = document.createElement("span");
+
+        Object.assign(conBtn.style, {
+          height: "100%",
+          width: "100%",
+          backdropFilter: "blur(5px)",
+          transform: "translateY(-100%)",
+          transition: "all 0.3s ease-in-out",
+        });
+
+        conBtn.appendChild(a);
+        a.appendChild(teks);
+        a.appendChild(icon);
+
+        a.setAttribute("href", `${linkWebsite}`);
+        a.setAttribute("target", `_blank`);
+
+        teks.textContent = "Visit the website";
+
+        Object.assign(a.style, {
+          display: "inline-flex",
+          height: "100%",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          color: "var(--background-color)",
+          fontWeight: "900",
+          fontSize: "2em",
+        });
+
+        conFoto.addEventListener("mouseenter", () => {
+          conBtn.classList.add("isfiosudig");
+        });
+        conFoto.addEventListener("mouseleave", () => {
+          conBtn.classList.remove("isfiosudig");
+        });
+      }
     }
     // div2
     {
@@ -187,6 +237,7 @@ function cardKanan(
             fontWeight: "700",
             border: "2px solid #ffffff78",
             color: "var(--blue)",
+            fontSize: "0.8em",
           });
         });
       }
@@ -236,23 +287,27 @@ function cardKanan(
 
 const containerCard = document.querySelector(".bsyusdj");
 
-cardKanan(
-  containerCard,
-  0,
-  "prj1/1.png",
-  "01",
-  "Rekomendasi Smartphone",
-  "Help you find your dream phone",
-  ["HTML", "CSS", "JavaScript"],
-  "https://dimaswidysap.github.io/rekomendasihp/"
-); // Row
-cardKanan(
-  containerCard,
-  1,
-  "prj1/1.png",
-  "02",
-  "Rekomendasi Smartphone",
-  "Help you find your dream phone",
-  ["HTML", "CSS", "JavaScript"],
-  "https://dimaswidysap.github.io/rekomendasihp/"
-); // Row-Reverse
+for (let i = 0; i < 5; i++) {
+  cardKanan(
+    containerCard,
+    0,
+    "prj1/1.png",
+    "01",
+    "Rekomendasi Smartphone",
+    "Help you find your dream phone",
+    ["HTML", "CSS", "JavaScript"],
+    "https://dimaswidysap.github.io/rekomendasihp/",
+    "https://dimaswidysap.github.io/rekomendasihp/"
+  ); // Row
+  cardKanan(
+    containerCard,
+    1,
+    "prj1/1.png",
+    "02",
+    "Rekomendasi Smartphone",
+    "Help you find your dream phone",
+    ["HTML", "CSS", "JavaScript"],
+    "https://dimaswidysap.github.io/rekomendasihp/",
+    "https://dimaswidysap.github.io/rekomendasihp/"
+  ); // Row-Reverse
+}
