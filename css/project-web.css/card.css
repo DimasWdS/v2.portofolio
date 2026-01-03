@@ -1,10 +1,7 @@
 @media (max-width: 640px) {
-  .con-konten {
-    width: 100% !important;
-    /* background-color: aqua; */
-  }
-  .con-bg-web-preview {
-    display: none;
+  /* card web hilang */
+  .adadad {
+    display: none !important;
   }
 }
 

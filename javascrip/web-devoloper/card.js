@@ -1,7 +1,6 @@
 // Function Card Project
 function cardKanan(
   conTarget,
-
   displayWeb,
   // nomorProject, -> Parameter ini DIHAPUS agar otomatis
   judulProject,
@@ -21,6 +20,7 @@ function cardKanan(
   container.appendChild(konten);
 
   konten.classList.add("ndguaus");
+  container.classList.add("adadad");
 
   Object.assign(container.style, {
     position: "relative",
@@ -311,7 +311,6 @@ const containerCard = document.querySelector(".bsyusdj");
 
 cardKanan(
   containerCard,
-
   "prj1/1.png",
   "Rekomendasi Smartphone",
   "Help you find your dream phone",
@@ -321,7 +320,6 @@ cardKanan(
 );
 cardKanan(
   containerCard,
-
   "prj1/1.png",
   "Rekomendasi Smartphone",
   "Help you find your dream phone",
@@ -331,7 +329,6 @@ cardKanan(
 );
 cardKanan(
   containerCard,
-
   "prj1/1.png",
   "Rekomendasi Smartphone",
   "Help you find your dream phone",
@@ -341,7 +338,6 @@ cardKanan(
 );
 cardKanan(
   containerCard,
-
   "prj1/1.png",
   "Rekomendasi Smartphone",
   "Help you find your dream phone",
