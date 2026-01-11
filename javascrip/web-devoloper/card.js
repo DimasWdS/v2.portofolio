@@ -54,7 +54,6 @@ function cardKanan(
         position: "absolute",
         inset: "0",
         display: "flex",
-        // flexDirection: posisi % 2 === 0 ? "row" : "row-reverse",
       });
 
       konten.appendChild(div1);
@@ -290,9 +289,6 @@ function cardKanan(
     // class card project
     container.classList.add("hugsudy");
 
-    // PERUBAHAN 3: LOGIKA UPDATE NOMOR OTOMATIS
-    // Setiap kali fungsi ini dijalankan, dia akan mencari semua card "hugsudy"
-    // di dalam "conTarget" dan mengurutkan nomornya ulang.
     const allCards = conTarget.querySelectorAll(".hugsudy");
     allCards.forEach((card, index) => {
       const numElement = card.querySelector(".auto-nomor");
@@ -302,7 +298,6 @@ function cardKanan(
 
         konten.style.flexDirection =
           currentNum % 2 === 0 ? "row" : "row-reverse";
-        // Format "01", "02", dst.
         numElement.textContent =
           currentNum < 10 ? "0" + currentNum : currentNum;
       }
@@ -311,19 +306,20 @@ function cardKanan(
   // layar hp
   {
     const container = document.createElement("section");
+    const conNumberHeader = document.createElement("section");
+    const numberHeaderTeks = document.createElement("span");
     const header = document.createElement("header");
 
     conTarget.appendChild(container);
     container.appendChild(header);
 
+    // berada di file  css/project-web/card.css
+    container.classList.add("scuhas");
+
     Object.assign(container.style, {
       width: "80%",
-      // 1. WAJIB: Set tinggi awal (samakan dengan tinggi header agar terlihat tertutup)
       height: "5rem",
-
-      // 2. WAJIB: Agar saat mengecil, konten sisa tidak terlihat "bocor" keluar
-      overflow: "hidden",
-
+      // overflow: "hidden",
       transition: "height 0.5s ease-in-out",
       borderBottom: "1px solid var(--blue) !important",
     });
@@ -338,7 +334,13 @@ function cardKanan(
     // header
     {
       const teksHeader = document.createElement("h2");
+      header.appendChild(conNumberHeader);
+      conNumberHeader.appendChild(numberHeaderTeks);
+
+      numberHeaderTeks.textContent = "1";
+
       Object.assign(header.style, {
+        position: "relative",
         height: "5rem",
         width: "100%",
         // backgroundColor: "red",
@@ -355,6 +357,18 @@ function cardKanan(
       Object.assign(teksHeader.style, {
         color: "var(--main-font)",
         opacity: "0.7",
+      });
+
+      Object.assign(conNumberHeader.style, {
+        position: "absolute",
+        bottom: "110%",
+        // backgroundColor: "red",
+      });
+
+      Object.assign(numberHeaderTeks.style, {
+        fontWeight: "900",
+        fontSize: "1.2em",
+        color: "var(--main-font)",
       });
     }
   }

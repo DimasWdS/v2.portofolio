@@ -11,5 +11,10 @@
 
 .dsdedef {
   height: 30rem !important;
-  /* transition: all 0.4s ease-in-out !important; */
+}
+
+@media (min-width: 640px) {
+  .scuhas {
+    display: none;
+  }
 }
