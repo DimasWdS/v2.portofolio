@@ -310,8 +310,28 @@ function cardKanan(
     const numberHeaderTeks = document.createElement("span");
     const header = document.createElement("header");
 
-    conTarget.appendChild(container);
+    // --- LOGIKA NOMOR OTOMATIS (MODIFIKASI DI SINI) ---
+
+    // 1. Tambahkan class khusus ke 'numberHeaderTeks' agar mudah dicari nanti
+    numberHeaderTeks.classList.add("card-number-id");
+
+    // 2. Cari semua card yang SUDAH ada sebelumnya di conTarget
+    const existingNumbers = conTarget.querySelectorAll(".card-number-id");
+
+    // 3. Update angka card lama (semua ditambah 1)
+    existingNumbers.forEach((span) => {
+      const currentNum = parseInt(span.textContent);
+      span.textContent = currentNum + 1;
+    });
+
+    // 4. Set card yang baru ini menjadi nomor 1
+    numberHeaderTeks.textContent = "1";
+
+    // 5. Masukkan container ke PALING ATAS (prepend), bukan appendChild
+    conTarget.prepend(container);
     container.appendChild(header);
+
+    // ----------------------------------------------------
 
     // berada di file  css/project-web/card.css
     container.classList.add("scuhas");
@@ -337,7 +357,7 @@ function cardKanan(
       header.appendChild(conNumberHeader);
       conNumberHeader.appendChild(numberHeaderTeks);
 
-      numberHeaderTeks.textContent = "1";
+      // (Code textContent = "1" yang lama dihapus karena sudah di-set di atas)
 
       Object.assign(header.style, {
         position: "relative",
